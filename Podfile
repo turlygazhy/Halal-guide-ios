@@ -6,5 +6,8 @@ target 'Halal guide' do
   use_frameworks!
 
   # Pods for Halal guide
+  pod 'Alamofire', '4.9.0'
+  pod 'IQKeyboardManagerSwift'
+  pod 'ImageLoader'
 
 end
