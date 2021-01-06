@@ -39,7 +39,7 @@ enum AppColor {
         case .brown: return UIColor(rgb: 58, 58, 58)
         case .lightBlue: return UIColor(rgb: 239, 243, 250)
         case .transparentWhite: return UIColor(rgb: 255, 255, 255, alpha: 50)
-        case .green: return UIColor(rgb: 40, 183, 64)
+        case .green: return UIColor(rgb: 10, 153, 60)
         case .lightGray: return UIColor(rgb: 246, 246, 246)
         case .darkGray: return UIColor(rgb: 199, 199, 204)
         case .gray: return UIColor(rgb: 218, 218, 229)

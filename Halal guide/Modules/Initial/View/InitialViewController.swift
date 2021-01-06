@@ -13,7 +13,7 @@ class InitialViewController: BaseViewController {
     var router: InitialRouterInput?
     var interactor: InitialInteractorInput?
     
-    private let titleLabel = UILabel()
+    private let logoImageView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +25,24 @@ class InitialViewController: BaseViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = AppColor.green.uiColor
     
-        titleLabel.text = "Welcome to Initial Page"
-        view.addSubview(titleLabel)
+        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.image = AppImage.appLogo.uiImage
+        view.addSubview(logoImageView)
+    
+        print("Welcome to Initial page!")
     }
  
     private func setConstraints() {
         var layoutConstraints = [NSLayoutConstraint]()
 
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         layoutConstraints += [
-            titleLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+            logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoImageView.widthAnchor.constraint(equalToConstant: 200.0),
+            logoImageView.heightAnchor.constraint(equalToConstant: 200.0)
         ]
 
         NSLayoutConstraint.activate(layoutConstraints)
