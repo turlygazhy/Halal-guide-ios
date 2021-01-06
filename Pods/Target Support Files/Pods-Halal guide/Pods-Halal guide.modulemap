@@ -1,0 +1,6 @@
+framework module Pods_Halal_guide {
+  umbrella header "Pods-Halal guide-umbrella.h"
+
+  export *
+  module * { export * }
+}

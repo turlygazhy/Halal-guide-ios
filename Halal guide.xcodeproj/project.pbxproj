@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FA68795FE52A0F48ACF9D93 /* Pods_Halal_guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609793F0399729641C029C4 /* Pods_Halal_guide.framework */; };
 		CE9F6E3D25A0CC7300CCFF31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */; };
 		CE9F6E3F25A0CC7300CCFF31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3E25A0CC7300CCFF31 /* ViewController.swift */; };
 		CE9F6E4225A0CC7300CCFF31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4025A0CC7300CCFF31 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F45278E04F95E0F557D77BA /* Pods-Halal guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halal guide.debug.xcconfig"; path = "Target Support Files/Pods-Halal guide/Pods-Halal guide.debug.xcconfig"; sourceTree = "<group>"; };
+		4C604E14FB11F8E10040C771 /* Pods-Halal guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halal guide.release.xcconfig"; path = "Target Support Files/Pods-Halal guide/Pods-Halal guide.release.xcconfig"; sourceTree = "<group>"; };
+		B609793F0399729641C029C4 /* Pods_Halal_guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halal_guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9F6E3925A0CC7300CCFF31 /* Halal guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halal guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9F6E3E25A0CC7300CCFF31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA68795FE52A0F48ACF9D93 /* Pods_Halal_guide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		776558902FC9B4D73288E3B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B609793F0399729641C029C4 /* Pods_Halal_guide.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A1B07289D96E34E31BC9FA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F45278E04F95E0F557D77BA /* Pods-Halal guide.debug.xcconfig */,
+				4C604E14FB11F8E10040C771 /* Pods-Halal guide.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE9F6E3025A0CC7200CCFF31 = {
 			isa = PBXGroup;
 			children = (
 				CE9F6E3B25A0CC7300CCFF31 /* Halal guide */,
 				CE9F6E3A25A0CC7300CCFF31 /* Products */,
+				8A1B07289D96E34E31BC9FA8 /* Pods */,
+				776558902FC9B4D73288E3B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9F6E4B25A0CC9100CCFF31 /* Build configuration list for PBXNativeTarget "Halal guide" */;
 			buildPhases = (
+				E3BC9EEE7FBF07493BE3BA6B /* [CP] Check Pods Manifest.lock */,
 				CE9F6E3525A0CC7200CCFF31 /* Sources */,
 				CE9F6E3625A0CC7200CCFF31 /* Frameworks */,
 				CE9F6E3725A0CC7200CCFF31 /* Resources */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E3BC9EEE7FBF07493BE3BA6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Halal guide-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE9F6E3525A0CC7200CCFF31 /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		CE9F6E4C25A0CC9100CCFF31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F45278E04F95E0F557D77BA /* Pods-Halal guide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +349,7 @@
 		};
 		CE9F6E4D25A0CC9100CCFF31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C604E14FB11F8E10040C771 /* Pods-Halal guide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
