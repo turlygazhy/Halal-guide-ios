@@ -30,7 +30,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupConstants() {
+        UILabel.appearance().textColor = AppColor.brown.uiColor
+        UITextField.appearance().textColor = AppColor.brown.uiColor
         
+        UITabBar.appearance().tintColor = AppColor.green.uiColor
+        UINavigationBar.appearance().tintColor = AppColor.red.uiColor
+        
+        UIButton.appearance().setTitleColor(AppColor.red.uiColor, for: .normal)
+        UIButton.appearance().setTitleColor(.white, for: .highlighted)
+        
+        UITableViewCell.appearance().separatorInset.left = 0.0
+        
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = AppColor.brown.uiColor
+        
+        if #available(iOS 11.0, *) {
+            UINavigationBar.appearance().largeTitleTextAttributes = [
+                .foregroundColor: AppColor.brown.uiColor,
+                .font: UIFont.systemFont(ofSize: 28, weight: .semibold)
+            ]
+        }
+        
+        UISearchBar.appearance().tintColor = AppColor.brown.uiColor
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

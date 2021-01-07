@@ -30,8 +30,6 @@ class InitialViewController: BaseViewController {
         logoImageView.contentMode = .scaleAspectFit
         logoImageView.image = AppImage.appLogo.uiImage
         view.addSubview(logoImageView)
-    
-        print("Welcome to Initial page!")
     }
  
     private func setConstraints() {

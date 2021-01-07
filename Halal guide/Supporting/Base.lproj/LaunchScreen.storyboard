@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Bx5-Ps-rZ1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Bx5-Ps-rZ1">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="CLI-Sd-5MC"/>
@@ -34,10 +34,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690" y="62"/>
+            <point key="canvasLocation" x="-1187" y="56"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="96" height="96"/>
+        <image name="appLogo" width="400" height="400"/>
     </resources>
 </document>
