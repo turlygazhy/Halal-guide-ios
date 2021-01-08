@@ -100,6 +100,10 @@
 		29CA4B1F25A5D94300F9B0B6 /* AppSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CA4B1225A5D94300F9B0B6 /* AppSessionManager.swift */; };
 		29CA4B2025A5D94300F9B0B6 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CA4B1325A5D94300F9B0B6 /* NetworkResponse.swift */; };
 		29CA4B2125A5D94300F9B0B6 /* RequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CA4B1425A5D94300F9B0B6 /* RequestAdapter.swift */; };
+		29F86EEE25A82E8C00C2927E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EED25A82E8C00C2927E /* Place.swift */; };
+		29F86EF225A8319900C2927E /* GetPlacesContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EF125A8319900C2927E /* GetPlacesContext.swift */; };
+		29F86EF825A832C200C2927E /* ResponsePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EF725A832C100C2927E /* ResponsePlace.swift */; };
+		29F86EFB25A836E300C2927E /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EFA25A836E300C2927E /* SearchViewCell.swift */; };
 		9FA68795FE52A0F48ACF9D93 /* Pods_Halal_guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609793F0399729641C029C4 /* Pods_Halal_guide.framework */; };
 		CE9F6E3D25A0CC7300CCFF31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */; };
 		CE9F6E3F25A0CC7300CCFF31 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3E25A0CC7300CCFF31 /* InitialViewController.swift */; };
@@ -202,6 +206,10 @@
 		29CA4B1225A5D94300F9B0B6 /* AppSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSessionManager.swift; sourceTree = "<group>"; };
 		29CA4B1325A5D94300F9B0B6 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		29CA4B1425A5D94300F9B0B6 /* RequestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAdapter.swift; sourceTree = "<group>"; };
+		29F86EED25A82E8C00C2927E /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		29F86EF125A8319900C2927E /* GetPlacesContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlacesContext.swift; sourceTree = "<group>"; };
+		29F86EF725A832C100C2927E /* ResponsePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePlace.swift; sourceTree = "<group>"; };
+		29F86EFA25A836E300C2927E /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		4C604E14FB11F8E10040C771 /* Pods-Halal guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halal guide.release.xcconfig"; path = "Target Support Files/Pods-Halal guide/Pods-Halal guide.release.xcconfig"; sourceTree = "<group>"; };
 		B609793F0399729641C029C4 /* Pods_Halal_guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halal_guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9F6E3925A0CC7300CCFF31 /* Halal guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halal guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +273,7 @@
 			children = (
 				295BE66C25A6DF3C00590449 /* SearchViewInput.swift */,
 				295BE66F25A6DF5500590449 /* SearchViewController.swift */,
+				29F86EFA25A836E300C2927E /* SearchViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,6 +475,7 @@
 		29CA4A9B25A5D39900F9B0B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				29F86EED25A82E8C00C2927E /* Place.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -588,6 +598,8 @@
 		29CA4B3025A5EA9500F9B0B6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				29F86EF625A832B600C2927E /* Models */,
+				29F86EF025A8317900C2927E /* NetworkContext */,
 				295BE66A25A6DF1D00590449 /* Router */,
 				295BE66925A6DF1800590449 /* Interactor */,
 				295BE66825A6DF0F00590449 /* Presenter */,
@@ -627,6 +639,22 @@
 				295BE64925A6DBD300590449 /* Router */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		29F86EF025A8317900C2927E /* NetworkContext */ = {
+			isa = PBXGroup;
+			children = (
+				29F86EF125A8319900C2927E /* GetPlacesContext.swift */,
+			);
+			path = NetworkContext;
+			sourceTree = "<group>";
+		};
+		29F86EF625A832B600C2927E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				29F86EF725A832C100C2927E /* ResponsePlace.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		776558902FC9B4D73288E3B0 /* Frameworks */ = {
@@ -798,6 +826,7 @@
 				295BE68D25A6E17E00590449 /* CateringViewController.swift in Sources */,
 				29CA4AD625A5D59100F9B0B6 /* UIImageView+Extensions.swift in Sources */,
 				29CA4A8825A5D19E00F9B0B6 /* Constants.swift in Sources */,
+				29F86EF825A832C200C2927E /* ResponsePlace.swift in Sources */,
 				29CA4AB125A5D54E00F9B0B6 /* ParentRouterInput.swift in Sources */,
 				29CA4A8B25A5D19E00F9B0B6 /* AppColor.swift in Sources */,
 				29CA4ADC25A5D59100F9B0B6 /* String+Extensions.swift in Sources */,
@@ -828,6 +857,7 @@
 				29CA4ABA25A5D56500F9B0B6 /* BasePresenterProtocols.swift in Sources */,
 				295BE69C25A6E24D00590449 /* CateringRouterInput.swift in Sources */,
 				29CA4AD725A5D59100F9B0B6 /* Date+Extensions.swift in Sources */,
+				29F86EFB25A836E300C2927E /* SearchViewCell.swift in Sources */,
 				29CA4A9925A5D35700F9B0B6 /* LocalStore.swift in Sources */,
 				29CA4B0125A5D76800F9B0B6 /* InitialRouterInput.swift in Sources */,
 				29CA4AB425A5D55200F9B0B6 /* RouteProtocol.swift in Sources */,
@@ -861,10 +891,12 @@
 				29CA4B1B25A5D94300F9B0B6 /* SessionManager.swift in Sources */,
 				295BE64E25A6DC0900590449 /* MenuViewInput.swift in Sources */,
 				295BE6D225A6E8A500590449 /* MainRouter.swift in Sources */,
+				29F86EF225A8319900C2927E /* GetPlacesContext.swift in Sources */,
 				CE9F6E3D25A0CC7300CCFF31 /* AppDelegate.swift in Sources */,
 				29CA4A9825A5D35700F9B0B6 /* DeviceInfoStore.swift in Sources */,
 				29CA4B1D25A5D94300F9B0B6 /* NetworkAdapter.swift in Sources */,
 				295BE67025A6DF5500590449 /* SearchViewController.swift in Sources */,
+				29F86EEE25A82E8C00C2927E /* Place.swift in Sources */,
 				295BE68225A6E04F00590449 /* SearchRouter.swift in Sources */,
 				29CA4AA525A5D46900F9B0B6 /* JailbreakDetectionService.swift in Sources */,
 				29CA4AE225A5D59100F9B0B6 /* Swime.swift in Sources */,

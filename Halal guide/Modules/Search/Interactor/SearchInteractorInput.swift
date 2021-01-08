@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SearchInteractorInput: class {
-    
+    func getPlaces()
 }

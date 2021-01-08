@@ -17,8 +17,9 @@ class SearchRouter: SearchRouterInput {
     required init() {
         let viewController = SearchViewController()
         let navigationController = NavigationController(rootViewController: viewController)
+        let networkService = NetworkAdapter(sessionManager: sessionManager)
         let presenter = SearchPresenter(view: viewController)
-        let interactor = SearchInteractor(presenter: presenter)
+        let interactor = SearchInteractor(networkService: networkService, presenter: presenter)
         let menuIconImage = AppImage.menu_search.uiImage?.fitted(in: CGSize(width: 16.0, height: 21.0))
         navigationController.tabBarItem = UITabBarItem(
             title: "Поиск",

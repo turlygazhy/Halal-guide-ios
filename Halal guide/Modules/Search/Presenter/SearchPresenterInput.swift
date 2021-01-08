@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SearchPresenterInput: BasePresenterInput {
-    
+    func setData(places: [Place])
 }

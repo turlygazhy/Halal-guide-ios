@@ -19,4 +19,8 @@ class SearchPresenter: SearchPresenterInput {
     init(view: SearchViewInput) {
         self.view = view
     }
+    
+    func setData(places: [Place]) {
+        view.setData(places: places)
+    }
 }

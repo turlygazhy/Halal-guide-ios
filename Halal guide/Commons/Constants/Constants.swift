@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
     static let stand = "Production"
-    static let host = "test.kz"
+    static let host = "halaldamu.kz"
     static let googleServiceInfoPlistFileName = "GoogleService-Info"
 
     static let baseURL = "https://" + host

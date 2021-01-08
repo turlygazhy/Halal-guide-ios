@@ -11,11 +11,11 @@ import ImageLoader
 
 extension UIImageView {
     
-    func loadAvatar(by avatarId: String?) {
-        if let url = avatarId {
-            self.load.request(with: Constants.imageURL + url)
+    func loadImage(by path: String?, defaultImage: UIImage? = UIImage.init(named: "appLogo")) {
+        if let url = path {
+            self.load.request(with: url)
         } else {
-            self.image = UIImage(named: "defaultAvatar")
+            self.image = defaultImage
         }
     }
 }
