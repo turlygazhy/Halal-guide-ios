@@ -78,10 +78,18 @@ class StatusEViewCell: UITableViewCell, ReusableView {
         statusLabel.text = addition.status?.title
         additionNameLabel.text = addition.name
         
-        if addition.status?.slug == "" {//todo
+        switch addition.status?.slug {
+        case "tyjym-salyngandar":
+            additionTitleLabel.textColor = AppColor.red.uiColor
             statusLabel.textColor = AppColor.red.uiColor
-        } else {
+        case "ruqsat-etilgender":
+            additionTitleLabel.textColor = AppColor.green.uiColor
             statusLabel.textColor = AppColor.green.uiColor
+        case "kumandiler":
+            additionTitleLabel.textColor = AppColor.yellow.uiColor
+            statusLabel.textColor = AppColor.yellow.uiColor
+        default:
+            print("default is ignored")
         }
     }
 }
