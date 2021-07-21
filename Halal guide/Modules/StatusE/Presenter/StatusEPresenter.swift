@@ -19,4 +19,8 @@ class StatusEPresenter: StatusEPresenterInput {
     init(view: StatusEViewInput) {
         self.view = view
     }
+    
+    func setData(additions: [Addition]) {
+        view.setData(additions: additions)
+    }
 }

@@ -9,6 +9,7 @@
 public enum Route: RouteProtocol {
     case root(endpoint: String)
     case getPlaces
+    case getAdditions
     
     public var serverUrl: String { return Constants.baseURL }
 }
@@ -19,6 +20,7 @@ extension Route {
         switch self {
         case .root(let endpoint): return endpoint
         case .getPlaces: return "/ru/api/mekemeler/1/1"
+        case .getAdditions: return "/ru/api/qospalar/1/1"
         }
     }
 }

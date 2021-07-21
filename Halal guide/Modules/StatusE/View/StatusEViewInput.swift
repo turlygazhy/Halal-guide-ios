@@ -9,5 +9,5 @@
 import Foundation
 
 protocol StatusEViewInput: BaseViewInputProtocol {
-    
+    func setData(additions: [Addition])
 }

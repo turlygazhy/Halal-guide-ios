@@ -17,8 +17,9 @@ class StatusERouter: StatusERouterInput {
     required init() {
         let viewController = StatusEViewController()
         let navigationController = NavigationController(rootViewController: viewController)
+        let networkService = NetworkAdapter(sessionManager: sessionManager)
         let presenter = StatusEPresenter(view: viewController)
-        let interactor = StatusEInteractor(presenter: presenter)
+        let interactor = StatusEInteractor(networkService: networkService, presenter: presenter)
         let menuIconImage = AppImage.menu_my_advice.uiImage?.fitted(in: CGSize(width: 16.0, height: 21.0))
         navigationController.tabBarItem = UITabBarItem(
             title: "Добавки Е",

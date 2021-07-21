@@ -9,5 +9,5 @@
 import Foundation
 
 protocol StatusEPresenterInput: BasePresenterInput {
-    
+    func setData(additions: [Addition])
 }
