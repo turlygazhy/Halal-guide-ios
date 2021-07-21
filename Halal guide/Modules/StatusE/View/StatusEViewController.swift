@@ -14,37 +14,77 @@ class StatusEViewController: BaseViewController {
     var router: StatusERouterInput?
     var interactor: StatusEInteractorInput?
 
-    private let titleLabel = UILabel()
+    private var dataSource = [Addition]()
+    
+    private let tableView = UITableView(frame: .zero, style: .grouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
         setConstraints()
+        
+        interactor?.getAdditions()
     }
     
     private func setupViews() {
         view.backgroundColor = .white
         
-        titleLabel.text = "Добавки Е"
-        view.addSubview(titleLabel)
+        title = "Добавки Е"
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(StatusEViewCell.self)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.separatorColor = AppColor.seperator.uiColor
+        tableView.backgroundColor = .white
+        tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 60
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
+        view.addSubview(tableView)
     }
     
     private func setConstraints() {
         var layoutConstraints = [NSLayoutConstraint]()
 
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         layoutConstraints += [
-            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
 
         NSLayoutConstraint.activate(layoutConstraints)
     }
 }
 
+extension StatusEViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension StatusEViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: StatusEViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.set(addition: dataSource[indexPath.row])
+        return cell
+    }
+}
+
 extension StatusEViewController: StatusEViewInput {
     
+    func setData(additions: [Addition]) {
+        dataSource = additions
+        tableView.reloadData()
+    }
 }
 
 extension StatusEViewController: MainTabBarItemPageRouterInput {

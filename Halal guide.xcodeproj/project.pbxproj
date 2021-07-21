@@ -109,6 +109,10 @@
 		CE9F6E3F25A0CC7300CCFF31 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3E25A0CC7300CCFF31 /* InitialViewController.swift */; };
 		CE9F6E4425A0CC9100CCFF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4325A0CC9100CCFF31 /* Assets.xcassets */; };
 		CE9F6E4725A0CC9100CCFF31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4525A0CC9100CCFF31 /* LaunchScreen.storyboard */; };
+		FB65DE0D26A7E41D004868B8 /* ResponseAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */; };
+		FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0E26A7E4B6004868B8 /* Addition.swift */; };
+		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
+		FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,6 +222,10 @@
 		CE9F6E4325A0CC9100CCFF31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9F6E4625A0CC9100CCFF31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9F6E4825A0CC9100CCFF31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAdditions.swift; sourceTree = "<group>"; };
+		FB65DE0E26A7E4B6004868B8 /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
+		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
+		FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionsContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +354,7 @@
 			children = (
 				295BE6A525A6E36F00590449 /* StatusEViewInput.swift */,
 				295BE6A925A6E39600590449 /* StatusEViewController.swift */,
+				FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -476,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				29F86EED25A82E8C00C2927E /* Place.swift */,
+				FB65DE0E26A7E4B6004868B8 /* Addition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -622,6 +632,8 @@
 		29CA4B3325A5EB0700F9B0B6 /* StatusE */ = {
 			isa = PBXGroup;
 			children = (
+				FB65DE1226A83FAA004868B8 /* NetworkContext */,
+				FB71F51526A704BB007DA604 /* Models */,
 				295BE6A425A6E35200590449 /* Router */,
 				295BE6A325A6E34C00590449 /* Interactor */,
 				295BE6A225A6E34500590449 /* Presenter */,
@@ -702,6 +714,22 @@
 				CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */,
 			);
 			path = "Halal guide";
+			sourceTree = "<group>";
+		};
+		FB65DE1226A83FAA004868B8 /* NetworkContext */ = {
+			isa = PBXGroup;
+			children = (
+				FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */,
+			);
+			path = NetworkContext;
+			sourceTree = "<group>";
+		};
+		FB71F51526A704BB007DA604 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -836,8 +864,10 @@
 				295BE65825A6DC7300590449 /* MenuPresenter.swift in Sources */,
 				295BE6B725A6E45B00590449 /* StatusEInteractor.swift in Sources */,
 				295BE6BE25A6E70200590449 /* StatusERouter.swift in Sources */,
+				FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */,
 				29CA4AC525A5D56D00F9B0B6 /* BaseViewInputProtocol.swift in Sources */,
 				29CA4ADB25A5D59100F9B0B6 /* UICollectionView+Extensions.swift in Sources */,
+				FB65DE0D26A7E41D004868B8 /* ResponseAdditions.swift in Sources */,
 				29CA4B1725A5D94300F9B0B6 /* NetworkService.swift in Sources */,
 				295BE69625A6E20900590449 /* CateringInteractorInput.swift in Sources */,
 				29CA4A9525A5D35700F9B0B6 /* AppError.swift in Sources */,
@@ -884,6 +914,7 @@
 				29CA4B0425A5D77E00F9B0B6 /* InitialRouter.swift in Sources */,
 				295BE6CF25A6E89500590449 /* MainRouterInput.swift in Sources */,
 				29CA4B2125A5D94300F9B0B6 /* RequestAdapter.swift in Sources */,
+				FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */,
 				29CA4AD925A5D59100F9B0B6 /* UITableView+Extensions.swift in Sources */,
 				29CA4AC225A5D56D00F9B0B6 /* EmptyTitleBarButtonItem.swift in Sources */,
 				29CA4B1C25A5D94300F9B0B6 /* CancelableRequest.swift in Sources */,
@@ -914,6 +945,7 @@
 				295BE6C825A6E83700590449 /* MainViewInput.swift in Sources */,
 				29CA4B2025A5D94300F9B0B6 /* NetworkResponse.swift in Sources */,
 				29CA4ADA25A5D59100F9B0B6 /* UIImage+Extensions.swift in Sources */,
+				FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */,
 				295BE66125A6DCEB00590449 /* MenuRouterInput.swift in Sources */,
 				29CA4AC425A5D56D00F9B0B6 /* BaseViewControllerProtocol.swift in Sources */,
 				29CA4A8925A5D19E00F9B0B6 /* UIConstants.swift in Sources */,

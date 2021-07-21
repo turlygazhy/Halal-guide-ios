@@ -32,6 +32,7 @@ enum AppColor {
     case lightRed
     case timeUnselect
     case seperator
+    case yellow
     
     var uiColor: UIColor {
         switch self {
@@ -58,6 +59,7 @@ enum AppColor {
         case .lightRed: return UIColor(rgb: 255, 235, 231)
         case .timeUnselect: return UIColor(rgb: 239, 239, 244)
         case .seperator: return UIColor(rgb: 224, 224, 224)
+        case .yellow: return UIColor(rgb: 212, 172, 13)
         }
     }
     
