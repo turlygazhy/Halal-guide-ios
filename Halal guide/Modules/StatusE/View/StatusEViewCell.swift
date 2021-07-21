@@ -52,13 +52,13 @@ class StatusEViewCell: UITableViewCell, ReusableView {
         layoutConstraints += [
             additionTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             additionTitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: UIConstants.defaultPadding),
-            additionTitleLabel.widthAnchor.constraint(equalToConstant: 48.0),
+            additionTitleLabel.widthAnchor.constraint(equalToConstant: 60.0),
             additionTitleLabel.heightAnchor.constraint(equalToConstant: 48.0)
         ]
 
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
         layoutConstraints += [
-            statusLabel.topAnchor.constraint(equalTo: topAnchor, constant: UIConstants.defaultPadding/2),
+            statusLabel.topAnchor.constraint(equalTo: topAnchor, constant: UIConstants.defaultPadding),
             statusLabel.leftAnchor.constraint(equalTo: additionTitleLabel.rightAnchor, constant: UIConstants.defaultPadding),
             statusLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: UIConstants.defaultPadding * -1)
         ]
@@ -67,7 +67,8 @@ class StatusEViewCell: UITableViewCell, ReusableView {
         layoutConstraints += [
             additionNameLabel.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 5.0),
             additionNameLabel.leftAnchor.constraint(equalTo: additionTitleLabel.rightAnchor, constant: UIConstants.defaultPadding),
-            additionNameLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: UIConstants.defaultPadding * -1)
+            additionNameLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: UIConstants.defaultPadding * -1),
+            additionNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: UIConstants.defaultPadding * -1)
         ]
         
         NSLayoutConstraint.activate(layoutConstraints)
