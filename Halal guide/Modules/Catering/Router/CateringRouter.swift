@@ -21,7 +21,7 @@ class CateringRouter: CateringRouterInput {
         let interactor = CateringInteractor(presenter: presenter)
         let menuIconImage = AppImage.menu_my_advice.uiImage?.fitted(in: CGSize(width: 16.0, height: 21.0))
         navigationController.tabBarItem = UITabBarItem(
-            title: "Питание",
+            title: "Карта",
             image: menuIconImage,
             tag: 2
         )
