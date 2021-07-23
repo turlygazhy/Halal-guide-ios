@@ -34,6 +34,11 @@ class MenuRouter: MenuRouterInput {
         menuViewController.router = self
         menuViewController.interactor = interactor
     }
+    
+    func openFeedback() {
+        let feedbackRouter = FeedbackRouter()
+        feedbackRouter.openFeedback()
+    }
 }
 
 extension MenuRouter: MainTabBarItemPageRouterInput {

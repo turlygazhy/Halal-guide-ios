@@ -63,6 +63,7 @@ class MenuViewController: BaseViewController {
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        router?.openFeedback()
     }
 }
 
