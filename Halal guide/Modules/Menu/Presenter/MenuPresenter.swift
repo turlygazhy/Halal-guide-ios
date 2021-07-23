@@ -19,4 +19,8 @@ class MenuPresenter: MenuPresenterInput {
     init(view: MenuViewInput) {
         self.view = view
     }
+    
+    func setData(menuItems: [String]) {
+        view.setData(menuItems: menuItems)
+    }
 }

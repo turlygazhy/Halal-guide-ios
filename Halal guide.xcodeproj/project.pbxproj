@@ -113,6 +113,7 @@
 		FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0E26A7E4B6004868B8 /* Addition.swift */; };
 		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
 		FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */; };
+		FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79462E26AB047400E5FD7D /* MenuViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -226,6 +227,7 @@
 		FB65DE0E26A7E4B6004868B8 /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
 		FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionsContext.swift; sourceTree = "<group>"; };
+		FB79462E26AB047400E5FD7D /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 			children = (
 				295BE64D25A6DC0900590449 /* MenuViewInput.swift */,
 				295BE65125A6DC2800590449 /* MenuViewController.swift */,
+				FB79462E26AB047400E5FD7D /* MenuViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -645,10 +648,10 @@
 		29CA4B3425A5EB1300F9B0B6 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				295BE64C25A6DBE900590449 /* View */,
 				295BE64B25A6DBE200590449 /* Interactor */,
 				295BE64A25A6DBDC00590449 /* Presenter */,
 				295BE64925A6DBD300590449 /* Router */,
+				295BE64C25A6DBE900590449 /* View */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -915,6 +918,7 @@
 				295BE6CF25A6E89500590449 /* MainRouterInput.swift in Sources */,
 				29CA4B2125A5D94300F9B0B6 /* RequestAdapter.swift in Sources */,
 				FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */,
+				FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */,
 				29CA4AD925A5D59100F9B0B6 /* UITableView+Extensions.swift in Sources */,
 				29CA4AC225A5D56D00F9B0B6 /* EmptyTitleBarButtonItem.swift in Sources */,
 				29CA4B1C25A5D94300F9B0B6 /* CancelableRequest.swift in Sources */,

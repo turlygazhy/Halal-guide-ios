@@ -15,4 +15,8 @@ class MenuInteractor: MenuInteractorInput {
     init(presenter: MenuPresenterInput) {
         self.presenter = presenter
     }
+    
+    func getMenuItems() {
+        self.presenter.setData(menuItems: ["Обратная связь", "Инструкции", "Оцените приложение", "Поделиться"])
+    }
 }
