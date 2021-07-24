@@ -114,6 +114,7 @@
 		FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0E26A7E4B6004868B8 /* Addition.swift */; };
 		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
 		FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */; };
+		FB75473C26AC6D67007DD1EC /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75473B26AC6D67007DD1EC /* MenuItem.swift */; };
 		FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79462E26AB047400E5FD7D /* MenuViewCell.swift */; };
 		FB79463426AB1D1900E5FD7D /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */; };
 		FB79463626AB1D4900E5FD7D /* FeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */; };
@@ -232,6 +233,7 @@
 		FB65DE0E26A7E4B6004868B8 /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
 		FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionsContext.swift; sourceTree = "<group>"; };
+		FB75473B26AC6D67007DD1EC /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		FB79462E26AB047400E5FD7D /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRouter.swift; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 		29CA4B3425A5EB1300F9B0B6 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				FB75473D26AC6D6C007DD1EC /* model */,
 				295BE64B25A6DBE200590449 /* Interactor */,
 				295BE64A25A6DBDC00590449 /* Presenter */,
 				295BE64925A6DBD300590449 /* Router */,
@@ -726,6 +729,14 @@
 				FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FB75473D26AC6D6C007DD1EC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FB75473B26AC6D67007DD1EC /* MenuItem.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		FB79463026AB1CDB00E5FD7D /* feedback */ = {
@@ -939,6 +950,7 @@
 				29CA4B0425A5D77E00F9B0B6 /* InitialRouter.swift in Sources */,
 				295BE6CF25A6E89500590449 /* MainRouterInput.swift in Sources */,
 				29CA4B2125A5D94300F9B0B6 /* RequestAdapter.swift in Sources */,
+				FB75473C26AC6D67007DD1EC /* MenuItem.swift in Sources */,
 				FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */,
 				FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */,
 				29CA4AD925A5D59100F9B0B6 /* UITableView+Extensions.swift in Sources */,
