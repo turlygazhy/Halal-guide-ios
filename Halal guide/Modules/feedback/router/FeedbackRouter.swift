@@ -12,18 +12,16 @@ import UIKit
 class FeedbackRouter: FeedbackRouterInput {
     
     private unowned let feedbackViewController: FeedbackViewController
-    unowned let navigationController: NavigationController
+    private unowned let navigationController: NavigationController
 
-    init() {
+    init(navigationController: NavigationController) {
+        self.navigationController = navigationController
+
         let viewController = FeedbackViewController()
         self.feedbackViewController = viewController
-        
-        let navigationController = NavigationController(rootViewController: feedbackViewController)
-        self.navigationController = navigationController
+        viewController.router = self
+
+        navigationController.pushViewController(viewController, animated: true)
     }
     
-    func openFeedback() {
-        self.navigationController.pushViewController(feedbackViewController, animated: true)
-    }
-
 }

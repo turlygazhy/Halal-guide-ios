@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
 protocol FeedbackRouterInput: class {
-    func openFeedback()
+
 }

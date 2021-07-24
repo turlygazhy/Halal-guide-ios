@@ -105,6 +105,7 @@
 		29F86EF825A832C200C2927E /* ResponsePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EF725A832C100C2927E /* ResponsePlace.swift */; };
 		29F86EFB25A836E300C2927E /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EFA25A836E300C2927E /* SearchViewCell.swift */; };
 		9FA68795FE52A0F48ACF9D93 /* Pods_Halal_guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609793F0399729641C029C4 /* Pods_Halal_guide.framework */; };
+		A32FD17926AC11B6007B678B /* FeedbackViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FD17826AC11B6007B678B /* FeedbackViewInput.swift */; };
 		CE9F6E3D25A0CC7300CCFF31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */; };
 		CE9F6E3F25A0CC7300CCFF31 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3E25A0CC7300CCFF31 /* InitialViewController.swift */; };
 		CE9F6E4425A0CC9100CCFF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4325A0CC9100CCFF31 /* Assets.xcassets */; };
@@ -219,6 +220,7 @@
 		29F86EF725A832C100C2927E /* ResponsePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePlace.swift; sourceTree = "<group>"; };
 		29F86EFA25A836E300C2927E /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		4C604E14FB11F8E10040C771 /* Pods-Halal guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halal guide.release.xcconfig"; path = "Target Support Files/Pods-Halal guide/Pods-Halal guide.release.xcconfig"; sourceTree = "<group>"; };
+		A32FD17826AC11B6007B678B /* FeedbackViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewInput.swift; sourceTree = "<group>"; };
 		B609793F0399729641C029C4 /* Pods_Halal_guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halal_guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9F6E3925A0CC7300CCFF31 /* Halal guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halal guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -402,20 +404,6 @@
 				295BE6CB25A6E84800590449 /* MainViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		295BE6C425A6E81400590449 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		295BE6C525A6E81A00590449 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		295BE6C625A6E81F00590449 /* Router */ = {
@@ -608,8 +596,6 @@
 			isa = PBXGroup;
 			children = (
 				295BE6C625A6E81F00590449 /* Router */,
-				295BE6C525A6E81A00590449 /* Interactor */,
-				295BE6C425A6E81400590449 /* Presenter */,
 				295BE6C325A6E7F800590449 /* View */,
 			);
 			path = Main;
@@ -755,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */,
+				A32FD17826AC11B6007B678B /* FeedbackViewInput.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -904,6 +891,7 @@
 				29CA4AC525A5D56D00F9B0B6 /* BaseViewInputProtocol.swift in Sources */,
 				29CA4ADB25A5D59100F9B0B6 /* UICollectionView+Extensions.swift in Sources */,
 				FB65DE0D26A7E41D004868B8 /* ResponseAdditions.swift in Sources */,
+				A32FD17926AC11B6007B678B /* FeedbackViewInput.swift in Sources */,
 				29CA4B1725A5D94300F9B0B6 /* NetworkService.swift in Sources */,
 				295BE69625A6E20900590449 /* CateringInteractorInput.swift in Sources */,
 				29CA4A9525A5D35700F9B0B6 /* AppError.swift in Sources */,

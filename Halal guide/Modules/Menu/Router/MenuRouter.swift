@@ -36,8 +36,7 @@ class MenuRouter: MenuRouterInput {
     }
     
     func openFeedback() {
-        let feedbackRouter = FeedbackRouter()
-        feedbackRouter.openFeedback()
+        _ = FeedbackRouter(navigationController: navigationController)
     }
 }
 

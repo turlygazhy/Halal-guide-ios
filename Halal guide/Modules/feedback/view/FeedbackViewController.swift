@@ -8,10 +8,27 @@
 
 import UIKit
 
-class FeedbackViewController: UIViewController {
+class FeedbackViewController: BaseViewController {
+
+    var router: FeedbackRouterInput?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupViews()
+        setConstraints()
     }
+    
+    private func setupViews() {
+        view.backgroundColor = .white
+        self.title = "Обратная связь"
+    }
+    
+    private func setConstraints() {
+        
+    }
+}
 
+extension FeedbackViewController: FeedbackViewInput {
+    
 }
