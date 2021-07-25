@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol MenuRouterInput: class {
-    
+    func openFeedback()
+    func openInstruction()
 }
