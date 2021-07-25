@@ -15,10 +15,9 @@ class SearchDetailRouter: SearchDetailRouterInput {
     private unowned let navigationController: NavigationController
     
     init(navigationController: NavigationController, place: Place) {
-        //todo place
         self.navigationController = navigationController
         
-        let viewController = SearchDetailViewController()
+        let viewController = SearchDetailViewController(place: place)
         self.searchDetailViewController = viewController
         viewController.router = self
         

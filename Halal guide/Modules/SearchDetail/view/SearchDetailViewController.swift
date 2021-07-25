@@ -12,6 +12,16 @@ import UIKit
 class SearchDetailViewController: BaseViewController {
     
     var router: SearchDetailRouterInput?
+    let place: Place
+    
+    init(place: Place){
+        self.place = place
+        super.init(nibName: nil, bundle: nil)//todo is it correct sending nil?
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +32,7 @@ class SearchDetailViewController: BaseViewController {
     
     private func setupViews() {
         view.backgroundColor = .white
-        self.title = "todo what should be here"
+        self.title = place.trademark_title
     }
     
     private func setConstraints() {
