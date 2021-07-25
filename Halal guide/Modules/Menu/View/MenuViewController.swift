@@ -66,6 +66,12 @@ extension MenuViewController: UITableViewDelegate {
         switch dataSource[indexPath.row] {
         case MenuItem.feedback.description:
             router?.openFeedback()
+        case MenuItem.instruction.description:
+            router?.openInstruction()
+        case MenuItem.giveMark.description:
+            print("todo open appstore")
+        case MenuItem.share.description:
+            print("todo send app link to messenger")
         default:
             print("default is ignored")
         }
