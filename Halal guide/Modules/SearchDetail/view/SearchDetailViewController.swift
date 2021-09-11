@@ -12,6 +12,8 @@ import UIKit
 class SearchDetailViewController: BaseViewController {
     
     var router: SearchDetailRouterInput?
+    private let itemDetail = UILabel()
+    
     let place: Place
     
     init(place: Place){
@@ -33,10 +35,23 @@ class SearchDetailViewController: BaseViewController {
     private func setupViews() {
         view.backgroundColor = .white
         self.title = place.trademark_title
+        
+        itemDetail.text = "todo"
+        itemDetail.font = .systemFont(ofSize: 20)
+        itemDetail.textColor = .black
+        itemDetail.numberOfLines = 0
+        view.addSubview(itemDetail)
     }
     
     private func setConstraints() {
+        var layoutConstraints = [NSLayoutConstraint]()
+        itemDetail.translatesAutoresizingMaskIntoConstraints = false
+        layoutConstraints += [
+            itemDetail.topAnchor.constraint(equalTo: view.topAnchor, constant: UIConstants.defaultPadding + 150),
+            itemDetail.leftAnchor.constraint(equalTo: view.leftAnchor, constant: UIConstants.defaultPadding)
+        ]
         
+        NSLayoutConstraint.activate(layoutConstraints)
     }
 }
 
