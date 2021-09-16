@@ -9,5 +9,6 @@ target 'Halal guide' do
   pod 'Alamofire', '4.9.0'
   pod 'IQKeyboardManagerSwift'
   pod 'ImageLoader'
-
+  pod 'GoogleMaps', '5.1.0'
+  
 end

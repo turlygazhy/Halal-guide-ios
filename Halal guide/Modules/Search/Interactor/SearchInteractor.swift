@@ -43,7 +43,9 @@ class SearchInteractor: SearchInteractorInput {
             guard let items = placesResponse.data else {
                 return
             }
-                
+            
+            DataHolder.shared.places = items
+            
             self?.presenter.setData(places: items)
             self?.presenter.stopLoading()
         }

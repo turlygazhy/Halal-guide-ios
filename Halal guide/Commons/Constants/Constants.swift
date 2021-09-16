@@ -11,10 +11,14 @@ import Foundation
 struct Constants {
     static let stand = "Production"
     static let host = "halaldamu.kz"
+    static let muftiat = "api.muftyat.kz"
     static let googleServiceInfoPlistFileName = "GoogleService-Info"
 
     static let baseURL = "https://" + host
+    static let baseMuftiatURL = "https://" + muftiat
+    
     static let imageURL = baseURL + "/api/file/avatar/"
     
     static let token = "token"
+    static let apiKey = "AIzaSyBGu_JaV9JSBox1ubQj6URpwIVhrH3uIoQ"
 }
