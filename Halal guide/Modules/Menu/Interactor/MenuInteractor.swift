@@ -11,12 +11,12 @@ import Foundation
 class MenuInteractor: MenuInteractorInput {
     
     private let presenter: MenuPresenterInput
-
+    
     init(presenter: MenuPresenterInput) {
         self.presenter = presenter
     }
     
     func getMenuItems() {
-        self.presenter.setData(menuItems: ["Обратная связь", "Инструкции", "Оцените приложение", "Поделиться"])
+        self.presenter.setData(menuItems: [MenuItem.feedback.description, MenuItem.instruction.description, MenuItem.giveMark.description, MenuItem.share.description])
     }
 }

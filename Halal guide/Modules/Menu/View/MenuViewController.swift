@@ -13,7 +13,7 @@ class MenuViewController: BaseViewController {
     
     var router: MenuRouterInput?
     var interactor: MenuInteractorInput?
-
+    
     private var dataSource = [String]()
     
     private let tableView = UITableView(frame: .zero, style: .grouped)
@@ -47,7 +47,7 @@ class MenuViewController: BaseViewController {
     
     private func setConstraints() {
         var layoutConstraints = [NSLayoutConstraint]()
-
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         layoutConstraints += [
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -55,7 +55,7 @@ class MenuViewController: BaseViewController {
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
-
+        
         NSLayoutConstraint.activate(layoutConstraints)
     }
 }
@@ -63,7 +63,18 @@ class MenuViewController: BaseViewController {
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        router?.openFeedback()
+        switch dataSource[indexPath.row] {
+        case MenuItem.feedback.description:
+            router?.openFeedback()
+        case MenuItem.instruction.description:
+            router?.openInstruction()
+        case MenuItem.giveMark.description:
+            print("todo open appstore")
+        case MenuItem.share.description:
+            print("todo send app link to messenger")
+        default:
+            print("default is ignored")
+        }
     }
 }
 

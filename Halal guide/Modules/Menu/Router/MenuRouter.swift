@@ -38,6 +38,10 @@ class MenuRouter: MenuRouterInput {
     func openFeedback() {
         _ = FeedbackRouter(navigationController: navigationController)
     }
+    
+    func openInstruction() {
+        _ = InstructionRouter(navigationController: navigationController)
+    }
 }
 
 extension MenuRouter: MainTabBarItemPageRouterInput {

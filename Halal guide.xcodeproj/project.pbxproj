@@ -119,6 +119,11 @@
 		FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0E26A7E4B6004868B8 /* Addition.swift */; };
 		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
 		FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */; };
+		FB75473C26AC6D67007DD1EC /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75473B26AC6D67007DD1EC /* MenuItem.swift */; };
+		FB75474126AC74EC007DD1EC /* InstructionRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474026AC74EC007DD1EC /* InstructionRouterInput.swift */; };
+		FB75474326AC74F8007DD1EC /* InstructionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474226AC74F8007DD1EC /* InstructionRouter.swift */; };
+		FB75474626AD1257007DD1EC /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474526AD1257007DD1EC /* InstructionViewController.swift */; };
+		FB75474826AD1302007DD1EC /* InstructionViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474726AD1302007DD1EC /* InstructionViewInput.swift */; };
 		FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79462E26AB047400E5FD7D /* MenuViewCell.swift */; };
 		FB79463426AB1D1900E5FD7D /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */; };
 		FB79463626AB1D4900E5FD7D /* FeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */; };
@@ -242,6 +247,11 @@
 		FB65DE0E26A7E4B6004868B8 /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
 		FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionsContext.swift; sourceTree = "<group>"; };
+		FB75473B26AC6D67007DD1EC /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		FB75474026AC74EC007DD1EC /* InstructionRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRouterInput.swift; sourceTree = "<group>"; };
+		FB75474226AC74F8007DD1EC /* InstructionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRouter.swift; sourceTree = "<group>"; };
+		FB75474526AD1257007DD1EC /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		FB75474726AD1302007DD1EC /* InstructionViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewInput.swift; sourceTree = "<group>"; };
 		FB79462E26AB047400E5FD7D /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRouter.swift; sourceTree = "<group>"; };
@@ -446,6 +456,7 @@
 		29CA4A7625A5CF6900F9B0B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FB75473E26AC74CC007DD1EC /* instruction */,
 				FB79463026AB1CDB00E5FD7D /* feedback */,
 				29CA4B3425A5EB1300F9B0B6 /* Menu */,
 				29CA4B3325A5EB0700F9B0B6 /* StatusE */,
@@ -655,6 +666,7 @@
 		29CA4B3425A5EB1300F9B0B6 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				FB75473D26AC6D6C007DD1EC /* model */,
 				295BE64B25A6DBE200590449 /* Interactor */,
 				295BE64A25A6DBDC00590449 /* Presenter */,
 				295BE64925A6DBD300590449 /* Router */,
@@ -757,6 +769,41 @@
 				FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FB75473D26AC6D6C007DD1EC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FB75473B26AC6D67007DD1EC /* MenuItem.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FB75473E26AC74CC007DD1EC /* instruction */ = {
+			isa = PBXGroup;
+			children = (
+				FB75474426AD124A007DD1EC /* view */,
+				FB75473F26AC74D8007DD1EC /* router */,
+			);
+			path = instruction;
+			sourceTree = "<group>";
+		};
+		FB75473F26AC74D8007DD1EC /* router */ = {
+			isa = PBXGroup;
+			children = (
+				FB75474026AC74EC007DD1EC /* InstructionRouterInput.swift */,
+				FB75474226AC74F8007DD1EC /* InstructionRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		FB75474426AD124A007DD1EC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FB75474526AD1257007DD1EC /* InstructionViewController.swift */,
+				FB75474726AD1302007DD1EC /* InstructionViewInput.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		FB79463026AB1CDB00E5FD7D /* feedback */ = {
@@ -927,6 +974,7 @@
 				295BE6BA25A6E6ED00590449 /* StatusERouterInput.swift in Sources */,
 				295BE68925A6E16300590449 /* CateringViewInput.swift in Sources */,
 				295BE68D25A6E17E00590449 /* CateringViewController.swift in Sources */,
+				FB75474126AC74EC007DD1EC /* InstructionRouterInput.swift in Sources */,
 				29CA4AD625A5D59100F9B0B6 /* UIImageView+Extensions.swift in Sources */,
 				29CA4A8825A5D19E00F9B0B6 /* Constants.swift in Sources */,
 				29F86EF825A832C200C2927E /* ResponsePlace.swift in Sources */,
@@ -934,6 +982,7 @@
 				29CA4A8B25A5D19E00F9B0B6 /* AppColor.swift in Sources */,
 				29CA4ADC25A5D59100F9B0B6 /* String+Extensions.swift in Sources */,
 				295BE67F25A6E03600590449 /* SearchRouterInput.swift in Sources */,
+				FB75474826AD1302007DD1EC /* InstructionViewInput.swift in Sources */,
 				29CA4ADD25A5D59100F9B0B6 /* MimeType.swift in Sources */,
 				29CA4AC325A5D56D00F9B0B6 /* BaseViewController.swift in Sources */,
 				295BE65825A6DC7300590449 /* MenuPresenter.swift in Sources */,
@@ -977,6 +1026,7 @@
 				29CA4AF225A5D6A400F9B0B6 /* InitialViewInput.swift in Sources */,
 				295BE65E25A6DCC400590449 /* MenuInteractor.swift in Sources */,
 				295BE6CC25A6E84800590449 /* MainViewController.swift in Sources */,
+				FB75474326AC74F8007DD1EC /* InstructionRouter.swift in Sources */,
 				CE9F6E3F25A0CC7300CCFF31 /* InitialViewController.swift in Sources */,
 				29CA4AF525A5D6E500F9B0B6 /* InitialPresenterInput.swift in Sources */,
 				295BE65225A6DC2800590449 /* MenuViewController.swift in Sources */,
@@ -992,6 +1042,7 @@
 				29CA4B0425A5D77E00F9B0B6 /* InitialRouter.swift in Sources */,
 				295BE6CF25A6E89500590449 /* MainRouterInput.swift in Sources */,
 				29CA4B2125A5D94300F9B0B6 /* RequestAdapter.swift in Sources */,
+				FB75473C26AC6D67007DD1EC /* MenuItem.swift in Sources */,
 				FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */,
 				FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */,
 				29CA4AD925A5D59100F9B0B6 /* UITableView+Extensions.swift in Sources */,
@@ -1026,6 +1077,7 @@
 				295BE6C825A6E83700590449 /* MainViewInput.swift in Sources */,
 				29CA4B2025A5D94300F9B0B6 /* NetworkResponse.swift in Sources */,
 				29CA4ADA25A5D59100F9B0B6 /* UIImage+Extensions.swift in Sources */,
+				FB75474626AD1257007DD1EC /* InstructionViewController.swift in Sources */,
 				FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */,
 				295BE66125A6DCEB00590449 /* MenuRouterInput.swift in Sources */,
 				29CA4AC425A5D56D00F9B0B6 /* BaseViewControllerProtocol.swift in Sources */,
