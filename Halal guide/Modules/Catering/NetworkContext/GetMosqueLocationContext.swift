@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GetMosqueLocation: NetworkContext {
+class GetMosqueLocationContext: NetworkContext {
     
     var route: Route
 

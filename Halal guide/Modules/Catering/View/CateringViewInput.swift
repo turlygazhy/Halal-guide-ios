@@ -9,5 +9,7 @@
 import Foundation
 
 protocol CateringViewInput: BaseViewInputProtocol {
-    
+    func setCafes(cafes: [PlaceViewModel])
+    func setShops(shops: [PlaceViewModel])
+    func setMosqueLocations(mosques: [MosqueLocation])
 }

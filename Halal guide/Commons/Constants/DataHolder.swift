@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class DataHolder {
+
+    static let shared = DataHolder()
+
+    var places: [Place]?
+    var mosques: [Mosque]?
+    var mosqueLocations: [MosqueLocation]?
+    
+    private init() { }
+}

@@ -106,6 +106,11 @@
 		29F86EFB25A836E300C2927E /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EFA25A836E300C2927E /* SearchViewCell.swift */; };
 		9FA68795FE52A0F48ACF9D93 /* Pods_Halal_guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609793F0399729641C029C4 /* Pods_Halal_guide.framework */; };
 		A32FD17926AC11B6007B678B /* FeedbackViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FD17826AC11B6007B678B /* FeedbackViewInput.swift */; };
+		A3D1DD3726F2F55400FD55A3 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D1DD3626F2F55400FD55A3 /* DataHolder.swift */; };
+		A3D1DD3926F2FBF600FD55A3 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D1DD3826F2FBF600FD55A3 /* PlaceViewModel.swift */; };
+		A3D1DD3C26F32D1400FD55A3 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D1DD3B26F32D1400FD55A3 /* Collection+Extensions.swift */; };
+		A3D1DD3F26F330D300FD55A3 /* GetMosquesContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D1DD3E26F330D300FD55A3 /* GetMosquesContext.swift */; };
+		A3D1DD4126F3381F00FD55A3 /* GetMosqueLocationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D1DD4026F3381F00FD55A3 /* GetMosqueLocationContext.swift */; };
 		CE9F6E3D25A0CC7300CCFF31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */; };
 		CE9F6E3F25A0CC7300CCFF31 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3E25A0CC7300CCFF31 /* InitialViewController.swift */; };
 		CE9F6E4425A0CC9100CCFF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4325A0CC9100CCFF31 /* Assets.xcassets */; };
@@ -221,6 +226,11 @@
 		29F86EFA25A836E300C2927E /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		4C604E14FB11F8E10040C771 /* Pods-Halal guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halal guide.release.xcconfig"; path = "Target Support Files/Pods-Halal guide/Pods-Halal guide.release.xcconfig"; sourceTree = "<group>"; };
 		A32FD17826AC11B6007B678B /* FeedbackViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewInput.swift; sourceTree = "<group>"; };
+		A3D1DD3626F2F55400FD55A3 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
+		A3D1DD3826F2FBF600FD55A3 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
+		A3D1DD3B26F32D1400FD55A3 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Collection+Extensions.swift"; path = "Halal guide/Modules/Catering/View/Collection+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		A3D1DD3E26F330D300FD55A3 /* GetMosquesContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMosquesContext.swift; sourceTree = "<group>"; };
+		A3D1DD4026F3381F00FD55A3 /* GetMosqueLocationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMosqueLocationContext.swift; sourceTree = "<group>"; };
 		B609793F0399729641C029C4 /* Pods_Halal_guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halal_guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9F6E3925A0CC7300CCFF31 /* Halal guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halal guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -329,6 +339,7 @@
 			children = (
 				295BE68825A6E16300590449 /* CateringViewInput.swift */,
 				295BE68C25A6E17E00590449 /* CateringViewController.swift */,
+				A3D1DD3826F2FBF600FD55A3 /* PlaceViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,6 +486,7 @@
 				29CA4A8225A5D19D00F9B0B6 /* Constants.swift */,
 				29CA4A8025A5D19D00F9B0B6 /* Route.swift */,
 				29CA4A8325A5D19E00F9B0B6 /* UIConstants.swift */,
+				A3D1DD3626F2F55400FD55A3 /* DataHolder.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -521,6 +533,7 @@
 				29CA4ACB25A5D59100F9B0B6 /* UITableViewCell+Extensions.swift */,
 				29CA4AD325A5D59100F9B0B6 /* UIView+Extensions.swift */,
 				29CA4AD225A5D59100F9B0B6 /* UIView+Identifiers.swift */,
+				A3D1DD3B26F32D1400FD55A3 /* Collection+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -617,6 +630,7 @@
 		29CA4B3125A5EA9E00F9B0B6 /* Catering */ = {
 			isa = PBXGroup;
 			children = (
+				A3D1DD3D26F330B700FD55A3 /* NetworkContext */,
 				295BE68725A6E14F00590449 /* Router */,
 				295BE68625A6E14A00590449 /* Interactor */,
 				295BE68525A6E14300590449 /* Presenter */,
@@ -682,6 +696,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A3D1DD3A26F32CFE00FD55A3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A3D1DD3D26F330B700FD55A3 /* NetworkContext */ = {
+			isa = PBXGroup;
+			children = (
+				A3D1DD3E26F330D300FD55A3 /* GetMosquesContext.swift */,
+				A3D1DD4026F3381F00FD55A3 /* GetMosqueLocationContext.swift */,
+			);
+			path = NetworkContext;
+			sourceTree = "<group>";
+		};
 		CE9F6E3025A0CC7200CCFF31 = {
 			isa = PBXGroup;
 			children = (
@@ -703,6 +733,7 @@
 		CE9F6E3B25A0CC7300CCFF31 /* Halal guide */ = {
 			isa = PBXGroup;
 			children = (
+				A3D1DD3A26F32CFE00FD55A3 /* New Group */,
 				29CA4A7825A5CF7800F9B0B6 /* Supporting */,
 				29CA4A7725A5CF7000F9B0B6 /* Services */,
 				29CA4A7625A5CF6900F9B0B6 /* Modules */,
@@ -767,6 +798,7 @@
 				CE9F6E3625A0CC7200CCFF31 /* Frameworks */,
 				CE9F6E3725A0CC7200CCFF31 /* Resources */,
 				C797178FE79673B84F7D14A5 /* [CP] Embed Pods Frameworks */,
+				76E1AB4751EF718A578D8EA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -823,6 +855,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		76E1AB4751EF718A578D8EA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Halal guide/Pods-Halal guide-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Halal guide/Pods-Halal guide-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Halal guide/Pods-Halal guide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C797178FE79673B84F7D14A5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -871,7 +920,10 @@
 			files = (
 				29CA4B1A25A5D94300F9B0B6 /* NetworkError.swift in Sources */,
 				29CA4AE125A5D59100F9B0B6 /* Data+Extensions.swift in Sources */,
+				A3D1DD4126F3381F00FD55A3 /* GetMosqueLocationContext.swift in Sources */,
+				A3D1DD3C26F32D1400FD55A3 /* Collection+Extensions.swift in Sources */,
 				295BE6AA25A6E39600590449 /* StatusEViewController.swift in Sources */,
+				A3D1DD3F26F330D300FD55A3 /* GetMosquesContext.swift in Sources */,
 				295BE6BA25A6E6ED00590449 /* StatusERouterInput.swift in Sources */,
 				295BE68925A6E16300590449 /* CateringViewInput.swift in Sources */,
 				295BE68D25A6E17E00590449 /* CateringViewController.swift in Sources */,
@@ -905,6 +957,7 @@
 				295BE6D525A6E9CA00590449 /* MainTabBarItemPageRouterInput.swift in Sources */,
 				29CA4AB725A5D55E00F9B0B6 /* BaseInteractorProtocols.swift in Sources */,
 				29CA4AA425A5D46900F9B0B6 /* JailbreakDetection.swift in Sources */,
+				A3D1DD3926F2FBF600FD55A3 /* PlaceViewModel.swift in Sources */,
 				295BE6AD25A6E3D500590449 /* StatusEPresenter.swift in Sources */,
 				295BE6A625A6E36F00590449 /* StatusEViewInput.swift in Sources */,
 				295BE65B25A6DCAF00590449 /* MenuInteractorInput.swift in Sources */,
@@ -976,6 +1029,7 @@
 				FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */,
 				295BE66125A6DCEB00590449 /* MenuRouterInput.swift in Sources */,
 				29CA4AC425A5D56D00F9B0B6 /* BaseViewControllerProtocol.swift in Sources */,
+				A3D1DD3726F2F55400FD55A3 /* DataHolder.swift in Sources */,
 				29CA4A8925A5D19E00F9B0B6 /* UIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1116,7 +1170,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C5855PWHN;
+				DEVELOPMENT_TEAM = 7A39G8C3M8;
 				INFOPLIST_FILE = "$(SRCROOT)/Halal guide/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1136,7 +1190,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C5855PWHN;
+				DEVELOPMENT_TEAM = 7A39G8C3M8;
 				INFOPLIST_FILE = "$(SRCROOT)/Halal guide/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

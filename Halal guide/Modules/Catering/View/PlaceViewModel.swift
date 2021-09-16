@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct PlaceViewModel {
+    let longitude: Double
+    let latitude: Double
+    let address: String?
+    let link: String?
+    let title: String?
+}

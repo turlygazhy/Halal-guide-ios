@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupConstants() {
+        GMSServices.provideAPIKey(Constants.apiKey)
+        
         UILabel.appearance().textColor = AppColor.brown.uiColor
         UITextField.appearance().textColor = AppColor.brown.uiColor
         

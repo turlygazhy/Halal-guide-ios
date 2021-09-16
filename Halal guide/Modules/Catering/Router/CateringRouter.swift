@@ -17,11 +17,12 @@ class CateringRouter: CateringRouterInput {
     required init() {
         let viewController = CateringViewController()
         let navigationController = NavigationController(rootViewController: viewController)
+        let networkService = NetworkAdapter(sessionManager: sessionManager)
         let presenter = CateringPresenter(view: viewController)
-        let interactor = CateringInteractor(presenter: presenter)
+        let interactor = CateringInteractor(networkService: networkService, presenter: presenter)
         let menuIconImage = AppImage.menu_my_advice.uiImage?.fitted(in: CGSize(width: 16.0, height: 21.0))
         navigationController.tabBarItem = UITabBarItem(
-            title: "Питание",
+            title: "Карта",
             image: menuIconImage,
             tag: 2
         )

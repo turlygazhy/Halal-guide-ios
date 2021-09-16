@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class GetMosquesContext: NetworkContext {
+    
+    var route: Route
+
+    var encoding: NetworkEncoding { return .url }
+    var method: NetworkMethod { return .get }
+
+    init(page: Int) {
+        route = .getMosques(page: page)
+    }
+}
