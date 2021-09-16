@@ -36,7 +36,7 @@ class SearchDetailViewController: BaseViewController {
         view.backgroundColor = .white
         self.title = place.trademark_title
         
-        itemDetail.text = "todo"
+        itemDetail.text = "Название: \nПредприятие: \nКатегория: \nСтатус: \nРегион: \nТоварные знаки: \n TODO link"
         itemDetail.font = .systemFont(ofSize: 20)
         itemDetail.textColor = .black
         itemDetail.numberOfLines = 0
