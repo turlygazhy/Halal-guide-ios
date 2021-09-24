@@ -20,7 +20,7 @@ class CateringInteractor: CateringInteractorInput {
     init(networkService: NetworkService, presenter: CateringPresenterInput) {
         self.presenter = presenter
         self.networkService = networkService
-    }
+    }    
 
     func getCafes() {
         let places = DataHolder.shared.places
@@ -32,26 +32,13 @@ class CateringInteractor: CateringInteractorInput {
                 
                 mapLinks.forEach({ mapLink in
                     
-                    guard let link = mapLink.link, let url = URLComponents(string: link) else { return }
+                    guard let link = mapLink.link else { return }
                     
-                    var latitude: Double = .zero
-                    var longitude: Double = .zero
-                    
-                    if let coordinates = url.queryItems?.first(where: { $0.name == "m" })?.value,
-                       let latitudeString = coordinates.components(separatedBy: ",").first,
-                       let longitudeString = coordinates.components(separatedBy: ",").last?.components(separatedBy: "/").first {
-                        latitude = Double(latitudeString) ?? .zero
-                        longitude = Double(longitudeString) ?? .zero
-                    } else if let coordinates = url.path.components(separatedBy: "/").first(where: { $0.contains("@") })?.dropFirst(),
-                              let latitudeString = coordinates.components(separatedBy: ",")[safe: 0],
-                              let longitudeString = coordinates.components(separatedBy: ",")[safe: 1] {
-                        latitude = Double(latitudeString) ?? .zero
-                        longitude = Double(longitudeString) ?? .zero
-                    }
+                    let latlng = LatLng(link: link)
                     
                     let placeViewModel = PlaceViewModel(
-                        longitude: longitude,
-                        latitude: latitude,
+                        longitude: latlng.longitude,
+                        latitude: latlng.latitude,
                         address: mapLink.address,
                         link: mapLink.link,
                         title: place.trademark_title
@@ -74,26 +61,13 @@ class CateringInteractor: CateringInteractorInput {
             if let mapLinks = place.maplink {
                 mapLinks.forEach({ mapLink in
                     
-                    guard let link = mapLink.link, let url = URLComponents(string: link) else { return }
+                    guard let link = mapLink.link else { return }
                     
-                    var latitude: Double = .zero
-                    var longitude: Double = .zero
-                    
-                    if let coordinates = url.queryItems?.first(where: { $0.name == "m" })?.value,
-                       let latitudeString = coordinates.components(separatedBy: ",").first,
-                       let longitudeString = coordinates.components(separatedBy: ",").last?.components(separatedBy: "/").first {
-                        latitude = Double(latitudeString) ?? .zero
-                        longitude = Double(longitudeString) ?? .zero
-                    } else if let coordinates = url.path.components(separatedBy: "/").first(where: { $0.contains("@") })?.dropFirst(),
-                              let latitudeString = coordinates.components(separatedBy: ",")[safe: 0],
-                              let longitudeString = coordinates.components(separatedBy: ",")[safe: 1] {
-                        latitude = Double(latitudeString) ?? .zero
-                        longitude = Double(longitudeString) ?? .zero
-                    }
+                    let latlng = LatLng(link: link)
                     
                     let placeViewModel = PlaceViewModel(
-                        longitude: longitude,
-                        latitude: latitude,
+                        longitude: latlng.longitude,
+                        latitude: latlng.latitude,
                         address: mapLink.address,
                         link: mapLink.link,
                         title: place.trademark_title

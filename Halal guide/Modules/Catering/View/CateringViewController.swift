@@ -16,7 +16,7 @@ class CateringViewController: BaseViewController {
     var interactor: CateringInteractorInput?
 
     private let mapView = GMSMapView()
-    private let segmentedControl = UISegmentedControl(items: ["Питание", "Магазины", "Мечети"])
+    private let segmentedControl = UISegmentedControl(items: ["Питание", "Магазины"])
     
     let locationManager = CLLocationManager()
 
@@ -25,6 +25,8 @@ class CateringViewController: BaseViewController {
         
         setupViews()
         setConstraints()
+        
+        self.navigationItem.largeTitleDisplayMode = .never
         
         interactor?.getCafes()
     }
@@ -80,10 +82,6 @@ class CateringViewController: BaseViewController {
             interactor?.getCafes()
         case 1: //Магазины
             interactor?.getShops()
-        case 2: // Мечети
-            print(DataHolder.shared.mosqueLocations?.count)
-            interactor?.getMosques()
-            return
         default:
             interactor?.getCafes()
         }
