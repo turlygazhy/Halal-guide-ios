@@ -19,4 +19,16 @@ class CateringPresenter: CateringPresenterInput {
     init(view: CateringViewInput) {
         self.view = view
     }
+    
+    func setCafes(cafes: [PlaceViewModel]) {
+        view?.setCafes(cafes: cafes)
+    }
+    
+    func setShops(shops: [PlaceViewModel]) {
+        view?.setShops(shops: shops)
+    }
+    
+    func setMosqueLocations(mosques: [MosqueLocation]) {
+        view?.setMosqueLocations(mosques: mosques)
+    }
 }

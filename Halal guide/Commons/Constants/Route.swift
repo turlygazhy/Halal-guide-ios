@@ -10,8 +10,19 @@ public enum Route: RouteProtocol {
     case root(endpoint: String)
     case getPlaces
     case getAdditions
-    
-    public var serverUrl: String { return Constants.baseURL }
+    case getMosques(page: Int)
+    case getMosqueLocation(id: String)
+
+    public var serverUrl: String {
+        switch self {
+        case .getMosqueLocation:
+            return Constants.baseMuftiatURL
+        case .getMosques:
+            return Constants.baseMuftiatURL
+        default:
+            return Constants.baseURL
+        }
+    }
 }
 
 extension Route {
@@ -21,6 +32,8 @@ extension Route {
         case .root(let endpoint): return endpoint
         case .getPlaces: return "/ru/api/mekemeler/1/1"
         case .getAdditions: return "/ru/api/qospalar/1/1"
+        case .getMosques(let page): return "/mosques/?page="+String(page)
+        case .getMosqueLocation(let id): return "/mosques/"+id
         }
     }
 }

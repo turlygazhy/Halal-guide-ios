@@ -9,5 +9,7 @@
 import Foundation
 
 protocol CateringInteractorInput: class {
-    
+    func getCafes()
+    func getShops()
+    func getMosques()
 }
