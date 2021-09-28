@@ -15,12 +15,11 @@ class SearchDetailRouter: SearchDetailRouterInput {
     private unowned let navigationController: NavigationController
     
     init(navigationController: NavigationController, place: Place) {
+        let storyboard = UIStoryboard(name: "Common", bundle: nil)
         self.navigationController = navigationController
-        
-        let viewController = SearchDetailViewController(place: place)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SearchDetailViewController") as! SearchDetailViewController
+        viewController.setPlace(place: place)
         self.searchDetailViewController = viewController
-        viewController.router = self
-        
         navigationController.pushViewController(viewController, animated: true)
     }
 }
