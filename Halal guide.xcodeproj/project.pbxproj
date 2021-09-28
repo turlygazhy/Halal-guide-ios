@@ -120,11 +120,17 @@
 		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
 		FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */; };
 		FB75028926FC964C00A1B6C3 /* LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028826FC964C00A1B6C3 /* LatLng.swift */; };
+		FB75028D26FE08AB00A1B6C3 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB75028C26FE08AB00A1B6C3 /* Common.storyboard */; };
+		FB75028F2702BCE000A1B6C3 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */; };
 		FB75473C26AC6D67007DD1EC /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75473B26AC6D67007DD1EC /* MenuItem.swift */; };
 		FB75474126AC74EC007DD1EC /* InstructionRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474026AC74EC007DD1EC /* InstructionRouterInput.swift */; };
 		FB75474326AC74F8007DD1EC /* InstructionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474226AC74F8007DD1EC /* InstructionRouter.swift */; };
 		FB75474626AD1257007DD1EC /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474526AD1257007DD1EC /* InstructionViewController.swift */; };
 		FB75474826AD1302007DD1EC /* InstructionViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474726AD1302007DD1EC /* InstructionViewInput.swift */; };
+		FB75474C26AD1C0D007DD1EC /* SearchDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474B26AD1C0D007DD1EC /* SearchDetailRouter.swift */; };
+		FB75474E26AD1C28007DD1EC /* SearchDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474D26AD1C28007DD1EC /* SearchDetailRouterInput.swift */; };
+		FB75475126AD1D0E007DD1EC /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75475026AD1D0E007DD1EC /* SearchDetailViewController.swift */; };
+		FB75475326AD1D30007DD1EC /* SearchDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75475226AD1D30007DD1EC /* SearchDetailViewInput.swift */; };
 		FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79462E26AB047400E5FD7D /* MenuViewCell.swift */; };
 		FB79463426AB1D1900E5FD7D /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */; };
 		FB79463626AB1D4900E5FD7D /* FeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */; };
@@ -249,11 +255,17 @@
 		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
 		FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionsContext.swift; sourceTree = "<group>"; };
 		FB75028826FC964C00A1B6C3 /* LatLng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLng.swift; sourceTree = "<group>"; };
+		FB75028C26FE08AB00A1B6C3 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
+		FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtension.swift; path = "Halal guide/Commons/Storyboard/NSAttributedStringExtension.swift"; sourceTree = SOURCE_ROOT; };
 		FB75473B26AC6D67007DD1EC /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		FB75474026AC74EC007DD1EC /* InstructionRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRouterInput.swift; sourceTree = "<group>"; };
 		FB75474226AC74F8007DD1EC /* InstructionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRouter.swift; sourceTree = "<group>"; };
 		FB75474526AD1257007DD1EC /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		FB75474726AD1302007DD1EC /* InstructionViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewInput.swift; sourceTree = "<group>"; };
+		FB75474B26AD1C0D007DD1EC /* SearchDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailRouter.swift; sourceTree = "<group>"; };
+		FB75474D26AD1C28007DD1EC /* SearchDetailRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailRouterInput.swift; sourceTree = "<group>"; };
+		FB75475026AD1D0E007DD1EC /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		FB75475226AD1D30007DD1EC /* SearchDetailViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewInput.swift; sourceTree = "<group>"; };
 		FB79462E26AB047400E5FD7D /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRouter.swift; sourceTree = "<group>"; };
@@ -442,6 +454,7 @@
 		29CA4A7525A5CF5F00F9B0B6 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				FB75028A26FE085300A1B6C3 /* Storyboard */,
 				29CA4AC825A5D58700F9B0B6 /* Utils */,
 				29CA4AAC25A5D53E00F9B0B6 /* Protocols */,
 				29CA4A9B25A5D39900F9B0B6 /* Models */,
@@ -458,6 +471,7 @@
 		29CA4A7625A5CF6900F9B0B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FB75474926AD1BEF007DD1EC /* SearchDetail */,
 				FB75473E26AC74CC007DD1EC /* instruction */,
 				FB79463026AB1CDB00E5FD7D /* feedback */,
 				29CA4B3425A5EB1300F9B0B6 /* Menu */,
@@ -548,6 +562,7 @@
 				29CA4AD325A5D59100F9B0B6 /* UIView+Extensions.swift */,
 				29CA4AD225A5D59100F9B0B6 /* UIView+Identifiers.swift */,
 				A3D1DD3B26F32D1400FD55A3 /* Collection+Extensions.swift */,
+				FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -766,6 +781,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FB75028A26FE085300A1B6C3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FB75028C26FE08AB00A1B6C3 /* Common.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		FB75473D26AC6D6C007DD1EC /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -799,6 +822,33 @@
 				FB75474726AD1302007DD1EC /* InstructionViewInput.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		FB75474926AD1BEF007DD1EC /* SearchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FB75474F26AD1D03007DD1EC /* View */,
+				FB75474A26AD1BFB007DD1EC /* Router */,
+			);
+			path = SearchDetail;
+			sourceTree = "<group>";
+		};
+		FB75474A26AD1BFB007DD1EC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FB75474B26AD1C0D007DD1EC /* SearchDetailRouter.swift */,
+				FB75474D26AD1C28007DD1EC /* SearchDetailRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FB75474F26AD1D03007DD1EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB75475026AD1D0E007DD1EC /* SearchDetailViewController.swift */,
+				FB75475226AD1D30007DD1EC /* SearchDetailViewInput.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FB79463026AB1CDB00E5FD7D /* feedback */ = {
@@ -889,6 +939,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB75028D26FE08AB00A1B6C3 /* Common.storyboard in Resources */,
 				CE9F6E4725A0CC9100CCFF31 /* LaunchScreen.storyboard in Resources */,
 				CE9F6E4425A0CC9100CCFF31 /* Assets.xcassets in Resources */,
 			);
@@ -1027,16 +1078,19 @@
 				295BE65225A6DC2800590449 /* MenuViewController.swift in Sources */,
 				29CA4AD825A5D59100F9B0B6 /* UITableViewCell+Extensions.swift in Sources */,
 				29CA4A9625A5D35700F9B0B6 /* Result.swift in Sources */,
+				FB75028F2702BCE000A1B6C3 /* NSAttributedStringExtension.swift in Sources */,
 				295BE69925A6E22400590449 /* CateringInteractor.swift in Sources */,
 				29CA4B1925A5D94300F9B0B6 /* MultipartFormDataNetworkContext.swift in Sources */,
 				29CA4B1F25A5D94300F9B0B6 /* AppSessionManager.swift in Sources */,
 				295BE67925A6DFDF00590449 /* SearchInteractorInput.swift in Sources */,
 				29CA4AF825A5D6F700F9B0B6 /* InitialPresenter.swift in Sources */,
+				FB75475326AD1D30007DD1EC /* SearchDetailViewInput.swift in Sources */,
 				295BE65525A6DC5E00590449 /* MenuPresenterInput.swift in Sources */,
 				295BE66425A6DD0200590449 /* MenuRouter.swift in Sources */,
 				29CA4B0425A5D77E00F9B0B6 /* InitialRouter.swift in Sources */,
 				295BE6CF25A6E89500590449 /* MainRouterInput.swift in Sources */,
 				29CA4B2125A5D94300F9B0B6 /* RequestAdapter.swift in Sources */,
+				FB75474C26AD1C0D007DD1EC /* SearchDetailRouter.swift in Sources */,
 				FB75473C26AC6D67007DD1EC /* MenuItem.swift in Sources */,
 				FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */,
 				FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */,
@@ -1047,7 +1101,9 @@
 				29CA4ADE25A5D59100F9B0B6 /* Dictionary+Extensions.swift in Sources */,
 				29CA4B1B25A5D94300F9B0B6 /* SessionManager.swift in Sources */,
 				295BE64E25A6DC0900590449 /* MenuViewInput.swift in Sources */,
+				FB75474E26AD1C28007DD1EC /* SearchDetailRouterInput.swift in Sources */,
 				FB79463826AB1D6000E5FD7D /* FeedbackRouterInput.swift in Sources */,
+				FB75475126AD1D0E007DD1EC /* SearchDetailViewController.swift in Sources */,
 				295BE6D225A6E8A500590449 /* MainRouter.swift in Sources */,
 				29F86EF225A8319900C2927E /* GetPlacesContext.swift in Sources */,
 				CE9F6E3D25A0CC7300CCFF31 /* AppDelegate.swift in Sources */,

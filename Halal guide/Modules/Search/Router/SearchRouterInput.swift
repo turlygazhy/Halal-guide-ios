@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SearchRouterInput: class {
-    
+    func openDetail(place: Place)
 }

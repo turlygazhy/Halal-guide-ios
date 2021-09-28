@@ -1,0 +1,56 @@
+Index: Halal guide.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n\t<key>SchemeUserState</key>\n\t<dict>\n\t\t<key>Halal guide.xcscheme_^#shared#^_</key>\n\t\t<dict>\n\t\t\t<key>orderHint</key>\n\t\t\t<integer>2</integer>\n\t\t</dict>\n\t</dict>\n</dict>\n</plist>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Halal guide.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist b/Halal guide.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist
+--- a/Halal guide.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist	(revision b7cb261f3a85788dc440d296e91307c9e257ac41)
++++ b/Halal guide.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist	(date 1632488726687)
+@@ -7,7 +7,7 @@
+ 		<key>Halal guide.xcscheme_^#shared#^_</key>
+ 		<dict>
+ 			<key>orderHint</key>
+-			<integer>2</integer>
++			<integer>4</integer>
+ 		</dict>
+ 	</dict>
+ </dict>
+Index: Pods/Pods.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n\t<key>SchemeUserState</key>\n\t<dict>\n\t\t<key>Alamofire.xcscheme_^#shared#^_</key>\n\t\t<dict>\n\t\t\t<key>orderHint</key>\n\t\t\t<integer>4</integer>\n\t\t</dict>\n\t\t<key>IQKeyboardManagerSwift.xcscheme_^#shared#^_</key>\n\t\t<dict>\n\t\t\t<key>orderHint</key>\n\t\t\t<integer>1</integer>\n\t\t</dict>\n\t\t<key>ImageLoader.xcscheme_^#shared#^_</key>\n\t\t<dict>\n\t\t\t<key>orderHint</key>\n\t\t\t<integer>0</integer>\n\t\t</dict>\n\t\t<key>Pods-Halal guide.xcscheme_^#shared#^_</key>\n\t\t<dict>\n\t\t\t<key>orderHint</key>\n\t\t\t<integer>3</integer>\n\t\t</dict>\n\t</dict>\n</dict>\n</plist>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Pods/Pods.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist b/Pods/Pods.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist
+--- a/Pods/Pods.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist	(revision b7cb261f3a85788dc440d296e91307c9e257ac41)
++++ b/Pods/Pods.xcodeproj/xcuserdata/erasylturlygazy.xcuserdatad/xcschemes/xcschememanagement.plist	(date 1632488726687)
+@@ -7,22 +7,22 @@
+ 		<key>Alamofire.xcscheme_^#shared#^_</key>
+ 		<dict>
+ 			<key>orderHint</key>
+-			<integer>4</integer>
++			<integer>3</integer>
+ 		</dict>
+ 		<key>IQKeyboardManagerSwift.xcscheme_^#shared#^_</key>
+ 		<dict>
+ 			<key>orderHint</key>
+-			<integer>1</integer>
++			<integer>4</integer>
+ 		</dict>
+ 		<key>ImageLoader.xcscheme_^#shared#^_</key>
+ 		<dict>
+ 			<key>orderHint</key>
+-			<integer>0</integer>
++			<integer>2</integer>
+ 		</dict>
+ 		<key>Pods-Halal guide.xcscheme_^#shared#^_</key>
+ 		<dict>
+ 			<key>orderHint</key>
+-			<integer>3</integer>
++			<integer>1</integer>
+ 		</dict>
+ 	</dict>
+ </dict>

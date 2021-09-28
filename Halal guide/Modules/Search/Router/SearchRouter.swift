@@ -35,6 +35,10 @@ class SearchRouter: SearchRouterInput {
         searchViewController.router = self
         searchViewController.interactor = interactor
     }
+    
+    func openDetail(place: Place) {
+        _ = SearchDetailRouter(navigationController: navigationController, place: place)
+    }
 }
 
 extension SearchRouter: MainTabBarItemPageRouterInput {
