@@ -22,13 +22,10 @@ class SearchRouter: SearchRouterInput {
         let interactor = SearchInteractor(networkService: networkService, presenter: presenter)
         let menuIconImage = AppImage.menu_search.uiImage?.fitted(in: CGSize(width: 16.0, height: 21.0))
         navigationController.tabBarItem = UITabBarItem(
-            title: "Поиск",
+            title: "",
             image: menuIconImage,
             tag: 2
         )
-        if #available(iOS 11.0, *) {
-            navigationController.navigationBar.prefersLargeTitles = true
-        }
 
         self.navigationController = navigationController
         searchViewController = viewController

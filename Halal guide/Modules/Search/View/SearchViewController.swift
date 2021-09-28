@@ -21,10 +21,24 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))//todo должно быть до фильтра
+        //todo нужно убрать тайтл
+        searchBar.placeholder = "Предприятие, товар, марка"
+        searchBar.delegate = self
+        let searchButton = UIBarButtonItem(customView: searchBar)
+        navigationItem.leftBarButtonItem = searchButton
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(filterTapped))//todo need to be filter icon
+        
         setupViews()
         setConstraints()
         
         interactor?.getPlaces()
+    }
+    
+    @objc func filterTapped() {
+        //todo
+        print("filter tapped")
     }
     
     private func setupViews() {
@@ -94,4 +108,12 @@ extension SearchViewController: MainTabBarItemPageRouterInput {
     func reloadPage() {
         
     }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
+    
 }
