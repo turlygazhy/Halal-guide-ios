@@ -23,11 +23,11 @@ class CateringInteractor: CateringInteractorInput {
     }    
 
     func getCafes() {
-        let places = DataHolder.shared.places
+        let places = DataHolder.shared.getPlaces()
         var items = [PlaceViewModel]()
-        let cafes = places?.filter { $0.category?.slug == "tamaqtanu-oryndary" || $0.category?.slug == "fast-fud-onimderi"}
+        let cafes = places.filter { $0.category?.slug == "tamaqtanu-oryndary" || $0.category?.slug == "fast-fud-onimderi"}
 
-        cafes?.forEach({ place in
+        cafes.forEach({ place in
             if let mapLinks = place.maplink {
                 
                 mapLinks.forEach({ mapLink in
@@ -54,10 +54,10 @@ class CateringInteractor: CateringInteractorInput {
     }
     
     func getShops() {
-        let places = DataHolder.shared.places
+        let places = DataHolder.shared.getPlaces()
         var items = [PlaceViewModel]()
-        let shops = places?.filter { $0.category?.slug == "et-dukeni"}
-        shops?.forEach({ place in
+        let shops = places.filter { $0.category?.slug == "et-dukeni"}
+        shops.forEach({ place in
             if let mapLinks = place.maplink {
                 mapLinks.forEach({ mapLink in
                     

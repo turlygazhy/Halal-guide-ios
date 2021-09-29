@@ -29,7 +29,7 @@ class SearchViewController: BaseViewController {
         navigationItem.leftBarButtonItem = searchButton
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(filterTapped))//todo need to be filter icon
-        
+        //todo нужно что бы когда выставлен фильтр это показывалось на иконке фильтра
         setupViews()
         setConstraints()
         

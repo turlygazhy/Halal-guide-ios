@@ -12,13 +12,19 @@ class SearchInteractor: SearchInteractorInput {
     
     private let presenter: SearchPresenterInput
     private let networkService: NetworkService
-
+    
     init(networkService: NetworkService, presenter: SearchPresenterInput) {
         self.networkService = networkService
         self.presenter = presenter
     }
     
     func getPlaces() {
+        
+        if DataHolder.shared.isPlacesExist() {
+            self.presenter.setData(places: DataHolder.shared.getPlaces())
+            return
+        }
+        
         presenter.startLoading()
         let context = GetPlacesContext()
         networkService.load(context: context) { [weak self] serverResponse in
@@ -44,7 +50,7 @@ class SearchInteractor: SearchInteractorInput {
                 return
             }
             
-            DataHolder.shared.places = items
+            DataHolder.shared.setPlaces(places: items)
             
             self?.presenter.setData(places: items)
             self?.presenter.stopLoading()
