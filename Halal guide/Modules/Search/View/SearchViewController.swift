@@ -28,7 +28,8 @@ class SearchViewController: BaseViewController {
         let searchButton = UIBarButtonItem(customView: searchBar)
         navigationItem.leftBarButtonItem = searchButton
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(filterTapped))//todo need to be filter icon
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter24"), style: .plain, target: self, action: #selector(filterTapped))
+        navigationItem.rightBarButtonItem?.tintColor = AppColor.green.uiColor
         //todo нужно что бы когда выставлен фильтр это показывалось на иконке фильтра
         setupViews()
         setConstraints()

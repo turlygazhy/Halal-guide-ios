@@ -475,6 +475,7 @@
 		29CA4A7625A5CF6900F9B0B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FB60078D27055E9800C9C67B /* SearchFilter */,
 				FB75474926AD1BEF007DD1EC /* SearchDetail */,
 				FB75473E26AC74CC007DD1EC /* instruction */,
 				FB79463026AB1CDB00E5FD7D /* feedback */,
@@ -769,6 +770,13 @@
 				CE9F6E3C25A0CC7300CCFF31 /* AppDelegate.swift */,
 			);
 			path = "Halal guide";
+			sourceTree = "<group>";
+		};
+		FB60078D27055E9800C9C67B /* SearchFilter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchFilter;
 			sourceTree = "<group>";
 		};
 		FB65DE1226A83FAA004868B8 /* NetworkContext */ = {
