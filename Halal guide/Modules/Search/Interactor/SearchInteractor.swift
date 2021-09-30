@@ -23,7 +23,7 @@ class SearchInteractor: SearchInteractorInput {
         if DataHolder.shared.isPlacesExist() {
             self.presenter.setData(places: DataHolder.shared.getPlaces())
             return
-        }
+        } 
         
         presenter.startLoading()
         let context = GetPlacesContext()

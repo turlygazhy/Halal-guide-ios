@@ -115,6 +115,8 @@
 		CE9F6E3F25A0CC7300CCFF31 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F6E3E25A0CC7300CCFF31 /* InitialViewController.swift */; };
 		CE9F6E4425A0CC9100CCFF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4325A0CC9100CCFF31 /* Assets.xcassets */; };
 		CE9F6E4725A0CC9100CCFF31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4525A0CC9100CCFF31 /* LaunchScreen.storyboard */; };
+		FB60078A270475BE00C9C67B /* PhoneMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB600789270475BE00C9C67B /* PhoneMemory.swift */; };
+		FB60078C2705551500C9C67B /* GetApiUpdateDateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */; };
 		FB65DE0D26A7E41D004868B8 /* ResponseAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */; };
 		FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0E26A7E4B6004868B8 /* Addition.swift */; };
 		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
@@ -250,6 +252,8 @@
 		CE9F6E4325A0CC9100CCFF31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9F6E4625A0CC9100CCFF31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9F6E4825A0CC9100CCFF31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB600789270475BE00C9C67B /* PhoneMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneMemory.swift; path = "Halal guide/Commons/Storyboard/PhoneMemory.swift"; sourceTree = SOURCE_ROOT; };
+		FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiUpdateDateContext.swift; sourceTree = "<group>"; };
 		FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAdditions.swift; sourceTree = "<group>"; };
 		FB65DE0E26A7E4B6004868B8 /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
@@ -563,6 +567,7 @@
 				29CA4AD225A5D59100F9B0B6 /* UIView+Identifiers.swift */,
 				A3D1DD3B26F32D1400FD55A3 /* Collection+Extensions.swift */,
 				FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */,
+				FB600789270475BE00C9C67B /* PhoneMemory.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -697,6 +702,7 @@
 			isa = PBXGroup;
 			children = (
 				29F86EF125A8319900C2927E /* GetPlacesContext.swift */,
+				FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */,
 			);
 			path = NetworkContext;
 			sourceTree = "<group>";
@@ -1069,6 +1075,7 @@
 				295BE69F25A6E27300590449 /* CateringRouter.swift in Sources */,
 				29CA4A9725A5D35700F9B0B6 /* LocalError.swift in Sources */,
 				29CA4A8725A5D19E00F9B0B6 /* AppImage.swift in Sources */,
+				FB60078C2705551500C9C67B /* GetApiUpdateDateContext.swift in Sources */,
 				29CA4AF225A5D6A400F9B0B6 /* InitialViewInput.swift in Sources */,
 				295BE65E25A6DCC400590449 /* MenuInteractor.swift in Sources */,
 				295BE6CC25A6E84800590449 /* MainViewController.swift in Sources */,
@@ -1135,6 +1142,7 @@
 				29CA4AC425A5D56D00F9B0B6 /* BaseViewControllerProtocol.swift in Sources */,
 				A3D1DD3726F2F55400FD55A3 /* DataHolder.swift in Sources */,
 				29CA4A8925A5D19E00F9B0B6 /* UIConstants.swift in Sources */,
+				FB60078A270475BE00C9C67B /* PhoneMemory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

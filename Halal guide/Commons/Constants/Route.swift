@@ -12,7 +12,8 @@ public enum Route: RouteProtocol {
     case getAdditions
     case getMosques(page: Int)
     case getMosqueLocation(id: String)
-
+    case getApiUpdateDate
+    
     public var serverUrl: String {
         switch self {
         case .getMosqueLocation:
@@ -34,6 +35,7 @@ extension Route {
         case .getAdditions: return "/ru/api/qospalar/1/1"
         case .getMosques(let page): return "/mosques/?page="+String(page)
         case .getMosqueLocation(let id): return "/mosques/"+id
+        case .getApiUpdateDate: return "/ru/api/mlast/1/1"
         }
     }
 }

@@ -19,15 +19,51 @@ class DataHolder {
     private init() { }
     
     func isPlacesExist() -> Bool {
-        places != nil && !places!.isEmpty
+        //when we already init var places
+        if places != nil && !places!.isEmpty {
+            return true
+        }
+        
+        //when no updates after last save
+        if apiUpdated() {
+            return false
+        } else {
+            let placesInMemory = PhoneMemory.readPlaces()
+            if placesInMemory.isEmpty {
+                return false
+            }
+            setPlaces(places: placesInMemory)
+            return true
+        }
+        
     }
     
     func getPlaces() -> [Place] {
-        places! //todo
+        places!
     }
     
     func setPlaces(places: [Place]) {
-        //todo save to phone
+        PhoneMemory.savePlaces(places: places)
         self.places = places
+    }
+    
+    func apiUpdated() -> Bool {
+        let saveDate = PhoneMemory.getLastSaveDate()
+        getApiUpdatedDate()
+        
+        
+        return false //todo
+    }
+    
+    func getApiUpdatedDate() { //todo not working
+        let networkService = NetworkAdapter(sessionManager: sessionManager)
+        networkService.load(context: GetApiUpdateDateContext()) { [weak self] serverResponse in
+            guard let interactor = self else { return }
+            guard serverResponse.isSuccess else { return }
+            guard let placesResponse: ResponsePlaces = serverResponse.decode() else { return }
+            
+            guard let items = placesResponse.data else { return }
+            print(items)//todo delete line
+        }
     }
 }

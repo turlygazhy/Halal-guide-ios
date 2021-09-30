@@ -13,11 +13,11 @@ class SearchDetailViewController: BaseViewController {
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var mekemeTitleLabel: UILabel!//todo выходит за рамки экрана
+    @IBOutlet weak var mekemeTitleLabel: UILabel!//todo выходит за рамки экрана kausar
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var regionLabel: UILabel!
-    @IBOutlet weak var trademarksLabel: UILabel!
+    @IBOutlet weak var trademarksLabel: UILabel! //todo lengerskoe выходит за рамки
     @IBOutlet weak var openInWebTextView: UITextView!
     
     var place: Place?
@@ -40,7 +40,7 @@ class SearchDetailViewController: BaseViewController {
         statusLabel.text = place?.status?.title
 //        statusLabel.textColor todo
         regionLabel.text = place?.location?.title
-        trademarksLabel.text = place?.trademarks//todo test after search
+        trademarksLabel.text = place?.trademarks
         setMoreLink()
     }
     

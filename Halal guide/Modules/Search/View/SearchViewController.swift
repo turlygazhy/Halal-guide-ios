@@ -13,11 +13,11 @@ class SearchViewController: BaseViewController {
     
     var router: SearchRouterInput?
     var interactor: SearchInteractorInput?
-
+    
     private var dataSource = [Place]()
-
+    
     private let tableView = UITableView(frame: .zero, style: .grouped)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,7 +61,7 @@ class SearchViewController: BaseViewController {
     
     private func setConstraints() {
         var layoutConstraints = [NSLayoutConstraint]()
-
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         layoutConstraints += [
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -69,7 +69,7 @@ class SearchViewController: BaseViewController {
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
-
+        
         NSLayoutConstraint.activate(layoutConstraints)
     }
 }
@@ -113,7 +113,14 @@ extension SearchViewController: MainTabBarItemPageRouterInput {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        print("searchText: \(searchText)")
+        dataSource = DataHolder.shared.getPlaces()
+        if !searchText.isEmpty {
+            dataSource = dataSource.filter {
+                ($0.mekeme_title?.localizedCaseInsensitiveContains(searchText))! || ($0.trademark_title?.localizedCaseInsensitiveContains(searchText))! || ($0.trademarks?.localizedCaseInsensitiveContains(searchText))!
+            }
+        }
+        tableView.reloadData()
     }
     
 }
