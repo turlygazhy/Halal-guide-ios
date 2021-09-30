@@ -23,7 +23,7 @@ class CateringViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
+        setupViews()//todo нужна кнопка открыть на карте
         setConstraints()
         
         self.navigationItem.largeTitleDisplayMode = .never
