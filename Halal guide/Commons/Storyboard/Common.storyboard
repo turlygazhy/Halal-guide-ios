@@ -9,6 +9,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Filter View Controller-->
+        <scene sceneID="cXe-8C-lfZ">
+            <objects>
+                <viewController storyboardIdentifier="FilterViewController" id="M9E-c5-NMJ" customClass="FilterViewController" customModule="Halal_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r6I-2h-126">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регион" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-Xl-16u">
+                                <rect key="frame" x="16" y="144" width="382" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5kA-R5-5td"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Ea-Xl-16u" firstAttribute="top" secondItem="5kA-R5-5td" secondAttribute="top" constant="100" id="7da-Dp-i92"/>
+                            <constraint firstItem="0Ea-Xl-16u" firstAttribute="leading" secondItem="5kA-R5-5td" secondAttribute="leading" constant="16" id="A8u-Id-16H"/>
+                            <constraint firstItem="5kA-R5-5td" firstAttribute="trailing" secondItem="0Ea-Xl-16u" secondAttribute="trailing" constant="16" id="wJG-2a-LlU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ymf-i7-1cB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-688" y="58"/>
+        </scene>
         <!--Search Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>

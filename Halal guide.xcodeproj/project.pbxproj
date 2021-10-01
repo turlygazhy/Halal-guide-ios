@@ -117,6 +117,7 @@
 		CE9F6E4725A0CC9100CCFF31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4525A0CC9100CCFF31 /* LaunchScreen.storyboard */; };
 		FB60078A270475BE00C9C67B /* PhoneMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB600789270475BE00C9C67B /* PhoneMemory.swift */; };
 		FB60078C2705551500C9C67B /* GetApiUpdateDateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */; };
+		FB60078F27069FD900C9C67B /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078E27069FD900C9C67B /* FilterViewController.swift */; };
 		FB65DE0D26A7E41D004868B8 /* ResponseAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */; };
 		FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0E26A7E4B6004868B8 /* Addition.swift */; };
 		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
@@ -254,6 +255,7 @@
 		CE9F6E4825A0CC9100CCFF31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB600789270475BE00C9C67B /* PhoneMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneMemory.swift; path = "Halal guide/Commons/Storyboard/PhoneMemory.swift"; sourceTree = SOURCE_ROOT; };
 		FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiUpdateDateContext.swift; sourceTree = "<group>"; };
+		FB60078E27069FD900C9C67B /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAdditions.swift; sourceTree = "<group>"; };
 		FB65DE0E26A7E4B6004868B8 /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
@@ -775,6 +777,7 @@
 		FB60078D27055E9800C9C67B /* SearchFilter */ = {
 			isa = PBXGroup;
 			children = (
+				FB60078E27069FD900C9C67B /* FilterViewController.swift */,
 			);
 			path = SearchFilter;
 			sourceTree = "<group>";
@@ -1031,6 +1034,7 @@
 				A3D1DD3C26F32D1400FD55A3 /* Collection+Extensions.swift in Sources */,
 				295BE6AA25A6E39600590449 /* StatusEViewController.swift in Sources */,
 				A3D1DD3F26F330D300FD55A3 /* GetMosquesContext.swift in Sources */,
+				FB60078F27069FD900C9C67B /* FilterViewController.swift in Sources */,
 				295BE6BA25A6E6ED00590449 /* StatusERouterInput.swift in Sources */,
 				295BE68925A6E16300590449 /* CateringViewInput.swift in Sources */,
 				295BE68D25A6E17E00590449 /* CateringViewController.swift in Sources */,

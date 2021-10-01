@@ -38,8 +38,9 @@ class SearchViewController: BaseViewController {
     }
     
     @objc func filterTapped() {
-        //todo
-        print("filter tapped")
+        let storyboard = UIStoryboard(name: "Common", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setupViews() {
