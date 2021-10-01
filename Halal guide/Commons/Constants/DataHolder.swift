@@ -13,6 +13,7 @@ class DataHolder {
     static let shared = DataHolder()
     
     private var places: [Place]?
+    private var additions: [Addition]?
     var mosques: [Mosque]?
     var mosqueLocations: [MosqueLocation]?
     
@@ -45,6 +46,15 @@ class DataHolder {
     func setPlaces(places: [Place]) {
         PhoneMemory.savePlaces(places: places)
         self.places = places
+    }
+    
+    func setAdditions(additions: [Addition]) {
+        //todo save to memory?
+        self.additions = additions
+    }
+    
+    func getAdditions() -> [Addition] {
+        additions!
     }
     
     func apiUpdated() -> Bool {

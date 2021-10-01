@@ -26,9 +26,6 @@ class StatusERouter: StatusERouterInput {
             image: menuIconImage,
             tag: 2
         )
-        if #available(iOS 11.0, *) {
-            navigationController.navigationBar.prefersLargeTitles = true
-        }
 
         self.navigationController = navigationController
         statusEViewController = viewController
