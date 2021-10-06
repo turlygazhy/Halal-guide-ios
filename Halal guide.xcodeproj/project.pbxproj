@@ -118,10 +118,12 @@
 		FB60078A270475BE00C9C67B /* PhoneMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB600789270475BE00C9C67B /* PhoneMemory.swift */; };
 		FB60078C2705551500C9C67B /* GetApiUpdateDateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */; };
 		FB60078F27069FD900C9C67B /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078E27069FD900C9C67B /* FilterViewController.swift */; };
+		FB6007932706AB8000C9C67B /* AdditionDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6007922706AB8000C9C67B /* AdditionDetailRouter.swift */; };
 		FB65DE0D26A7E41D004868B8 /* ResponseAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */; };
 		FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE0E26A7E4B6004868B8 /* Addition.swift */; };
 		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
 		FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */; };
+		FB72D81A270DFEE3008F2270 /* AdditionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D819270DFEE3008F2270 /* AdditionDetailViewController.swift */; };
 		FB75028926FC964C00A1B6C3 /* LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028826FC964C00A1B6C3 /* LatLng.swift */; };
 		FB75028D26FE08AB00A1B6C3 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB75028C26FE08AB00A1B6C3 /* Common.storyboard */; };
 		FB75028F2702BCE000A1B6C3 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */; };
@@ -256,10 +258,12 @@
 		FB600789270475BE00C9C67B /* PhoneMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneMemory.swift; path = "Halal guide/Commons/Storyboard/PhoneMemory.swift"; sourceTree = SOURCE_ROOT; };
 		FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiUpdateDateContext.swift; sourceTree = "<group>"; };
 		FB60078E27069FD900C9C67B /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		FB6007922706AB8000C9C67B /* AdditionDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionDetailRouter.swift; sourceTree = "<group>"; };
 		FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAdditions.swift; sourceTree = "<group>"; };
 		FB65DE0E26A7E4B6004868B8 /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
 		FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionsContext.swift; sourceTree = "<group>"; };
+		FB72D819270DFEE3008F2270 /* AdditionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionDetailViewController.swift; sourceTree = "<group>"; };
 		FB75028826FC964C00A1B6C3 /* LatLng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLng.swift; sourceTree = "<group>"; };
 		FB75028C26FE08AB00A1B6C3 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 		FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtension.swift; path = "Halal guide/Commons/Storyboard/NSAttributedStringExtension.swift"; sourceTree = SOURCE_ROOT; };
@@ -477,6 +481,7 @@
 		29CA4A7625A5CF6900F9B0B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FB6007902706AB6A00C9C67B /* AdditionDetail */,
 				FB60078D27055E9800C9C67B /* SearchFilter */,
 				FB75474926AD1BEF007DD1EC /* SearchDetail */,
 				FB75473E26AC74CC007DD1EC /* instruction */,
@@ -782,6 +787,23 @@
 			path = SearchFilter;
 			sourceTree = "<group>";
 		};
+		FB6007902706AB6A00C9C67B /* AdditionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FB72D818270DFED4008F2270 /* View */,
+				FB6007912706AB7200C9C67B /* Router */,
+			);
+			path = AdditionDetail;
+			sourceTree = "<group>";
+		};
+		FB6007912706AB7200C9C67B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FB6007922706AB8000C9C67B /* AdditionDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FB65DE1226A83FAA004868B8 /* NetworkContext */ = {
 			isa = PBXGroup;
 			children = (
@@ -796,6 +818,14 @@
 				FB65DE0C26A7E41D004868B8 /* ResponseAdditions.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FB72D818270DFED4008F2270 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB72D819270DFEE3008F2270 /* AdditionDetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FB75028A26FE085300A1B6C3 /* Storyboard */ = {
@@ -1051,6 +1081,7 @@
 				29CA4AC325A5D56D00F9B0B6 /* BaseViewController.swift in Sources */,
 				295BE65825A6DC7300590449 /* MenuPresenter.swift in Sources */,
 				295BE6B725A6E45B00590449 /* StatusEInteractor.swift in Sources */,
+				FB72D81A270DFEE3008F2270 /* AdditionDetailViewController.swift in Sources */,
 				295BE6BE25A6E70200590449 /* StatusERouter.swift in Sources */,
 				FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */,
 				29CA4AC525A5D56D00F9B0B6 /* BaseViewInputProtocol.swift in Sources */,
@@ -1145,6 +1176,7 @@
 				29CA4B1525A5D94300F9B0B6 /* FailureNetworkResponse.swift in Sources */,
 				29CA4B1825A5D94300F9B0B6 /* IdentifiedRequest.swift in Sources */,
 				295BE67C25A6DFEA00590449 /* SearchInteractor.swift in Sources */,
+				FB6007932706AB8000C9C67B /* AdditionDetailRouter.swift in Sources */,
 				295BE6C825A6E83700590449 /* MainViewInput.swift in Sources */,
 				29CA4B2025A5D94300F9B0B6 /* NetworkResponse.swift in Sources */,
 				29CA4ADA25A5D59100F9B0B6 /* UIImage+Extensions.swift in Sources */,

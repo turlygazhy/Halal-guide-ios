@@ -32,6 +32,10 @@ class StatusERouter: StatusERouterInput {
         statusEViewController.router = self
         statusEViewController.interactor = interactor
     }
+    
+    func openDetail(addition: Addition) {
+        _ = AdditionDetailRouter(navigationController: navigationController, addition: addition)
+    }
 }
 
 extension StatusERouter: MainTabBarItemPageRouterInput {

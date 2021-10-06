@@ -70,6 +70,7 @@ class StatusEViewController: BaseViewController {
 extension StatusEViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        router?.openDetail(addition: dataSource[indexPath.row])
     }
 }
 
@@ -113,7 +114,6 @@ extension StatusEViewController: UISearchBarDelegate {
             dataSource = dataSource.filter {
                 ($0.title?.localizedCaseInsensitiveContains(searchText))! || ($0.name?.localizedCaseInsensitiveContains(searchText))! || ($0.title?.localizedCaseInsensitiveContains(queryOnlyDigits))!
             }
-            
         }
         
         tableView.reloadData()

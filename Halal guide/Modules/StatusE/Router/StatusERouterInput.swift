@@ -9,5 +9,5 @@
 import Foundation
 
 protocol StatusERouterInput: class {
-    
+    func openDetail(addition: Addition)
 }
