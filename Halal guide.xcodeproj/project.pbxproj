@@ -124,6 +124,8 @@
 		FB65DE1126A7EC0B004868B8 /* StatusEViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */; };
 		FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */; };
 		FB72D81A270DFEE3008F2270 /* AdditionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D819270DFEE3008F2270 /* AdditionDetailViewController.swift */; };
+		FB72D81D270E8AE7008F2270 /* ChooseRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D81C270E8AE7008F2270 /* ChooseRegionViewController.swift */; };
+		FB72D81F270E938B008F2270 /* RegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D81E270E938B008F2270 /* RegionTableViewCell.swift */; };
 		FB75028926FC964C00A1B6C3 /* LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028826FC964C00A1B6C3 /* LatLng.swift */; };
 		FB75028D26FE08AB00A1B6C3 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB75028C26FE08AB00A1B6C3 /* Common.storyboard */; };
 		FB75028F2702BCE000A1B6C3 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */; };
@@ -264,6 +266,8 @@
 		FB65DE1026A7EC0B004868B8 /* StatusEViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEViewCell.swift; sourceTree = "<group>"; };
 		FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionsContext.swift; sourceTree = "<group>"; };
 		FB72D819270DFEE3008F2270 /* AdditionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionDetailViewController.swift; sourceTree = "<group>"; };
+		FB72D81C270E8AE7008F2270 /* ChooseRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRegionViewController.swift; sourceTree = "<group>"; };
+		FB72D81E270E938B008F2270 /* RegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTableViewCell.swift; sourceTree = "<group>"; };
 		FB75028826FC964C00A1B6C3 /* LatLng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLng.swift; sourceTree = "<group>"; };
 		FB75028C26FE08AB00A1B6C3 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 		FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtension.swift; path = "Halal guide/Commons/Storyboard/NSAttributedStringExtension.swift"; sourceTree = SOURCE_ROOT; };
@@ -782,7 +786,7 @@
 		FB60078D27055E9800C9C67B /* SearchFilter */ = {
 			isa = PBXGroup;
 			children = (
-				FB60078E27069FD900C9C67B /* FilterViewController.swift */,
+				FB72D81B270E8AD5008F2270 /* View */,
 			);
 			path = SearchFilter;
 			sourceTree = "<group>";
@@ -824,6 +828,16 @@
 			isa = PBXGroup;
 			children = (
 				FB72D819270DFEE3008F2270 /* AdditionDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB72D81B270E8AD5008F2270 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB60078E27069FD900C9C67B /* FilterViewController.swift */,
+				FB72D81C270E8AE7008F2270 /* ChooseRegionViewController.swift */,
+				FB72D81E270E938B008F2270 /* RegionTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1077,6 +1091,7 @@
 				29CA4ADC25A5D59100F9B0B6 /* String+Extensions.swift in Sources */,
 				295BE67F25A6E03600590449 /* SearchRouterInput.swift in Sources */,
 				FB75474826AD1302007DD1EC /* InstructionViewInput.swift in Sources */,
+				FB72D81F270E938B008F2270 /* RegionTableViewCell.swift in Sources */,
 				29CA4ADD25A5D59100F9B0B6 /* MimeType.swift in Sources */,
 				29CA4AC325A5D56D00F9B0B6 /* BaseViewController.swift in Sources */,
 				295BE65825A6DC7300590449 /* MenuPresenter.swift in Sources */,
@@ -1102,6 +1117,7 @@
 				29CA4AB725A5D55E00F9B0B6 /* BaseInteractorProtocols.swift in Sources */,
 				29CA4AA425A5D46900F9B0B6 /* JailbreakDetection.swift in Sources */,
 				A3D1DD3926F2FBF600FD55A3 /* PlaceViewModel.swift in Sources */,
+				FB72D81D270E8AE7008F2270 /* ChooseRegionViewController.swift in Sources */,
 				295BE6AD25A6E3D500590449 /* StatusEPresenter.swift in Sources */,
 				295BE6A625A6E36F00590449 /* StatusEViewInput.swift in Sources */,
 				295BE65B25A6DCAF00590449 /* MenuInteractorInput.swift in Sources */,

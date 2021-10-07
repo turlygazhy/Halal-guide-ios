@@ -76,4 +76,8 @@ class DataHolder {
             print(items)//todo delete line
         }
     }
+    
+    func getRegionNames() -> [String] {
+        Array(Set(getPlaces().map{($0.location?.title)!}))
+    }
 }
