@@ -10,12 +10,16 @@ import UIKit
 
 class FilterViewController: UIViewController {
     
+    @IBOutlet weak var chooseRegionButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        chooseRegionButton.setTitleColor(.black, for: .normal)
     }
-//todo button color is red, should be black
     
     override func viewDidAppear(_ animated: Bool) {
-        print("")//todo button text should show what is selected
+        let regionCheckboxes = DataHolder.shared.getRegionCheckboxes()
+        let chosen = regionCheckboxes.map{$0.checked! ? $0.text! : ""}.filter{!$0.isEmpty}.joined(separator: ", ")
+        chosen.isEmpty ? chooseRegionButton.setTitle("Выберите регион", for: .normal) : chooseRegionButton.setTitle(chosen, for: .normal)
     }
 }
