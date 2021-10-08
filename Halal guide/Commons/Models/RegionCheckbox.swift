@@ -8,8 +8,13 @@
 
 import Foundation
 
-struct RegionCheckbox {
+class RegionCheckbox {
     
     var checked: Bool?
     var text: String?
+    
+    init(checked: Bool, text: String) {
+        self.checked = checked
+        self.text = text
+    }
 }

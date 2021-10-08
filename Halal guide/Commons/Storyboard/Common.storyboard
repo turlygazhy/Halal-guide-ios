@@ -62,30 +62,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLU-a3-Bee">
-                                <rect key="frame" x="132" y="753" width="150" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldC-UF-iwj">
-                                        <rect key="frame" x="105" y="5" width="30" height="30"/>
-                                        <state key="normal" title="Ок"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTk-df-nzY">
-                                        <rect key="frame" x="15" y="5" width="56" height="30"/>
-                                        <state key="normal" title="Отмена"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="eTk-df-nzY" firstAttribute="centerY" secondItem="hLU-a3-Bee" secondAttribute="centerY" id="4sr-YD-sx5"/>
-                                    <constraint firstItem="eTk-df-nzY" firstAttribute="leading" secondItem="hLU-a3-Bee" secondAttribute="leading" constant="15" id="5eP-JW-TYs"/>
-                                    <constraint firstItem="ldC-UF-iwj" firstAttribute="centerY" secondItem="hLU-a3-Bee" secondAttribute="centerY" id="BP0-Dy-kgH"/>
-                                    <constraint firstAttribute="width" constant="150" id="ZSp-Ua-Wjm"/>
-                                    <constraint firstAttribute="height" constant="40" id="a2Q-Mk-pv3"/>
-                                    <constraint firstAttribute="trailing" secondItem="ldC-UF-iwj" secondAttribute="trailing" constant="15" id="dNn-KZ-WWd"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CEr-T1-LZK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="743"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="88q-46-rF6" customClass="RegionTableViewCell" customModule="Halal_guide" customModuleProvider="target">
@@ -127,19 +105,47 @@
                                     <outlet property="delegate" destination="RlX-zb-8yc" id="osj-q7-MCN"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldC-UF-iwj">
+                                <rect key="frame" x="359" y="758" width="30" height="30"/>
+                                <state key="normal" title="Ок"/>
+                                <connections>
+                                    <action selector="submitRegions:" destination="RlX-zb-8yc" eventType="touchUpInside" id="6Fv-Mp-QqT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTk-df-nzY">
+                                <rect key="frame" x="268" y="758" width="56" height="30"/>
+                                <state key="normal" title="Отмена"/>
+                                <connections>
+                                    <action selector="cancelChoosing:" destination="RlX-zb-8yc" eventType="touchUpInside" id="p4I-Fe-fqD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gc-PP-JMW">
+                                <rect key="frame" x="25" y="758" width="68" height="30"/>
+                                <state key="normal" title="Очистить"/>
+                                <connections>
+                                    <action selector="clearRegions:" destination="RlX-zb-8yc" eventType="touchUpInside" id="t2C-z1-fWI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uic-ZN-3Xv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hLU-a3-Bee" firstAttribute="centerX" secondItem="uic-ZN-3Xv" secondAttribute="centerX" id="C2b-lh-TYP"/>
+                            <constraint firstItem="uic-ZN-3Xv" firstAttribute="trailing" secondItem="ldC-UF-iwj" secondAttribute="trailing" constant="25" id="BNB-0h-vbp"/>
+                            <constraint firstItem="uic-ZN-3Xv" firstAttribute="bottom" secondItem="8Gc-PP-JMW" secondAttribute="bottom" constant="20" id="NxI-9O-jXX"/>
                             <constraint firstItem="uic-ZN-3Xv" firstAttribute="trailing" secondItem="CEr-T1-LZK" secondAttribute="trailing" id="Pnd-dS-Wy2"/>
+                            <constraint firstItem="ldC-UF-iwj" firstAttribute="top" secondItem="CEr-T1-LZK" secondAttribute="bottom" constant="20" id="RNy-ON-fWn"/>
+                            <constraint firstItem="ldC-UF-iwj" firstAttribute="leading" secondItem="eTk-df-nzY" secondAttribute="trailing" constant="35" id="V46-9j-5Xn"/>
                             <constraint firstItem="CEr-T1-LZK" firstAttribute="top" secondItem="uic-ZN-3Xv" secondAttribute="top" id="YK1-5S-Mag"/>
+                            <constraint firstItem="uic-ZN-3Xv" firstAttribute="bottom" secondItem="eTk-df-nzY" secondAttribute="bottom" constant="20" id="dt9-Zn-lTb"/>
+                            <constraint firstItem="uic-ZN-3Xv" firstAttribute="bottom" secondItem="ldC-UF-iwj" secondAttribute="bottom" constant="20" id="fKR-9V-te3"/>
+                            <constraint firstItem="8Gc-PP-JMW" firstAttribute="leading" secondItem="uic-ZN-3Xv" secondAttribute="leading" constant="25" id="lyU-v5-lbT"/>
                             <constraint firstItem="CEr-T1-LZK" firstAttribute="leading" secondItem="uic-ZN-3Xv" secondAttribute="leading" id="oIV-Bl-vNZ"/>
-                            <constraint firstItem="hLU-a3-Bee" firstAttribute="top" secondItem="CEr-T1-LZK" secondAttribute="bottom" constant="10" id="uzV-vk-jNi"/>
-                            <constraint firstItem="uic-ZN-3Xv" firstAttribute="bottom" secondItem="hLU-a3-Bee" secondAttribute="bottom" constant="15" id="zHg-Zv-9V8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="br2-lC-LXD"/>
+                    <connections>
+                        <outlet property="tableView" destination="CEr-T1-LZK" id="Ze5-zF-wTm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZS-ek-QdA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

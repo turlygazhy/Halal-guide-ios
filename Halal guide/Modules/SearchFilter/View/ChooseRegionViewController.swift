@@ -9,8 +9,9 @@
 import UIKit
 
 class ChooseRegionViewController: UIViewController {
-
+    
     private var dataSource = [RegionCheckbox]()
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +19,21 @@ class ChooseRegionViewController: UIViewController {
         dataSource = DataHolder.shared.getRegionNames().map{RegionCheckbox(checked: false, text: $0)}
         self.title = "Выберите регион"
     }
-
+    
     @IBAction func switchChanged(_ sender: UISwitch) {
         dataSource[sender.tag].checked = sender.isOn
     }
     
+    @IBAction func submitRegions(_ sender: Any) {
+    }
+    
+    @IBAction func cancelChoosing(_ sender: Any) {
+    }
+    
+    @IBAction func clearRegions(_ sender: Any) {
+        dataSource.forEach {$0.checked = false}
+        tableView.reloadData()
+    }
 }
 
 extension ChooseRegionViewController: UITableViewDataSource, UITableViewDelegate {
@@ -34,7 +45,7 @@ extension ChooseRegionViewController: UITableViewDataSource, UITableViewDelegate
         let cell: RegionTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RegionTableViewCell
         let region = dataSource[indexPath.row]
         cell.regionNameLabel.text = region.text
-        cell.regionSwitch.setOn(region.checked!, animated: false)
+        cell.regionSwitch.setOn(region.checked!, animated: true)
         cell.regionSwitch.tag = indexPath.row
         return cell
         //todo switch если кликнуть первую то она аффектнет и другую снизу
