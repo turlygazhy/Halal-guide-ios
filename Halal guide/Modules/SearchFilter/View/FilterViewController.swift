@@ -14,5 +14,8 @@ class FilterViewController: UIViewController {
         super.viewDidLoad()
     }
 //todo button color is red, should be black
-    //todo button text should show what is selected
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("")//todo button text should show what is selected
+    }
 }

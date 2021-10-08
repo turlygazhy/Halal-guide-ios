@@ -16,6 +16,7 @@ class DataHolder {
     private var additions: [Addition]?
     var mosques: [Mosque]?
     var mosqueLocations: [MosqueLocation]?
+    var regionCheckboxes: [RegionCheckbox]?
     
     private init() { }
     
@@ -77,7 +78,18 @@ class DataHolder {
         }
     }
     
-    func getRegionNames() -> [String] {
+    private func getRegionNames() -> [String] {
         Array(Set(getPlaces().map{($0.location?.title)!}))
+    }
+    
+    func getRegionCheckboxes() -> [RegionCheckbox] {
+        if regionCheckboxes == nil || regionCheckboxes!.isEmpty {
+            regionCheckboxes = getRegionNames().map{RegionCheckbox(checked: false, text: $0)}
+        }
+        return regionCheckboxes!
+    }
+
+    func setRegionCheckboxes(regionCheckboxes: [RegionCheckbox]) {
+        self.regionCheckboxes = regionCheckboxes
     }
 }
