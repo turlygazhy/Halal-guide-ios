@@ -30,11 +30,16 @@ class SearchViewController: BaseViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter24"), style: .plain, target: self, action: #selector(filterTapped))
         navigationItem.rightBarButtonItem?.tintColor = AppColor.green.uiColor
-        //todo нужно что бы когда выставлен фильтр это показывалось на иконке фильтра
         setupViews()
         setConstraints()
         
         interactor?.getPlaces()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        dataSource = DataUtil.filter(places: dataSource)
+        tableView.reloadData()
+        //todo нужно что бы когда выставлен фильтр это показывалось на иконке фильтра
     }
     
     @objc func filterTapped() {
@@ -117,6 +122,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("searchText: \(searchText)")
         dataSource = DataHolder.shared.getPlaces()
+        //todo filter
         if !searchText.isEmpty {
             dataSource = dataSource.filter {
                 ($0.mekeme_title?.localizedCaseInsensitiveContains(searchText))! || ($0.trademark_title?.localizedCaseInsensitiveContains(searchText))! || ($0.trademarks?.localizedCaseInsensitiveContains(searchText))!

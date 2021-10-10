@@ -91,7 +91,7 @@ class DataHolder {
         if regionCheckboxes == nil || regionCheckboxes!.isEmpty {
             regionCheckboxes = getRegionNames().map{CheckboxWithLabel(checked: false, text: $0)}
         }
-        return regionCheckboxes!
+        return regionCheckboxes!//todo sort by alphabet
     }
     
     func setRegionCheckboxes(regionCheckboxes: [CheckboxWithLabel]) {
@@ -102,10 +102,15 @@ class DataHolder {
         if categoryCheckboxes == nil || categoryCheckboxes!.isEmpty {
             categoryCheckboxes = getCategoryNames().map{CheckboxWithLabel(checked: false, text: $0)}
         }
-        return categoryCheckboxes!
+        return categoryCheckboxes!//todo sort by alphabet
     }
     
     func setCategoryCheckboxes(categoryCheckboxes: [CheckboxWithLabel]) {
         self.categoryCheckboxes = categoryCheckboxes
+    }
+    
+    func clearFilters() {
+        regionCheckboxes = nil
+        categoryCheckboxes = nil
     }
 }

@@ -28,4 +28,14 @@ class FilterViewController: UIViewController {
         let chosenCategories = categoryCheckboxes.map{$0.checked! ? $0.text! : ""}.filter{!$0.isEmpty}.joined(separator: ", ")
         chosenCategories.isEmpty ? chooseCategoryButton.setTitle("Выберите категорию", for: .normal) : chooseCategoryButton.setTitle(chosenCategories, for: .normal)
     }
+   
+    @IBAction func submitFilter(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func clearFilter(_ sender: Any) {
+        DataHolder.shared.clearFilters()
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
