@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RegionCheckbox {
+class CheckboxWithLabel {
     
     var checked: Bool?
     var text: String?

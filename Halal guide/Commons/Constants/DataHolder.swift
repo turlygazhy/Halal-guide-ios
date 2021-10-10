@@ -16,7 +16,8 @@ class DataHolder {
     private var additions: [Addition]?
     var mosques: [Mosque]?
     var mosqueLocations: [MosqueLocation]?
-    var regionCheckboxes: [RegionCheckbox]?
+    var regionCheckboxes: [CheckboxWithLabel]?
+    var categoryCheckboxes: [CheckboxWithLabel]?
     
     private init() { }
     
@@ -82,14 +83,29 @@ class DataHolder {
         Array(Set(getPlaces().map{($0.location?.title)!}))
     }
     
-    func getRegionCheckboxes() -> [RegionCheckbox] {
+    private func getCategoryNames() -> [String] {
+        Array(Set(getPlaces().map{($0.category?.title)!}))
+    }
+    
+    func getRegionCheckboxes() -> [CheckboxWithLabel] {
         if regionCheckboxes == nil || regionCheckboxes!.isEmpty {
-            regionCheckboxes = getRegionNames().map{RegionCheckbox(checked: false, text: $0)}
+            regionCheckboxes = getRegionNames().map{CheckboxWithLabel(checked: false, text: $0)}
         }
         return regionCheckboxes!
     }
-
-    func setRegionCheckboxes(regionCheckboxes: [RegionCheckbox]) {
+    
+    func setRegionCheckboxes(regionCheckboxes: [CheckboxWithLabel]) {
         self.regionCheckboxes = regionCheckboxes
+    }
+    
+    func getCategoryCheckboxes() -> [CheckboxWithLabel] {
+        if categoryCheckboxes == nil || categoryCheckboxes!.isEmpty {
+            categoryCheckboxes = getCategoryNames().map{CheckboxWithLabel(checked: false, text: $0)}
+        }
+        return categoryCheckboxes!
+    }
+    
+    func setCategoryCheckboxes(categoryCheckboxes: [CheckboxWithLabel]) {
+        self.categoryCheckboxes = categoryCheckboxes
     }
 }

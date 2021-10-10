@@ -125,8 +125,9 @@
 		FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */; };
 		FB72D81A270DFEE3008F2270 /* AdditionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D819270DFEE3008F2270 /* AdditionDetailViewController.swift */; };
 		FB72D81D270E8AE7008F2270 /* ChooseRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D81C270E8AE7008F2270 /* ChooseRegionViewController.swift */; };
-		FB72D81F270E938B008F2270 /* RegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D81E270E938B008F2270 /* RegionTableViewCell.swift */; };
-		FB72D821270EBAB4008F2270 /* RegionCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D820270EBAB4008F2270 /* RegionCheckbox.swift */; };
+		FB72D81F270E938B008F2270 /* SwitchAndLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D81E270E938B008F2270 /* SwitchAndLabelCell.swift */; };
+		FB72D821270EBAB4008F2270 /* CheckboxWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D820270EBAB4008F2270 /* CheckboxWithLabel.swift */; };
+		FB72D82327104495008F2270 /* ChooseCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D82227104495008F2270 /* ChooseCategoryViewController.swift */; };
 		FB75028926FC964C00A1B6C3 /* LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028826FC964C00A1B6C3 /* LatLng.swift */; };
 		FB75028D26FE08AB00A1B6C3 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB75028C26FE08AB00A1B6C3 /* Common.storyboard */; };
 		FB75028F2702BCE000A1B6C3 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */; };
@@ -268,8 +269,9 @@
 		FB65DE1326A83FC4004868B8 /* GetAdditionsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionsContext.swift; sourceTree = "<group>"; };
 		FB72D819270DFEE3008F2270 /* AdditionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionDetailViewController.swift; sourceTree = "<group>"; };
 		FB72D81C270E8AE7008F2270 /* ChooseRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRegionViewController.swift; sourceTree = "<group>"; };
-		FB72D81E270E938B008F2270 /* RegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTableViewCell.swift; sourceTree = "<group>"; };
-		FB72D820270EBAB4008F2270 /* RegionCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionCheckbox.swift; sourceTree = "<group>"; };
+		FB72D81E270E938B008F2270 /* SwitchAndLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchAndLabelCell.swift; sourceTree = "<group>"; };
+		FB72D820270EBAB4008F2270 /* CheckboxWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxWithLabel.swift; sourceTree = "<group>"; };
+		FB72D82227104495008F2270 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategoryViewController.swift; sourceTree = "<group>"; };
 		FB75028826FC964C00A1B6C3 /* LatLng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLng.swift; sourceTree = "<group>"; };
 		FB75028C26FE08AB00A1B6C3 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 		FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtension.swift; path = "Halal guide/Commons/Storyboard/NSAttributedStringExtension.swift"; sourceTree = SOURCE_ROOT; };
@@ -542,7 +544,7 @@
 				29F86EED25A82E8C00C2927E /* Place.swift */,
 				FB65DE0E26A7E4B6004868B8 /* Addition.swift */,
 				FB75028826FC964C00A1B6C3 /* LatLng.swift */,
-				FB72D820270EBAB4008F2270 /* RegionCheckbox.swift */,
+				FB72D820270EBAB4008F2270 /* CheckboxWithLabel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -840,7 +842,8 @@
 			children = (
 				FB60078E27069FD900C9C67B /* FilterViewController.swift */,
 				FB72D81C270E8AE7008F2270 /* ChooseRegionViewController.swift */,
-				FB72D81E270E938B008F2270 /* RegionTableViewCell.swift */,
+				FB72D81E270E938B008F2270 /* SwitchAndLabelCell.swift */,
+				FB72D82227104495008F2270 /* ChooseCategoryViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1077,6 +1080,7 @@
 			files = (
 				29CA4B1A25A5D94300F9B0B6 /* NetworkError.swift in Sources */,
 				29CA4AE125A5D59100F9B0B6 /* Data+Extensions.swift in Sources */,
+				FB72D82327104495008F2270 /* ChooseCategoryViewController.swift in Sources */,
 				A3D1DD4126F3381F00FD55A3 /* GetMosqueLocationContext.swift in Sources */,
 				A3D1DD3C26F32D1400FD55A3 /* Collection+Extensions.swift in Sources */,
 				295BE6AA25A6E39600590449 /* StatusEViewController.swift in Sources */,
@@ -1094,7 +1098,7 @@
 				29CA4ADC25A5D59100F9B0B6 /* String+Extensions.swift in Sources */,
 				295BE67F25A6E03600590449 /* SearchRouterInput.swift in Sources */,
 				FB75474826AD1302007DD1EC /* InstructionViewInput.swift in Sources */,
-				FB72D81F270E938B008F2270 /* RegionTableViewCell.swift in Sources */,
+				FB72D81F270E938B008F2270 /* SwitchAndLabelCell.swift in Sources */,
 				29CA4ADD25A5D59100F9B0B6 /* MimeType.swift in Sources */,
 				29CA4AC325A5D56D00F9B0B6 /* BaseViewController.swift in Sources */,
 				295BE65825A6DC7300590449 /* MenuPresenter.swift in Sources */,
@@ -1172,7 +1176,7 @@
 				295BE64E25A6DC0900590449 /* MenuViewInput.swift in Sources */,
 				FB75474E26AD1C28007DD1EC /* SearchDetailRouterInput.swift in Sources */,
 				FB79463826AB1D6000E5FD7D /* FeedbackRouterInput.swift in Sources */,
-				FB72D821270EBAB4008F2270 /* RegionCheckbox.swift in Sources */,
+				FB72D821270EBAB4008F2270 /* CheckboxWithLabel.swift in Sources */,
 				FB75475126AD1D0E007DD1EC /* SearchDetailViewController.swift in Sources */,
 				295BE6D225A6E8A500590449 /* MainRouter.swift in Sources */,
 				29F86EF225A8319900C2927E /* GetPlacesContext.swift in Sources */,

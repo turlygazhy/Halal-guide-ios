@@ -10,7 +10,7 @@ import UIKit
 
 class SwitchAndLabelCell: UITableViewCell {
     
-    @IBOutlet weak var regionSwitch: UISwitch!
-    @IBOutlet weak var regionNameLabel: UILabel!
+    @IBOutlet weak var uiSwitch: UISwitch!
+    @IBOutlet weak var label: UILabel!
     
 }

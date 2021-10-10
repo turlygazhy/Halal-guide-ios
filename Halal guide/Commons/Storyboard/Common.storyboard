@@ -23,33 +23,60 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjW-fO-sQC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quv-FW-Npl">
+                                <rect key="frame" x="16" y="266" width="382" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjW-fO-sQC">
                                 <rect key="frame" x="20" y="196" width="374" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wTS-hI-RA8"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="  Выберите регион">
+                                <state key="normal" title="Выберите регион">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="RlX-zb-8yc" kind="show" id="d36-bJ-iXV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9W5-dk-1By">
+                                <rect key="frame" x="20" y="318" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JWd-pE-Xvq"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Выберите категорию">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="X4y-Nb-axB" kind="show" id="aed-rC-iif"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5kA-R5-5td"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Quv-FW-Npl" firstAttribute="leading" secondItem="0Ea-Xl-16u" secondAttribute="leading" id="0M7-KT-8d5"/>
                             <constraint firstItem="xjW-fO-sQC" firstAttribute="leading" secondItem="5kA-R5-5td" secondAttribute="leading" constant="20" id="4ho-7p-WSM"/>
+                            <constraint firstItem="Quv-FW-Npl" firstAttribute="top" secondItem="xjW-fO-sQC" secondAttribute="bottom" constant="30" id="7K0-4W-KB0"/>
                             <constraint firstItem="0Ea-Xl-16u" firstAttribute="top" secondItem="5kA-R5-5td" secondAttribute="top" constant="100" id="7da-Dp-i92"/>
                             <constraint firstItem="0Ea-Xl-16u" firstAttribute="leading" secondItem="5kA-R5-5td" secondAttribute="leading" constant="16" id="A8u-Id-16H"/>
+                            <constraint firstItem="9W5-dk-1By" firstAttribute="trailing" secondItem="xjW-fO-sQC" secondAttribute="trailing" id="JSW-C9-2fN"/>
+                            <constraint firstItem="9W5-dk-1By" firstAttribute="leading" secondItem="xjW-fO-sQC" secondAttribute="leading" id="Nxp-s9-oe8"/>
+                            <constraint firstItem="Quv-FW-Npl" firstAttribute="trailing" secondItem="0Ea-Xl-16u" secondAttribute="trailing" id="WET-z0-bDx"/>
                             <constraint firstItem="5kA-R5-5td" firstAttribute="trailing" secondItem="xjW-fO-sQC" secondAttribute="trailing" constant="20" id="by4-vA-roA"/>
+                            <constraint firstItem="9W5-dk-1By" firstAttribute="top" secondItem="Quv-FW-Npl" secondAttribute="bottom" constant="15" id="wAe-tr-MGO"/>
                             <constraint firstItem="5kA-R5-5td" firstAttribute="trailing" secondItem="0Ea-Xl-16u" secondAttribute="trailing" constant="16" id="wJG-2a-LlU"/>
                             <constraint firstItem="xjW-fO-sQC" firstAttribute="top" secondItem="0Ea-Xl-16u" secondAttribute="bottom" constant="15" id="x3I-qd-Y1M"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chooseCategoryButton" destination="9W5-dk-1By" id="VIb-SY-d9o"/>
                         <outlet property="chooseRegionButton" destination="xjW-fO-sQC" id="K1b-9I-jIl"/>
                     </connections>
                 </viewController>
@@ -69,7 +96,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="88q-46-rF6" customClass="RegionTableViewCell" customModule="Halal_guide" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="88q-46-rF6" customClass="SwitchAndLabelCell" customModule="Halal_guide" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="51.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="88q-46-rF6" id="XOL-46-Nhr">
@@ -98,8 +125,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="regionNameLabel" destination="GRI-3z-nnj" id="asp-yy-jjQ"/>
-                                            <outlet property="regionSwitch" destination="fGD-rs-pqB" id="JEW-Uj-OAE"/>
+                                            <outlet property="label" destination="GRI-3z-nnj" id="asp-yy-jjQ"/>
+                                            <outlet property="uiSwitch" destination="fGD-rs-pqB" id="JEW-Uj-OAE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -152,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZS-ek-QdA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2197.1014492753625" y="-233.03571428571428"/>
+            <point key="canvasLocation" x="-2197" y="-242"/>
         </scene>
         <!--Search Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -460,6 +487,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJW-0o-gsu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="909" y="58"/>
+        </scene>
+        <!--Choose Category View Controller-->
+        <scene sceneID="hVq-dx-GdE">
+            <objects>
+                <viewController storyboardIdentifier="ChooseCategoryViewController" id="X4y-Nb-axB" customClass="ChooseCategoryViewController" customModule="Halal_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GW5-Rk-tGa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F7j-MP-St5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="hb1-nb-kTd" customClass="SwitchAndLabelCell" customModule="Halal_guide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="51.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hb1-nb-kTd" id="0ZJ-MX-e1N">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1l-i5-5GD">
+                                                    <rect key="frame" x="74" y="15.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQG-h9-rl2">
+                                                    <rect key="frame" x="15" y="10" width="51" height="31.5"/>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="X4y-Nb-axB" eventType="valueChanged" id="fCM-fO-XCG"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zQG-h9-rl2" secondAttribute="bottom" constant="10" id="5wf-gX-Dt8"/>
+                                                <constraint firstItem="zQG-h9-rl2" firstAttribute="leading" secondItem="0ZJ-MX-e1N" secondAttribute="leading" constant="15" id="FyO-cY-3PT"/>
+                                                <constraint firstItem="zQG-h9-rl2" firstAttribute="top" secondItem="0ZJ-MX-e1N" secondAttribute="top" constant="10" id="RSf-i2-mBa"/>
+                                                <constraint firstItem="Y1l-i5-5GD" firstAttribute="centerY" secondItem="zQG-h9-rl2" secondAttribute="centerY" id="qkY-sn-IdY"/>
+                                                <constraint firstItem="Y1l-i5-5GD" firstAttribute="leading" secondItem="zQG-h9-rl2" secondAttribute="trailing" constant="10" id="ubl-Tu-dIF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="Y1l-i5-5GD" id="d5d-lM-LZB"/>
+                                            <outlet property="uiSwitch" destination="zQG-h9-rl2" id="u88-ch-uL0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="X4y-Nb-axB" id="cFJ-Zs-kNW"/>
+                                    <outlet property="delegate" destination="X4y-Nb-axB" id="lKM-yJ-IGG"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbA-aQ-qzc">
+                                <rect key="frame" x="359" y="758" width="30" height="30"/>
+                                <state key="normal" title="Ок"/>
+                                <connections>
+                                    <action selector="submitCategories:" destination="X4y-Nb-axB" eventType="touchUpInside" id="kbm-Yc-hEe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgT-RY-OK3">
+                                <rect key="frame" x="268" y="758" width="56" height="30"/>
+                                <state key="normal" title="Отмена"/>
+                                <connections>
+                                    <action selector="cancelChoosing:" destination="X4y-Nb-axB" eventType="touchUpInside" id="9Sw-dG-aRu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyl-z3-Njk">
+                                <rect key="frame" x="25" y="758" width="68" height="30"/>
+                                <state key="normal" title="Очистить"/>
+                                <connections>
+                                    <action selector="clearCategories:" destination="X4y-Nb-axB" eventType="touchUpInside" id="dIn-zk-M5S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FaS-a5-dJu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FaS-a5-dJu" firstAttribute="trailing" secondItem="F7j-MP-St5" secondAttribute="trailing" id="51X-hz-RbO"/>
+                            <constraint firstItem="FaS-a5-dJu" firstAttribute="bottom" secondItem="LbA-aQ-qzc" secondAttribute="bottom" constant="20" id="Fd9-n5-YNB"/>
+                            <constraint firstItem="FaS-a5-dJu" firstAttribute="trailing" secondItem="LbA-aQ-qzc" secondAttribute="trailing" constant="25" id="IXs-Sg-cl4"/>
+                            <constraint firstItem="FaS-a5-dJu" firstAttribute="bottom" secondItem="tgT-RY-OK3" secondAttribute="bottom" constant="20" id="NdP-Is-17e"/>
+                            <constraint firstItem="LbA-aQ-qzc" firstAttribute="top" secondItem="F7j-MP-St5" secondAttribute="bottom" constant="20" id="PFT-jP-hZm"/>
+                            <constraint firstItem="FaS-a5-dJu" firstAttribute="bottom" secondItem="Qyl-z3-Njk" secondAttribute="bottom" constant="20" id="RoQ-4e-dKI"/>
+                            <constraint firstItem="F7j-MP-St5" firstAttribute="top" secondItem="FaS-a5-dJu" secondAttribute="top" id="VVD-Xb-DUB"/>
+                            <constraint firstItem="F7j-MP-St5" firstAttribute="leading" secondItem="FaS-a5-dJu" secondAttribute="leading" id="YBs-3O-2dL"/>
+                            <constraint firstItem="Qyl-z3-Njk" firstAttribute="leading" secondItem="FaS-a5-dJu" secondAttribute="leading" constant="25" id="eVf-Za-o6L"/>
+                            <constraint firstItem="LbA-aQ-qzc" firstAttribute="leading" secondItem="tgT-RY-OK3" secondAttribute="trailing" constant="35" id="pgE-Nk-zB6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ESd-nJ-iPB"/>
+                    <connections>
+                        <outlet property="tableView" destination="F7j-MP-St5" id="lbL-Ib-rQS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaC-Iq-Q3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2197" y="434"/>
         </scene>
     </scenes>
     <resources>
