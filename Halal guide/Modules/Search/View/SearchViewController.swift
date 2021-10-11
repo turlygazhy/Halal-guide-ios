@@ -121,8 +121,7 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("searchText: \(searchText)")
-        dataSource = DataHolder.shared.getPlaces()
-        //todo filter
+        dataSource = DataUtil.filter(places: DataHolder.shared.getPlaces())
         if !searchText.isEmpty {
             dataSource = dataSource.filter {
                 ($0.mekeme_title?.localizedCaseInsensitiveContains(searchText))! || ($0.trademark_title?.localizedCaseInsensitiveContains(searchText))! || ($0.trademarks?.localizedCaseInsensitiveContains(searchText))!
