@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MenuPresenterInput: BasePresenterInput {
-    func setData(menuItems: [String])
+    
 }

@@ -15,7 +15,8 @@ class MenuRouter: MenuRouterInput {
     unowned let navigationController: NavigationController
     
     required init() {
-        let viewController = MenuViewController()
+        let storyboard = UIStoryboard(name: "Common", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         let navigationController = NavigationController(rootViewController: viewController)
         let presenter = MenuPresenter(view: viewController)
         let interactor = MenuInteractor(presenter: presenter)
@@ -35,13 +36,6 @@ class MenuRouter: MenuRouterInput {
         menuViewController.interactor = interactor
     }
     
-    func openFeedback() {
-        _ = FeedbackRouter(navigationController: navigationController)
-    }
-    
-    func openInstruction() {
-        _ = InstructionRouter(navigationController: navigationController)
-    }
 }
 
 extension MenuRouter: MainTabBarItemPageRouterInput {

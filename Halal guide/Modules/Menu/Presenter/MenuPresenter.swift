@@ -20,7 +20,4 @@ class MenuPresenter: MenuPresenterInput {
         self.view = view
     }
     
-    func setData(menuItems: [String]) {
-        view.setData(menuItems: menuItems)
-    }
 }

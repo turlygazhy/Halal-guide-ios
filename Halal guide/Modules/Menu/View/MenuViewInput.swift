@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MenuViewInput: BaseViewInputProtocol {
-    func setData(menuItems: [String])
+    
 }

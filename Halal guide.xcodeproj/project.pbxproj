@@ -105,7 +105,6 @@
 		29F86EF825A832C200C2927E /* ResponsePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EF725A832C100C2927E /* ResponsePlace.swift */; };
 		29F86EFB25A836E300C2927E /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F86EFA25A836E300C2927E /* SearchViewCell.swift */; };
 		9FA68795FE52A0F48ACF9D93 /* Pods_Halal_guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609793F0399729641C029C4 /* Pods_Halal_guide.framework */; };
-		A32FD17926AC11B6007B678B /* FeedbackViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FD17826AC11B6007B678B /* FeedbackViewInput.swift */; };
 		A3D1DD3726F2F55400FD55A3 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D1DD3626F2F55400FD55A3 /* DataHolder.swift */; };
 		A3D1DD3926F2FBF600FD55A3 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D1DD3826F2FBF600FD55A3 /* PlaceViewModel.swift */; };
 		A3D1DD3C26F32D1400FD55A3 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D1DD3B26F32D1400FD55A3 /* Collection+Extensions.swift */; };
@@ -132,19 +131,11 @@
 		FB75028926FC964C00A1B6C3 /* LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028826FC964C00A1B6C3 /* LatLng.swift */; };
 		FB75028D26FE08AB00A1B6C3 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB75028C26FE08AB00A1B6C3 /* Common.storyboard */; };
 		FB75028F2702BCE000A1B6C3 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */; };
-		FB75473C26AC6D67007DD1EC /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75473B26AC6D67007DD1EC /* MenuItem.swift */; };
-		FB75474126AC74EC007DD1EC /* InstructionRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474026AC74EC007DD1EC /* InstructionRouterInput.swift */; };
-		FB75474326AC74F8007DD1EC /* InstructionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474226AC74F8007DD1EC /* InstructionRouter.swift */; };
-		FB75474626AD1257007DD1EC /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474526AD1257007DD1EC /* InstructionViewController.swift */; };
-		FB75474826AD1302007DD1EC /* InstructionViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474726AD1302007DD1EC /* InstructionViewInput.swift */; };
 		FB75474C26AD1C0D007DD1EC /* SearchDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474B26AD1C0D007DD1EC /* SearchDetailRouter.swift */; };
 		FB75474E26AD1C28007DD1EC /* SearchDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75474D26AD1C28007DD1EC /* SearchDetailRouterInput.swift */; };
 		FB75475126AD1D0E007DD1EC /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75475026AD1D0E007DD1EC /* SearchDetailViewController.swift */; };
 		FB75475326AD1D30007DD1EC /* SearchDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75475226AD1D30007DD1EC /* SearchDetailViewInput.swift */; };
 		FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79462E26AB047400E5FD7D /* MenuViewCell.swift */; };
-		FB79463426AB1D1900E5FD7D /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */; };
-		FB79463626AB1D4900E5FD7D /* FeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */; };
-		FB79463826AB1D6000E5FD7D /* FeedbackRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79463726AB1D6000E5FD7D /* FeedbackRouterInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -247,7 +238,6 @@
 		29F86EF725A832C100C2927E /* ResponsePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePlace.swift; sourceTree = "<group>"; };
 		29F86EFA25A836E300C2927E /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		4C604E14FB11F8E10040C771 /* Pods-Halal guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halal guide.release.xcconfig"; path = "Target Support Files/Pods-Halal guide/Pods-Halal guide.release.xcconfig"; sourceTree = "<group>"; };
-		A32FD17826AC11B6007B678B /* FeedbackViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewInput.swift; sourceTree = "<group>"; };
 		A3D1DD3626F2F55400FD55A3 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		A3D1DD3826F2FBF600FD55A3 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		A3D1DD3B26F32D1400FD55A3 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Collection+Extensions.swift"; path = "Halal guide/Modules/Catering/View/Collection+Extensions.swift"; sourceTree = SOURCE_ROOT; };
@@ -277,19 +267,11 @@
 		FB75028826FC964C00A1B6C3 /* LatLng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLng.swift; sourceTree = "<group>"; };
 		FB75028C26FE08AB00A1B6C3 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 		FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtension.swift; path = "Halal guide/Commons/Storyboard/NSAttributedStringExtension.swift"; sourceTree = SOURCE_ROOT; };
-		FB75473B26AC6D67007DD1EC /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		FB75474026AC74EC007DD1EC /* InstructionRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRouterInput.swift; sourceTree = "<group>"; };
-		FB75474226AC74F8007DD1EC /* InstructionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRouter.swift; sourceTree = "<group>"; };
-		FB75474526AD1257007DD1EC /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
-		FB75474726AD1302007DD1EC /* InstructionViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewInput.swift; sourceTree = "<group>"; };
 		FB75474B26AD1C0D007DD1EC /* SearchDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailRouter.swift; sourceTree = "<group>"; };
 		FB75474D26AD1C28007DD1EC /* SearchDetailRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailRouterInput.swift; sourceTree = "<group>"; };
 		FB75475026AD1D0E007DD1EC /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		FB75475226AD1D30007DD1EC /* SearchDetailViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewInput.swift; sourceTree = "<group>"; };
 		FB79462E26AB047400E5FD7D /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
-		FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRouter.swift; sourceTree = "<group>"; };
-		FB79463726AB1D6000E5FD7D /* FeedbackRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRouterInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,8 +476,6 @@
 				FB6007902706AB6A00C9C67B /* AdditionDetail */,
 				FB60078D27055E9800C9C67B /* SearchFilter */,
 				FB75474926AD1BEF007DD1EC /* SearchDetail */,
-				FB75473E26AC74CC007DD1EC /* instruction */,
-				FB79463026AB1CDB00E5FD7D /* feedback */,
 				29CA4B3425A5EB1300F9B0B6 /* Menu */,
 				29CA4B3325A5EB0700F9B0B6 /* StatusE */,
 				29CA4B3125A5EA9E00F9B0B6 /* Catering */,
@@ -709,7 +689,6 @@
 		29CA4B3425A5EB1300F9B0B6 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				FB75473D26AC6D6C007DD1EC /* model */,
 				295BE64B25A6DBE200590449 /* Interactor */,
 				295BE64A25A6DBDC00590449 /* Presenter */,
 				295BE64925A6DBD300590449 /* Router */,
@@ -859,41 +838,6 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		FB75473D26AC6D6C007DD1EC /* model */ = {
-			isa = PBXGroup;
-			children = (
-				FB75473B26AC6D67007DD1EC /* MenuItem.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		FB75473E26AC74CC007DD1EC /* instruction */ = {
-			isa = PBXGroup;
-			children = (
-				FB75474426AD124A007DD1EC /* view */,
-				FB75473F26AC74D8007DD1EC /* router */,
-			);
-			path = instruction;
-			sourceTree = "<group>";
-		};
-		FB75473F26AC74D8007DD1EC /* router */ = {
-			isa = PBXGroup;
-			children = (
-				FB75474026AC74EC007DD1EC /* InstructionRouterInput.swift */,
-				FB75474226AC74F8007DD1EC /* InstructionRouter.swift */,
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		FB75474426AD124A007DD1EC /* view */ = {
-			isa = PBXGroup;
-			children = (
-				FB75474526AD1257007DD1EC /* InstructionViewController.swift */,
-				FB75474726AD1302007DD1EC /* InstructionViewInput.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		FB75474926AD1BEF007DD1EC /* SearchDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,33 +863,6 @@
 				FB75475226AD1D30007DD1EC /* SearchDetailViewInput.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FB79463026AB1CDB00E5FD7D /* feedback */ = {
-			isa = PBXGroup;
-			children = (
-				FB79463226AB1CFA00E5FD7D /* router */,
-				FB79463126AB1CF000E5FD7D /* view */,
-			);
-			path = feedback;
-			sourceTree = "<group>";
-		};
-		FB79463126AB1CF000E5FD7D /* view */ = {
-			isa = PBXGroup;
-			children = (
-				FB79463326AB1D1900E5FD7D /* FeedbackViewController.swift */,
-				A32FD17826AC11B6007B678B /* FeedbackViewInput.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		FB79463226AB1CFA00E5FD7D /* router */ = {
-			isa = PBXGroup;
-			children = (
-				FB79463526AB1D4900E5FD7D /* FeedbackRouter.swift */,
-				FB79463726AB1D6000E5FD7D /* FeedbackRouterInput.swift */,
-			);
-			path = router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1092,7 +1009,6 @@
 				295BE6BA25A6E6ED00590449 /* StatusERouterInput.swift in Sources */,
 				295BE68925A6E16300590449 /* CateringViewInput.swift in Sources */,
 				295BE68D25A6E17E00590449 /* CateringViewController.swift in Sources */,
-				FB75474126AC74EC007DD1EC /* InstructionRouterInput.swift in Sources */,
 				29CA4AD625A5D59100F9B0B6 /* UIImageView+Extensions.swift in Sources */,
 				29CA4A8825A5D19E00F9B0B6 /* Constants.swift in Sources */,
 				29F86EF825A832C200C2927E /* ResponsePlace.swift in Sources */,
@@ -1100,7 +1016,6 @@
 				29CA4A8B25A5D19E00F9B0B6 /* AppColor.swift in Sources */,
 				29CA4ADC25A5D59100F9B0B6 /* String+Extensions.swift in Sources */,
 				295BE67F25A6E03600590449 /* SearchRouterInput.swift in Sources */,
-				FB75474826AD1302007DD1EC /* InstructionViewInput.swift in Sources */,
 				FB72D81F270E938B008F2270 /* SwitchAndLabelCell.swift in Sources */,
 				29CA4ADD25A5D59100F9B0B6 /* MimeType.swift in Sources */,
 				29CA4AC325A5D56D00F9B0B6 /* BaseViewController.swift in Sources */,
@@ -1112,7 +1027,6 @@
 				29CA4AC525A5D56D00F9B0B6 /* BaseViewInputProtocol.swift in Sources */,
 				29CA4ADB25A5D59100F9B0B6 /* UICollectionView+Extensions.swift in Sources */,
 				FB65DE0D26A7E41D004868B8 /* ResponseAdditions.swift in Sources */,
-				A32FD17926AC11B6007B678B /* FeedbackViewInput.swift in Sources */,
 				29CA4B1725A5D94300F9B0B6 /* NetworkService.swift in Sources */,
 				295BE69625A6E20900590449 /* CateringInteractorInput.swift in Sources */,
 				29CA4A9525A5D35700F9B0B6 /* AppError.swift in Sources */,
@@ -1138,7 +1052,6 @@
 				29CA4A9925A5D35700F9B0B6 /* LocalStore.swift in Sources */,
 				29CA4B0125A5D76800F9B0B6 /* InitialRouterInput.swift in Sources */,
 				29CA4AB425A5D55200F9B0B6 /* RouteProtocol.swift in Sources */,
-				FB79463626AB1D4900E5FD7D /* FeedbackRouter.swift in Sources */,
 				29CA4AFE25A5D72D00F9B0B6 /* InitialInteractor.swift in Sources */,
 				29CA4A8625A5D19E00F9B0B6 /* Route.swift in Sources */,
 				295BE69F25A6E27300590449 /* CateringRouter.swift in Sources */,
@@ -1148,7 +1061,6 @@
 				29CA4AF225A5D6A400F9B0B6 /* InitialViewInput.swift in Sources */,
 				295BE65E25A6DCC400590449 /* MenuInteractor.swift in Sources */,
 				295BE6CC25A6E84800590449 /* MainViewController.swift in Sources */,
-				FB75474326AC74F8007DD1EC /* InstructionRouter.swift in Sources */,
 				CE9F6E3F25A0CC7300CCFF31 /* InitialViewController.swift in Sources */,
 				29CA4AF525A5D6E500F9B0B6 /* InitialPresenterInput.swift in Sources */,
 				295BE65225A6DC2800590449 /* MenuViewController.swift in Sources */,
@@ -1167,18 +1079,15 @@
 				295BE6CF25A6E89500590449 /* MainRouterInput.swift in Sources */,
 				29CA4B2125A5D94300F9B0B6 /* RequestAdapter.swift in Sources */,
 				FB75474C26AD1C0D007DD1EC /* SearchDetailRouter.swift in Sources */,
-				FB75473C26AC6D67007DD1EC /* MenuItem.swift in Sources */,
 				FB65DE0F26A7E4B6004868B8 /* Addition.swift in Sources */,
 				FB79462F26AB047400E5FD7D /* MenuViewCell.swift in Sources */,
 				29CA4AD925A5D59100F9B0B6 /* UITableView+Extensions.swift in Sources */,
 				29CA4AC225A5D56D00F9B0B6 /* EmptyTitleBarButtonItem.swift in Sources */,
 				29CA4B1C25A5D94300F9B0B6 /* CancelableRequest.swift in Sources */,
-				FB79463426AB1D1900E5FD7D /* FeedbackViewController.swift in Sources */,
 				29CA4ADE25A5D59100F9B0B6 /* Dictionary+Extensions.swift in Sources */,
 				29CA4B1B25A5D94300F9B0B6 /* SessionManager.swift in Sources */,
 				295BE64E25A6DC0900590449 /* MenuViewInput.swift in Sources */,
 				FB75474E26AD1C28007DD1EC /* SearchDetailRouterInput.swift in Sources */,
-				FB79463826AB1D6000E5FD7D /* FeedbackRouterInput.swift in Sources */,
 				FB72D821270EBAB4008F2270 /* CheckboxWithLabel.swift in Sources */,
 				FB75475126AD1D0E007DD1EC /* SearchDetailViewController.swift in Sources */,
 				295BE6D225A6E8A500590449 /* MainRouter.swift in Sources */,
@@ -1208,7 +1117,6 @@
 				295BE6C825A6E83700590449 /* MainViewInput.swift in Sources */,
 				29CA4B2025A5D94300F9B0B6 /* NetworkResponse.swift in Sources */,
 				29CA4ADA25A5D59100F9B0B6 /* UIImage+Extensions.swift in Sources */,
-				FB75474626AD1257007DD1EC /* InstructionViewController.swift in Sources */,
 				FB65DE1426A83FC4004868B8 /* GetAdditionsContext.swift in Sources */,
 				295BE66125A6DCEB00590449 /* MenuRouterInput.swift in Sources */,
 				29CA4AC425A5D56D00F9B0B6 /* BaseViewControllerProtocol.swift in Sources */,

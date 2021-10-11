@@ -407,6 +407,33 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="57.589285714285708"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="ojn-rs-g9t">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="QWP-yp-0HU" customClass="MenuViewController" customModule="Halal_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7QO-lU-NVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="todo menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLK-Xp-UdF">
+                                <rect key="frame" x="81" y="251" width="183" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IMK-m5-Wtk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jLK-Xp-UdF" firstAttribute="centerY" secondItem="IMK-m5-Wtk" secondAttribute="centerY" id="adL-cI-7Hm"/>
+                            <constraint firstItem="jLK-Xp-UdF" firstAttribute="centerX" secondItem="IMK-m5-Wtk" secondAttribute="centerX" id="gnC-fx-jSE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZC-Qt-dun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="869"/>
+        </scene>
         <!--Addition Detail View Controller-->
         <scene sceneID="Gtv-uH-wh9">
             <objects>
