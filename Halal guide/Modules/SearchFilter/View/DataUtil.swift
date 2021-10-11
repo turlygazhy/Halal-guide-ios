@@ -35,7 +35,6 @@ class DataUtil {
             return true
         }
         
-        let temp = regions.filter{ $0.checked! }.map{ $0.text }.contains(region)
-        return temp //todo inline
+        return regions.filter{ $0.checked! }.map{ $0.text }.contains(region)
     }
 }
