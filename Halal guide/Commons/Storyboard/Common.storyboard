@@ -415,24 +415,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="todo menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLK-Xp-UdF">
-                                <rect key="frame" x="81" y="251" width="183" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IF3-hd-h6W">
+                                <rect key="frame" x="15" y="54" width="384" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Bx-NS-45V">
+                                        <rect key="frame" x="10" y="5.5" width="40" height="39.5"/>
+                                        <color key="tintColor" red="0.43649187680000001" green="0.69530123470000005" blue="0.4002474546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="8wI-Rb-Qba"/>
+                                            <constraint firstAttribute="height" constant="40" id="lua-0M-YVG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf6-dd-ik0">
+                                        <rect key="frame" x="65" y="1" width="215" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Обратная связь"/>
+                                        <connections>
+                                            <segue destination="pPN-iA-QBJ" kind="show" id="yfm-tn-dEj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="0Bx-NS-45V" firstAttribute="leading" secondItem="IF3-hd-h6W" secondAttribute="leading" constant="10" id="92V-lM-kXw"/>
+                                    <constraint firstItem="0Bx-NS-45V" firstAttribute="centerY" secondItem="IF3-hd-h6W" secondAttribute="centerY" id="IYl-JV-M4i"/>
+                                    <constraint firstAttribute="height" constant="50" id="kk0-F6-nW0"/>
+                                    <constraint firstItem="qf6-dd-ik0" firstAttribute="leading" secondItem="0Bx-NS-45V" secondAttribute="trailing" constant="15" id="myS-2I-79n"/>
+                                    <constraint firstItem="qf6-dd-ik0" firstAttribute="centerY" secondItem="IF3-hd-h6W" secondAttribute="centerY" id="t2C-lH-09d"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IMK-m5-Wtk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jLK-Xp-UdF" firstAttribute="centerY" secondItem="IMK-m5-Wtk" secondAttribute="centerY" id="adL-cI-7Hm"/>
-                            <constraint firstItem="jLK-Xp-UdF" firstAttribute="centerX" secondItem="IMK-m5-Wtk" secondAttribute="centerX" id="gnC-fx-jSE"/>
+                            <constraint firstItem="IF3-hd-h6W" firstAttribute="top" secondItem="IMK-m5-Wtk" secondAttribute="top" constant="10" id="1xk-KN-WgM"/>
+                            <constraint firstItem="IMK-m5-Wtk" firstAttribute="trailing" secondItem="IF3-hd-h6W" secondAttribute="trailing" constant="15" id="U94-Xd-yjk"/>
+                            <constraint firstItem="IF3-hd-h6W" firstAttribute="leading" secondItem="IMK-m5-Wtk" secondAttribute="leading" constant="15" id="rnk-fa-u8v"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZC-Qt-dun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="869"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2aV-zd-fpE">
+            <objects>
+                <viewController id="pPN-iA-QBJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4q-ja-sAC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pPy-GC-llw">
+                                <rect key="frame" x="20" y="40" width="374" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="R9h-AF-1ct"/>
+                                </constraints>
+                                <string key="text">Если вы нашли ошибку в работе программы или ошибку в данных пожалуйста сообщите об этом нам, используя один из следующих вариантов:</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-instagram" translatesAutoresizingMaskIntoConstraints="NO" id="XoC-3o-QqF">
+                                <rect key="frame" x="179.5" y="240" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="lLz-n0-MjL"/>
+                                    <constraint firstAttribute="width" constant="55" id="z9d-6d-ode"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-whatsapp" translatesAutoresizingMaskIntoConstraints="NO" id="jId-zA-h8C">
+                                <rect key="frame" x="79.5" y="232.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="GnL-Ue-n5p"/>
+                                    <constraint firstAttribute="width" constant="70" id="vN7-nD-Ue9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-mail" translatesAutoresizingMaskIntoConstraints="NO" id="Tze-YX-vnY">
+                                <rect key="frame" x="264.5" y="232.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CfZ-eQ-GWV"/>
+                                    <constraint firstAttribute="width" constant="70" id="P8L-2d-GIi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWn-k9-ACA">
+                                <rect key="frame" x="48" y="327" width="346" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">todo images should be 
+clickable</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cWT-UQ-tXi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XoC-3o-QqF" firstAttribute="top" secondItem="pPy-GC-llw" secondAttribute="bottom" constant="50" id="1FX-rZ-QzE"/>
+                            <constraint firstItem="Tze-YX-vnY" firstAttribute="leading" secondItem="XoC-3o-QqF" secondAttribute="trailing" constant="30" id="1h4-b9-1Gj"/>
+                            <constraint firstItem="pPy-GC-llw" firstAttribute="leading" secondItem="cWT-UQ-tXi" secondAttribute="leading" constant="20" id="AJv-eq-msP"/>
+                            <constraint firstItem="XoC-3o-QqF" firstAttribute="leading" secondItem="jId-zA-h8C" secondAttribute="trailing" constant="30" id="Dmj-5T-bf4"/>
+                            <constraint firstItem="Tze-YX-vnY" firstAttribute="centerY" secondItem="XoC-3o-QqF" secondAttribute="centerY" id="R8O-eF-iAy"/>
+                            <constraint firstItem="pPy-GC-llw" firstAttribute="top" secondItem="cWT-UQ-tXi" secondAttribute="top" constant="40" id="aD0-5j-jLG"/>
+                            <constraint firstItem="cWT-UQ-tXi" firstAttribute="trailing" secondItem="pPy-GC-llw" secondAttribute="trailing" constant="20" id="fvn-M1-be1"/>
+                            <constraint firstItem="XoC-3o-QqF" firstAttribute="centerX" secondItem="cWT-UQ-tXi" secondAttribute="centerX" id="nQW-fS-oMM"/>
+                            <constraint firstItem="jId-zA-h8C" firstAttribute="centerY" secondItem="XoC-3o-QqF" secondAttribute="centerY" id="tSM-6D-eWS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ruC-1H-vMo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcg-nW-Tvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="764"/>
         </scene>
         <!--Addition Detail View Controller-->
         <scene sceneID="Gtv-uH-wh9">
@@ -650,6 +744,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo-instagram" width="1455" height="1454"/>
+        <image name="logo-mail" width="512" height="512"/>
+        <image name="logo-whatsapp" width="1600" height="1136"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

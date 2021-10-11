@@ -19,7 +19,7 @@ class MenuViewController: BaseViewController {
         
         view.backgroundColor = .white
         title = "Меню"
-        
+        //todo menu is ugly
     }
     
 }
