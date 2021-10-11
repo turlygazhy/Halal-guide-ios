@@ -19,10 +19,6 @@ class ChooseRegionViewController: UIViewController {
         
         dataSource = DataHolder.shared.getRegionCheckboxes()
         self.title = "Выберите регион"
-        //todo bug
-        //when i open choose region first time and click any, click cancel, and back I see that my chose was saved.
-        //i think i dont have two vars, both is link to one
-        //todo bug кликнул очистить в фильтре но таблица не перезагрузилась
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
