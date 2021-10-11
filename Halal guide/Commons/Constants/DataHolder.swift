@@ -91,22 +91,24 @@ class DataHolder {
         if regionCheckboxes == nil || regionCheckboxes!.isEmpty {
             regionCheckboxes = getRegionNames().map{CheckboxWithLabel(checked: false, text: $0)}
         }
-        return regionCheckboxes!//todo sort by alphabet
+        return regionCheckboxes!.map{ CheckboxWithLabel(checked: $0.checked!, text: $0.text!) }
+        //todo is this copying correct?
+        //todo sort by alphabet
     }
     
     func setRegionCheckboxes(regionCheckboxes: [CheckboxWithLabel]) {
-        self.regionCheckboxes = regionCheckboxes
+        self.regionCheckboxes = regionCheckboxes.map{ CheckboxWithLabel(checked: $0.checked!, text: $0.text!) }
     }
     
     func getCategoryCheckboxes() -> [CheckboxWithLabel] {
         if categoryCheckboxes == nil || categoryCheckboxes!.isEmpty {
             categoryCheckboxes = getCategoryNames().map{CheckboxWithLabel(checked: false, text: $0)}
         }
-        return categoryCheckboxes!//todo sort by alphabet
+        return categoryCheckboxes!.map{ CheckboxWithLabel(checked: $0.checked!, text: $0.text!) }//todo sort by alphabet
     }
     
     func setCategoryCheckboxes(categoryCheckboxes: [CheckboxWithLabel]) {
-        self.categoryCheckboxes = categoryCheckboxes
+        self.categoryCheckboxes = categoryCheckboxes.map{ CheckboxWithLabel(checked: $0.checked!, text: $0.text!) }
     }
     
     func clearFilters() {
