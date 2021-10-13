@@ -22,6 +22,14 @@ class MenuViewController: BaseViewController {
         //todo menu is ugly
     }
     
+    @IBAction func markApp(_ sender: Any) {
+        //todo
+    }
+    
+    @IBAction func shareApp(_ sender: Any) {
+        //todo
+    }
+    
 }
 
 extension MenuViewController: MenuViewInput {
