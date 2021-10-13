@@ -21,8 +21,7 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))//todo должно быть до фильтра
-        //todo нужно убрать тайтл
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 85, height: 0))
         searchBar.placeholder = "Предприятие, товар, марка"
         searchBar.delegate = self
         let searchButton = UIBarButtonItem(customView: searchBar)

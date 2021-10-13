@@ -92,7 +92,6 @@ class DataHolder {
             regionCheckboxes = getRegionNames().map{CheckboxWithLabel(checked: false, text: $0)}
         }
         return regionCheckboxes!.map{ CheckboxWithLabel(checked: $0.checked!, text: $0.text!) }
-        //todo is this copying correct?
         //todo sort by alphabet
     }
     

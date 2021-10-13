@@ -18,6 +18,8 @@ class SearchInteractor: SearchInteractorInput {
         self.presenter = presenter
     }
     
+    //todo check api updated here
+    
     func getPlaces() {
         
         if DataHolder.shared.isPlacesExist() {

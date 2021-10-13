@@ -115,6 +115,7 @@
 		CE9F6E4425A0CC9100CCFF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4325A0CC9100CCFF31 /* Assets.xcassets */; };
 		CE9F6E4725A0CC9100CCFF31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9F6E4525A0CC9100CCFF31 /* LaunchScreen.storyboard */; };
 		FB44F628271323D0000BB93B /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44F627271323D0000BB93B /* DataUtil.swift */; };
+		FB44F62A2715BEF9000BB93B /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44F6292715BEF9000BB93B /* FeedbackViewController.swift */; };
 		FB60078A270475BE00C9C67B /* PhoneMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB600789270475BE00C9C67B /* PhoneMemory.swift */; };
 		FB60078C2705551500C9C67B /* GetApiUpdateDateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */; };
 		FB60078F27069FD900C9C67B /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078E27069FD900C9C67B /* FilterViewController.swift */; };
@@ -251,6 +252,7 @@
 		CE9F6E4625A0CC9100CCFF31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9F6E4825A0CC9100CCFF31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB44F627271323D0000BB93B /* DataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataUtil.swift; path = "Halal guide/Modules/SearchFilter/View/DataUtil.swift"; sourceTree = SOURCE_ROOT; };
+		FB44F6292715BEF9000BB93B /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		FB600789270475BE00C9C67B /* PhoneMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneMemory.swift; path = "Halal guide/Commons/Storyboard/PhoneMemory.swift"; sourceTree = SOURCE_ROOT; };
 		FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiUpdateDateContext.swift; sourceTree = "<group>"; };
 		FB60078E27069FD900C9C67B /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				295BE64D25A6DC0900590449 /* MenuViewInput.swift */,
 				295BE65125A6DC2800590449 /* MenuViewController.swift */,
 				FB79462E26AB047400E5FD7D /* MenuViewCell.swift */,
+				FB44F6292715BEF9000BB93B /* FeedbackViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1113,6 +1116,7 @@
 				29CA4B1525A5D94300F9B0B6 /* FailureNetworkResponse.swift in Sources */,
 				29CA4B1825A5D94300F9B0B6 /* IdentifiedRequest.swift in Sources */,
 				295BE67C25A6DFEA00590449 /* SearchInteractor.swift in Sources */,
+				FB44F62A2715BEF9000BB93B /* FeedbackViewController.swift in Sources */,
 				FB6007932706AB8000C9C67B /* AdditionDetailRouter.swift in Sources */,
 				295BE6C825A6E83700590449 /* MainViewInput.swift in Sources */,
 				29CA4B2025A5D94300F9B0B6 /* NetworkResponse.swift in Sources */,

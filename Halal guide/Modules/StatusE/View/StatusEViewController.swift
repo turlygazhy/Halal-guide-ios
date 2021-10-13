@@ -21,8 +21,7 @@ class StatusEViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))//todo должно быть до конца
-        //todo убрать тайтл
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 30, height: 20))
         searchBar.placeholder = "Номер добавки, название"
         searchBar.delegate = self
         let searchButton = UIBarButtonItem(customView: searchBar)

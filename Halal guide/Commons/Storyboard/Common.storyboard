@@ -316,8 +316,8 @@
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7q-nx-Adw" userLabel="mekeme">
-                                <rect key="frame" x="161" y="364.5" width="8" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7q-nx-Adw" userLabel="mekeme">
+                                <rect key="frame" x="161" y="364" width="8" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -458,10 +458,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="869"/>
         </scene>
-        <!--View Controller-->
+        <!--Feedback View Controller-->
         <scene sceneID="2aV-zd-fpE">
             <objects>
-                <viewController id="pPN-iA-QBJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedbackViewController" id="pPN-iA-QBJ" customClass="FeedbackViewController" customModule="Halal_guide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4q-ja-sAC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -477,56 +477,59 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-instagram" translatesAutoresizingMaskIntoConstraints="NO" id="XoC-3o-QqF">
-                                <rect key="frame" x="179.5" y="240" width="55" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="lLz-n0-MjL"/>
-                                    <constraint firstAttribute="width" constant="55" id="z9d-6d-ode"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-whatsapp" translatesAutoresizingMaskIntoConstraints="NO" id="jId-zA-h8C">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1la-cm-FJt" userLabel="whatsapp">
                                 <rect key="frame" x="79.5" y="232.5" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="GnL-Ue-n5p"/>
-                                    <constraint firstAttribute="width" constant="70" id="vN7-nD-Ue9"/>
+                                    <constraint firstAttribute="width" constant="70" id="UHI-jz-OCQ"/>
+                                    <constraint firstAttribute="height" constant="70" id="c9a-h2-8M4"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-mail" translatesAutoresizingMaskIntoConstraints="NO" id="Tze-YX-vnY">
+                                <state key="normal" image="logo-whatsapp"/>
+                                <connections>
+                                    <action selector="openWhatsapp:" destination="pPN-iA-QBJ" eventType="touchUpInside" id="SIL-Yj-7c7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-ta-6II" userLabel="instagram">
+                                <rect key="frame" x="179.5" y="240" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Pa6-hQ-VTz"/>
+                                    <constraint firstAttribute="width" constant="55" id="sc6-am-4Z8"/>
+                                </constraints>
+                                <state key="normal" image="logo-instagram"/>
+                                <connections>
+                                    <action selector="openInstagram:" destination="pPN-iA-QBJ" eventType="touchUpInside" id="Sfb-SC-csJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6o-Bi-Y7u" userLabel="mail">
                                 <rect key="frame" x="264.5" y="232.5" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="CfZ-eQ-GWV"/>
-                                    <constraint firstAttribute="width" constant="70" id="P8L-2d-GIi"/>
+                                    <constraint firstAttribute="width" constant="70" id="pnd-kS-TmL"/>
+                                    <constraint firstAttribute="height" constant="70" id="s62-a3-p14"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWn-k9-ACA">
-                                <rect key="frame" x="48" y="327" width="346" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">todo images should be 
-clickable</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" image="logo-mail"/>
+                                <connections>
+                                    <action selector="openMail:" destination="pPN-iA-QBJ" eventType="touchUpInside" id="8hG-0d-29A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cWT-UQ-tXi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XoC-3o-QqF" firstAttribute="top" secondItem="pPy-GC-llw" secondAttribute="bottom" constant="50" id="1FX-rZ-QzE"/>
-                            <constraint firstItem="Tze-YX-vnY" firstAttribute="leading" secondItem="XoC-3o-QqF" secondAttribute="trailing" constant="30" id="1h4-b9-1Gj"/>
+                            <constraint firstItem="cyC-ta-6II" firstAttribute="centerX" secondItem="cWT-UQ-tXi" secondAttribute="centerX" id="3Ou-dE-Aia"/>
                             <constraint firstItem="pPy-GC-llw" firstAttribute="leading" secondItem="cWT-UQ-tXi" secondAttribute="leading" constant="20" id="AJv-eq-msP"/>
-                            <constraint firstItem="XoC-3o-QqF" firstAttribute="leading" secondItem="jId-zA-h8C" secondAttribute="trailing" constant="30" id="Dmj-5T-bf4"/>
-                            <constraint firstItem="Tze-YX-vnY" firstAttribute="centerY" secondItem="XoC-3o-QqF" secondAttribute="centerY" id="R8O-eF-iAy"/>
+                            <constraint firstItem="D6o-Bi-Y7u" firstAttribute="leading" secondItem="cyC-ta-6II" secondAttribute="trailing" constant="30" id="Bpz-gB-xMD"/>
+                            <constraint firstItem="cyC-ta-6II" firstAttribute="leading" secondItem="1la-cm-FJt" secondAttribute="trailing" constant="30" id="Bv0-Ab-Su3"/>
+                            <constraint firstItem="1la-cm-FJt" firstAttribute="centerY" secondItem="cyC-ta-6II" secondAttribute="centerY" id="DF2-mE-BBZ"/>
+                            <constraint firstItem="D6o-Bi-Y7u" firstAttribute="centerY" secondItem="cyC-ta-6II" secondAttribute="centerY" id="TCA-Kq-ici"/>
                             <constraint firstItem="pPy-GC-llw" firstAttribute="top" secondItem="cWT-UQ-tXi" secondAttribute="top" constant="40" id="aD0-5j-jLG"/>
+                            <constraint firstItem="cyC-ta-6II" firstAttribute="top" secondItem="pPy-GC-llw" secondAttribute="bottom" constant="50" id="c7w-MP-6eF"/>
                             <constraint firstItem="cWT-UQ-tXi" firstAttribute="trailing" secondItem="pPy-GC-llw" secondAttribute="trailing" constant="20" id="fvn-M1-be1"/>
-                            <constraint firstItem="XoC-3o-QqF" firstAttribute="centerX" secondItem="cWT-UQ-tXi" secondAttribute="centerX" id="nQW-fS-oMM"/>
-                            <constraint firstItem="jId-zA-h8C" firstAttribute="centerY" secondItem="XoC-3o-QqF" secondAttribute="centerY" id="tSM-6D-eWS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ruC-1H-vMo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcg-nW-Tvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943" y="764"/>
+            <point key="canvasLocation" x="942.02898550724649" y="763.39285714285711"/>
         </scene>
         <!--Addition Detail View Controller-->
         <scene sceneID="Gtv-uH-wh9">
