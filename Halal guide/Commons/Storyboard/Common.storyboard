@@ -444,19 +444,125 @@
                                     <constraint firstItem="qf6-dd-ik0" firstAttribute="centerY" secondItem="IF3-hd-h6W" secondAttribute="centerY" id="t2C-lH-09d"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SNV-hq-P0J" userLabel="info">
+                                <rect key="frame" x="25" y="119.5" width="40" height="39"/>
+                                <color key="tintColor" red="0.43649187680000001" green="0.69530123470000005" blue="0.4002474546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gNZ-cd-AHi" userLabel="star">
+                                <rect key="frame" x="25" y="173.5" width="40" height="40"/>
+                                <color key="tintColor" red="0.43649187680000001" green="0.69530123470000005" blue="0.4002474546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e7Z-oW-K2m" userLabel="share">
+                                <rect key="frame" x="25" y="229.5" width="40" height="39"/>
+                                <color key="tintColor" red="0.43649187680000001" green="0.69530123470000005" blue="0.4002474546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry3-k8-lgq">
+                                <rect key="frame" x="80" y="115" width="166" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Инструкции"/>
+                                <connections>
+                                    <segue destination="E7N-fP-04z" kind="show" id="nRm-gi-Cmh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-Si-HuK">
+                                <rect key="frame" x="80" y="170" width="297" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Оцените приложение"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jui-Rc-ExA">
+                                <rect key="frame" x="80" y="225" width="164" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Поделиться"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IMK-m5-Wtk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="e7Z-oW-K2m" firstAttribute="width" secondItem="gNZ-cd-AHi" secondAttribute="width" id="05J-3R-xeM"/>
+                            <constraint firstItem="Jui-Rc-ExA" firstAttribute="centerY" secondItem="e7Z-oW-K2m" secondAttribute="centerY" id="0aF-kG-fG6"/>
+                            <constraint firstItem="Ydn-Si-HuK" firstAttribute="leading" secondItem="gNZ-cd-AHi" secondAttribute="trailing" constant="15" id="0u3-KP-TZA"/>
                             <constraint firstItem="IF3-hd-h6W" firstAttribute="top" secondItem="IMK-m5-Wtk" secondAttribute="top" constant="10" id="1xk-KN-WgM"/>
+                            <constraint firstItem="SNV-hq-P0J" firstAttribute="centerX" secondItem="0Bx-NS-45V" secondAttribute="centerX" id="5Ab-xK-20T"/>
+                            <constraint firstItem="ry3-k8-lgq" firstAttribute="leading" secondItem="SNV-hq-P0J" secondAttribute="trailing" constant="15" id="7pr-Vk-huW"/>
+                            <constraint firstItem="SNV-hq-P0J" firstAttribute="width" secondItem="0Bx-NS-45V" secondAttribute="width" id="DXO-ug-M6B"/>
+                            <constraint firstItem="gNZ-cd-AHi" firstAttribute="height" secondItem="SNV-hq-P0J" secondAttribute="height" id="Fgt-lu-5qX"/>
+                            <constraint firstItem="Jui-Rc-ExA" firstAttribute="leading" secondItem="e7Z-oW-K2m" secondAttribute="trailing" constant="15" id="GzB-cX-Pl6"/>
+                            <constraint firstItem="gNZ-cd-AHi" firstAttribute="centerX" secondItem="SNV-hq-P0J" secondAttribute="centerX" id="PXE-BW-h5W"/>
+                            <constraint firstItem="ry3-k8-lgq" firstAttribute="centerY" secondItem="SNV-hq-P0J" secondAttribute="centerY" id="SIi-Dc-CQs"/>
                             <constraint firstItem="IMK-m5-Wtk" firstAttribute="trailing" secondItem="IF3-hd-h6W" secondAttribute="trailing" constant="15" id="U94-Xd-yjk"/>
+                            <constraint firstItem="Ydn-Si-HuK" firstAttribute="centerY" secondItem="gNZ-cd-AHi" secondAttribute="centerY" id="Wmy-6q-xe8"/>
+                            <constraint firstItem="gNZ-cd-AHi" firstAttribute="width" secondItem="SNV-hq-P0J" secondAttribute="width" id="bwj-ZI-ojK"/>
+                            <constraint firstItem="gNZ-cd-AHi" firstAttribute="top" secondItem="SNV-hq-P0J" secondAttribute="bottom" constant="15" id="cBj-r6-6Bg"/>
+                            <constraint firstItem="SNV-hq-P0J" firstAttribute="leading" secondItem="0Bx-NS-45V" secondAttribute="leading" id="cbn-9R-EZ4"/>
+                            <constraint firstItem="SNV-hq-P0J" firstAttribute="height" secondItem="0Bx-NS-45V" secondAttribute="height" id="dC2-aH-um0"/>
+                            <constraint firstItem="e7Z-oW-K2m" firstAttribute="top" secondItem="gNZ-cd-AHi" secondAttribute="bottom" constant="15" id="gf8-zr-eTu"/>
+                            <constraint firstItem="e7Z-oW-K2m" firstAttribute="centerX" secondItem="gNZ-cd-AHi" secondAttribute="centerX" id="miN-zE-bpK"/>
+                            <constraint firstItem="SNV-hq-P0J" firstAttribute="top" secondItem="IF3-hd-h6W" secondAttribute="bottom" constant="15" id="rAc-H6-eNi"/>
                             <constraint firstItem="IF3-hd-h6W" firstAttribute="leading" secondItem="IMK-m5-Wtk" secondAttribute="leading" constant="15" id="rnk-fa-u8v"/>
+                            <constraint firstItem="e7Z-oW-K2m" firstAttribute="height" secondItem="gNZ-cd-AHi" secondAttribute="height" id="zcL-Tm-5mb"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZC-Qt-dun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="869"/>
+            <point key="canvasLocation" x="132" y="1067"/>
+        </scene>
+        <!--Instruction View Controller-->
+        <scene sceneID="Dnf-Px-zXP">
+            <objects>
+                <viewController storyboardIdentifier="InstructionViewController" id="E7N-fP-04z" customClass="InstructionViewController" customModule="Halal_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXQ-24-JvM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vLO-0L-byw">
+                                <rect key="frame" x="157" y="20" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1PQ-s6-7mL"/>
+                                    <constraint firstAttribute="width" constant="100" id="6OH-FH-dcV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Халал Даму" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7T-0B-Y0A">
+                                <rect key="frame" x="138" y="135" width="138" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="центр стандартизации и сертификации." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjK-8i-2gi">
+                                <rect key="frame" x="29" y="168" width="356" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Mj-Nj-Jao">
+                                <rect key="frame" x="15" y="206" width="384" height="243"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">В данном мобильном приложении вы можете самостоятельно проверить подлинность сертификата «Халал Даму» используя меню 'Поиск', посмотреть перечень «Пищевых добавок (Е коды)», благодаря которому можно самостоятельно изучить состав продукта, открыть карту, что бы увидеть сертифицированные «Мясные лавки» и «Места общественного питания».</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dET-Ou-tgF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jjK-8i-2gi" firstAttribute="centerX" secondItem="f7T-0B-Y0A" secondAttribute="centerX" id="4sw-Nk-jQG"/>
+                            <constraint firstItem="dET-Ou-tgF" firstAttribute="trailing" secondItem="4Mj-Nj-Jao" secondAttribute="trailing" constant="15" id="HEc-Mp-8lk"/>
+                            <constraint firstItem="4Mj-Nj-Jao" firstAttribute="top" secondItem="jjK-8i-2gi" secondAttribute="bottom" constant="15" id="Nrk-3W-6ia"/>
+                            <constraint firstItem="f7T-0B-Y0A" firstAttribute="centerX" secondItem="vLO-0L-byw" secondAttribute="centerX" id="SX2-ha-xtq"/>
+                            <constraint firstItem="4Mj-Nj-Jao" firstAttribute="centerX" secondItem="jjK-8i-2gi" secondAttribute="centerX" id="bT3-GB-bZr"/>
+                            <constraint firstItem="vLO-0L-byw" firstAttribute="centerX" secondItem="dET-Ou-tgF" secondAttribute="centerX" id="eOD-C4-Fij"/>
+                            <constraint firstItem="jjK-8i-2gi" firstAttribute="top" secondItem="f7T-0B-Y0A" secondAttribute="bottom" constant="3" id="g4s-gp-kNn"/>
+                            <constraint firstItem="4Mj-Nj-Jao" firstAttribute="leading" secondItem="dET-Ou-tgF" secondAttribute="leading" constant="15" id="k6T-jV-9XO"/>
+                            <constraint firstItem="vLO-0L-byw" firstAttribute="top" secondItem="dET-Ou-tgF" secondAttribute="top" constant="20" id="sbH-mH-pLF"/>
+                            <constraint firstItem="f7T-0B-Y0A" firstAttribute="top" secondItem="vLO-0L-byw" secondAttribute="bottom" constant="15" id="zPh-y9-dZN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pWG-lF-NC3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3K-up-4WN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="1457"/>
         </scene>
         <!--Feedback View Controller-->
         <scene sceneID="2aV-zd-fpE">
@@ -747,10 +853,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appLogo" width="400" height="400"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="link.circle" catalog="system" width="128" height="121"/>
         <image name="logo-instagram" width="1455" height="1454"/>
         <image name="logo-mail" width="512" height="512"/>
         <image name="logo-whatsapp" width="1600" height="1136"/>
         <image name="message" catalog="system" width="128" height="113"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
