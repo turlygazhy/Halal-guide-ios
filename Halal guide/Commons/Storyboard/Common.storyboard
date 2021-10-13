@@ -468,11 +468,17 @@
                                 <rect key="frame" x="80" y="170" width="297" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Оцените приложение"/>
+                                <connections>
+                                    <action selector="markApp:" destination="QWP-yp-0HU" eventType="touchUpInside" id="tSe-C1-KLL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jui-Rc-ExA">
                                 <rect key="frame" x="80" y="225" width="164" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Поделиться"/>
+                                <connections>
+                                    <action selector="shareApp:" destination="QWP-yp-0HU" eventType="touchUpInside" id="gmj-RP-Vzg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IMK-m5-Wtk"/>
