@@ -12,7 +12,7 @@ import UIKit
 class MenuViewCell: UITableViewCell, ReusableView {
     
     private let menuItemTitle = UILabel()
-    //todo need to add icons
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setupViews()
