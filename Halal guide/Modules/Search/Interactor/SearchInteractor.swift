@@ -18,17 +18,34 @@ class SearchInteractor: SearchInteractorInput {
         self.presenter = presenter
     }
     
-    //todo check api updated here
+    func getApiUpdatedDate() {
+        presenter.startLoading()
+        var updatedDate: String?
+        networkService.load(context: GetApiUpdateDateContext()) { [weak self] serverResponse in
+            if DataHolder.shared.isPlacesExist() {
+                self?.presenter.stopLoading()
+                return
+            }
+            
+            guard serverResponse.isSuccess else { return }
+            guard let placesResponse: ResponsePlaces = serverResponse.decode() else { return }
+            
+            guard let items = placesResponse.data else { return }
+            updatedDate = items[0].updated_at?.date
+            if updatedDate == PhoneMemory.readApiUpdateDate() {
+                DataHolder.shared.setPlaces(places: PhoneMemory.readPlaces())
+                self?.presenter.setData(places: DataHolder.shared.getPlaces())
+                self?.presenter.stopLoading()
+            } else {
+                self?.getPlaces()
+            }
+            PhoneMemory.saveApiUpdateDate(updateDate: updatedDate!)
+        }
+    }
     
     func getPlaces() {
-        
-        if DataHolder.shared.isPlacesExist() {
-            self.presenter.setData(places: DataHolder.shared.getPlaces())
-            return
-        } 
-        
-        presenter.startLoading()
         let context = GetPlacesContext()
+        
         networkService.load(context: context) { [weak self] serverResponse in
             guard let interactor = self else { return }
             guard serverResponse.isSuccess else {

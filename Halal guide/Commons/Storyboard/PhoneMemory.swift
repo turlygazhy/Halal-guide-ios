@@ -11,6 +11,7 @@ import Foundation
 class PhoneMemory {
     
     static let PLACES_KEY = "PLACES_KEY"
+    static let UPDATE_DATE = "UPDATE_DATE"
     
     static func savePlaces(places: [Place]){
         do {
@@ -38,8 +39,12 @@ class PhoneMemory {
         }
     }
     
-    static func getLastSaveDate() -> String {
-        "" //todo
+    static func readApiUpdateDate() -> String {
+        UserDefaults.standard.string(forKey: PhoneMemory.UPDATE_DATE) ?? ""
+    }
+    
+    static func saveApiUpdateDate(updateDate: String) {
+        UserDefaults.standard.set(updateDate, forKey: PhoneMemory.UPDATE_DATE)
     }
     
 }

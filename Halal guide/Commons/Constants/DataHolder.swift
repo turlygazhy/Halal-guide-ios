@@ -22,23 +22,7 @@ class DataHolder {
     private init() { }
     
     func isPlacesExist() -> Bool {
-        //when we already init var places
-        if places != nil && !places!.isEmpty {
-            return true
-        }
-        
-        //when no updates after last save
-        if apiUpdated() {
-            return false
-        } else {
-            let placesInMemory = PhoneMemory.readPlaces()
-            if placesInMemory.isEmpty {
-                return false
-            }
-            setPlaces(places: placesInMemory)
-            return true
-        }
-        
+        places != nil && !places!.isEmpty
     }
     
     func getPlaces() -> [Place] {
@@ -59,24 +43,25 @@ class DataHolder {
         additions!
     }
     
-    func apiUpdated() -> Bool {
-        let saveDate = PhoneMemory.getLastSaveDate()
-        getApiUpdatedDate()
+    func apiUpdated(networkService: NetworkService) -> Bool {
+        let saveDate = PhoneMemory.readApiUpdateDate()
+        getApiUpdatedDate(networkService: networkService)
         
         
         return false //todo
     }
     
-    func getApiUpdatedDate() { //todo not working
-        let networkService = NetworkAdapter(sessionManager: sessionManager)
+    func getApiUpdatedDate(networkService: NetworkService) -> String {
+        var updatedDate: String?
         networkService.load(context: GetApiUpdateDateContext()) { [weak self] serverResponse in
             guard let interactor = self else { return }
             guard serverResponse.isSuccess else { return }
             guard let placesResponse: ResponsePlaces = serverResponse.decode() else { return }
             
             guard let items = placesResponse.data else { return }
-            print(items)//todo delete line
+            updatedDate = items[0].updated_at?.date
         }
+        return updatedDate != nil ? updatedDate! : ""
     }
     
     private func getRegionNames() -> [String] {

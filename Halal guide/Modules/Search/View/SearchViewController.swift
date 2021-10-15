@@ -32,12 +32,12 @@ class SearchViewController: BaseViewController {
         setupViews()
         setConstraints()
         
-        interactor?.getPlaces()
+        interactor?.getApiUpdatedDate()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        dataSource = DataUtil.filter(places: DataHolder.shared.getPlaces())
-        tableView.reloadData()
+//        dataSource = DataUtil.filter(places: DataHolder.shared.getPlaces())
+//        tableView.reloadData()
         //todo нужно что бы когда выставлен фильтр это показывалось на иконке фильтра
     }
     
