@@ -22,6 +22,14 @@ class StatusEInteractor: StatusEInteractorInput {
         presenter.startLoading()
         let context = GetAdditionsContext()
         networkService.load(context: context) { [weak self] serverResponse in
+            if !DataHolder.shared.apiUpdated {
+                let additions = PhoneMemory.readAdditions()
+                if !additions.isEmpty {
+                    self?.presenter.setData(additions: additions)
+                    self?.presenter.stopLoading()
+                    return
+                }
+            }
             guard let interactor = self else { return }
             guard serverResponse.isSuccess else {
                 interactor.presenter.stopLoading()
@@ -43,6 +51,8 @@ class StatusEInteractor: StatusEInteractorInput {
             guard let items = additionsResponse.data else {
                 return
             }
+            
+            PhoneMemory.saveAdditions(additions: items)
             
             self?.presenter.setData(additions: items)
             self?.presenter.stopLoading()

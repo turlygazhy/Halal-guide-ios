@@ -70,7 +70,7 @@ class SearchInteractor: SearchInteractorInput {
             }
             
             DataHolder.shared.setPlaces(places: items)
-            
+            DataHolder.shared.apiUpdated = true
             self?.presenter.setData(places: items)
             self?.presenter.stopLoading()
         }

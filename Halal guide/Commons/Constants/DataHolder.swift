@@ -12,6 +12,8 @@ class DataHolder {
     
     static let shared = DataHolder()
     
+    var apiUpdated = false
+    
     private var places: [Place]?
     private var additions: [Addition]?
     var mosques: [Mosque]?
