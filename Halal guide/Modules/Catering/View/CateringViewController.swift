@@ -121,6 +121,7 @@ extension CateringViewController: CateringViewInput {
         marker.position = CLLocationCoordinate2D(latitude: place.latitude, longitude: place.longitude)
         marker.title = place.title
         marker.snippet = place.address
+        marker.accessibilityHint = "fdsafdsafdsafdsafdsafsda"
         marker.map = mapView
     }
 }
@@ -169,9 +170,9 @@ extension CateringViewController: GMSMapViewDelegate {
         let mapViewWidth = mapView.frame.size.width
         
         let googleMapsButton = UIButton()
-        googleMapsButton.setImage(UIImage(named: "appLogo"), for: .normal)
+        googleMapsButton.setImage(UIImage(named: "googleMapLogo"), for: .normal)
         googleMapsButton.setTitleColor(.blue, for: .normal)
-        googleMapsButton.frame = CGRect.init(x: mapViewWidth - 65, y: mapViewHeight - 120, width: 55, height: 55)
+        googleMapsButton.frame = CGRect.init(x: mapViewWidth - 100, y: mapViewHeight - 130, width: 125, height: 75)
         googleMapsButton.addTarget(self, action: #selector(self.markerClick(sender:)), for: .touchUpInside)
         googleMapsButton.tag = 0
         
