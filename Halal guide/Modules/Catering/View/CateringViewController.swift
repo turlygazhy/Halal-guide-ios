@@ -14,17 +14,18 @@ class CateringViewController: BaseViewController {
     
     var router: CateringRouterInput?
     var interactor: CateringInteractorInput?
-
+    
     private let mapView = GMSMapView()
     private let segmentedControl = UISegmentedControl(items: ["Питание", "Магазины"])
     
     let locationManager = CLLocationManager()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()//todo нужна кнопка открыть на карте
+        setupViews()
         setConstraints()
+        mapView.delegate = self
         
         self.navigationItem.largeTitleDisplayMode = .never
         
@@ -33,14 +34,14 @@ class CateringViewController: BaseViewController {
     
     private func setupViews() {
         title = "Карта"
-
+        
         view.backgroundColor = .white
         view.addSubview(mapView)
         
         locationManager.delegate = self
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestLocation()
-
+            
             mapView.isMyLocationEnabled = true
             mapView.settings.myLocationButton = true
         } else {
@@ -56,7 +57,7 @@ class CateringViewController: BaseViewController {
     
     private func setConstraints() {
         var layoutConstraints = [NSLayoutConstraint]()
-
+        
         mapView.translatesAutoresizingMaskIntoConstraints = false
         layoutConstraints += [
             mapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -64,7 +65,7 @@ class CateringViewController: BaseViewController {
             mapView.rightAnchor.constraint(equalTo: view.rightAnchor),
             mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
-
+        
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         layoutConstraints += [
             segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: UIConstants.defaultPadding),
@@ -72,7 +73,7 @@ class CateringViewController: BaseViewController {
             segmentedControl.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -1 * UIConstants.defaultPadding),
             segmentedControl.heightAnchor.constraint(equalToConstant: 45.0)
         ]
-
+        
         NSLayoutConstraint.activate(layoutConstraints)
     }
     
@@ -133,31 +134,55 @@ extension CateringViewController: MainTabBarItemPageRouterInput {
 
 // MARK: - CLLocationManagerDelegate
 extension CateringViewController: CLLocationManagerDelegate {
-
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard status == .authorizedWhenInUse else {
-          return
+            return
         }
         locationManager.requestLocation()
-
+        
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
-          return
+            return
         }
-
+        
         mapView.camera = GMSCameraPosition(
-          target: location.coordinate,
-          zoom: 15,
-          bearing: 0,
-          viewingAngle: 0)
+            target: location.coordinate,
+            zoom: 15,
+            bearing: 0,
+            viewingAngle: 0)
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
+}
+
+extension CateringViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        let mapViewHeight = mapView.frame.size.height
+        let mapViewWidth = mapView.frame.size.width
+        
+        let googleMapsButton = UIButton()
+        googleMapsButton.setImage(UIImage(named: "appLogo"), for: .normal)
+        googleMapsButton.setTitleColor(.blue, for: .normal)
+        googleMapsButton.frame = CGRect.init(x: mapViewWidth - 65, y: mapViewHeight - 120, width: 55, height: 55)
+        googleMapsButton.addTarget(self, action: #selector(self.markerClick(sender:)), for: .touchUpInside)
+        googleMapsButton.tag = 0
+        
+        self.view.addSubview(googleMapsButton)
+        
+        return false
+    }
+    
+    @objc func markerClick(sender: UIButton) {
+        //todo
+    }
+    
 }
 
