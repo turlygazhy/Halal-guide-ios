@@ -117,6 +117,7 @@
 		FB44F628271323D0000BB93B /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44F627271323D0000BB93B /* DataUtil.swift */; };
 		FB44F62A2715BEF9000BB93B /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44F6292715BEF9000BB93B /* FeedbackViewController.swift */; };
 		FB44F62C27167866000BB93B /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44F62B27167866000BB93B /* InstructionViewController.swift */; };
+		FB44F63D27207999000BB93B /* GMSMarker+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44F63C27207999000BB93B /* GMSMarker+Extensions.swift */; };
 		FB60078A270475BE00C9C67B /* PhoneMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB600789270475BE00C9C67B /* PhoneMemory.swift */; };
 		FB60078C2705551500C9C67B /* GetApiUpdateDateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */; };
 		FB60078F27069FD900C9C67B /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60078E27069FD900C9C67B /* FilterViewController.swift */; };
@@ -255,6 +256,7 @@
 		FB44F627271323D0000BB93B /* DataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataUtil.swift; path = "Halal guide/Modules/SearchFilter/View/DataUtil.swift"; sourceTree = SOURCE_ROOT; };
 		FB44F6292715BEF9000BB93B /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		FB44F62B27167866000BB93B /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		FB44F63C27207999000BB93B /* GMSMarker+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "GMSMarker+Extensions.swift"; path = "../../../../../../Desktop/gb_vk/GB_VK/GB_VK/Presentation/Friend/GMSMarker+Extensions.swift"; sourceTree = "<group>"; };
 		FB600789270475BE00C9C67B /* PhoneMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneMemory.swift; path = "Halal guide/Commons/Storyboard/PhoneMemory.swift"; sourceTree = SOURCE_ROOT; };
 		FB60078B2705551500C9C67B /* GetApiUpdateDateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiUpdateDateContext.swift; sourceTree = "<group>"; };
 		FB60078E27069FD900C9C67B /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -463,7 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				FB75028A26FE085300A1B6C3 /* Storyboard */,
-				29CA4AC825A5D58700F9B0B6 /* Utils */,
+				29CA4AC825A5D58700F9B0B6 /* Util */,
 				29CA4AAC25A5D53E00F9B0B6 /* Protocols */,
 				29CA4A9B25A5D39900F9B0B6 /* Models */,
 				29CA4A9025A5D35700F9B0B6 /* AppError.swift */,
@@ -554,7 +556,7 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		29CA4AC825A5D58700F9B0B6 /* Utils */ = {
+		29CA4AC825A5D58700F9B0B6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				29CA4AD425A5D59100F9B0B6 /* Data+Extensions.swift */,
@@ -574,8 +576,9 @@
 				FB75028E2702BCE000A1B6C3 /* NSAttributedStringExtension.swift */,
 				FB600789270475BE00C9C67B /* PhoneMemory.swift */,
 				FB44F627271323D0000BB93B /* DataUtil.swift */,
+				FB44F63C27207999000BB93B /* GMSMarker+Extensions.swift */,
 			);
-			path = Utils;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		29CA4AEB25A5D62400F9B0B6 /* Initial */ = {
@@ -1105,6 +1108,7 @@
 				29F86EEE25A82E8C00C2927E /* Place.swift in Sources */,
 				295BE68225A6E04F00590449 /* SearchRouter.swift in Sources */,
 				29CA4AA525A5D46900F9B0B6 /* JailbreakDetectionService.swift in Sources */,
+				FB44F63D27207999000BB93B /* GMSMarker+Extensions.swift in Sources */,
 				29CA4AE225A5D59100F9B0B6 /* Swime.swift in Sources */,
 				FB75028926FC964C00A1B6C3 /* LatLng.swift in Sources */,
 				295BE69325A6E1D700590449 /* CateringPresenter.swift in Sources */,

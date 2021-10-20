@@ -121,7 +121,7 @@ extension CateringViewController: CateringViewInput {
         marker.position = CLLocationCoordinate2D(latitude: place.latitude, longitude: place.longitude)
         marker.title = place.title
         marker.snippet = place.address
-        marker.accessibilityHint = "fdsafdsafdsafdsafdsafsda"
+        marker.accessibilityHint = place.link! //todo extend GMSMarker, add mapLink field
         marker.map = mapView
     }
 }
@@ -169,14 +169,20 @@ extension CateringViewController: GMSMapViewDelegate {
         let mapViewHeight = mapView.frame.size.height
         let mapViewWidth = mapView.frame.size.width
         
-        let googleMapsButton = UIButton()
-        googleMapsButton.setImage(UIImage(named: "googleMapLogo"), for: .normal)
-        googleMapsButton.setTitleColor(.blue, for: .normal)
-        googleMapsButton.frame = CGRect.init(x: mapViewWidth - 100, y: mapViewHeight - 130, width: 125, height: 75)
-        googleMapsButton.addTarget(self, action: #selector(self.markerClick(sender:)), for: .touchUpInside)
-        googleMapsButton.tag = 0
-        
-        self.view.addSubview(googleMapsButton)
+        if marker.accessibilityHint!.contains("2gis") {
+            let gisButton = UIButton()
+            gisButton.setImage(UIImage(named: "2gis"), for: .normal)
+            gisButton.frame = CGRect.init(x: mapViewWidth - 70, y: mapViewHeight - 125, width: 60, height: 60)
+            gisButton.addTarget(self, action: #selector(self.markerClick(sender:)), for: .touchUpInside)
+            self.view.addSubview(gisButton)
+        } else {
+            let googleMapsButton = UIButton()
+            googleMapsButton.setImage(UIImage(named: "googleMapLogo"), for: .normal)
+            googleMapsButton.frame = CGRect.init(x: mapViewWidth - 100, y: mapViewHeight - 130, width: 125, height: 75)
+            googleMapsButton.addTarget(self, action: #selector(self.markerClick(sender:)), for: .touchUpInside)
+            
+            self.view.addSubview(googleMapsButton)
+        }
         
         return false
     }
