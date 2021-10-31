@@ -30,6 +30,12 @@ class CateringViewController: BaseViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         
         interactor?.getCafes()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showToast(message: "Нажмите на красную точку, что бы увидеть информацию.")//todo if clicked don't show
     }
     
     private func setupViews() {
@@ -166,29 +172,11 @@ extension CateringViewController: CLLocationManagerDelegate {
 extension CateringViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        let mapViewHeight = mapView.frame.size.height
-        let mapViewWidth = mapView.frame.size.width
-        
-        if marker.accessibilityHint!.contains("2gis") {
-            let gisButton = UIButton()
-            gisButton.setImage(UIImage(named: "2gis"), for: .normal)
-            gisButton.frame = CGRect.init(x: mapViewWidth - 70, y: mapViewHeight - 125, width: 60, height: 60)
-            gisButton.addTarget(self, action: #selector(self.markerClick(sender:)), for: .touchUpInside)
-            self.view.addSubview(gisButton)
-        } else {
-            let googleMapsButton = UIButton()
-            googleMapsButton.setImage(UIImage(named: "googleMapLogo"), for: .normal)
-            googleMapsButton.frame = CGRect.init(x: mapViewWidth - 100, y: mapViewHeight - 130, width: 125, height: 75)
-            googleMapsButton.addTarget(self, action: #selector(self.markerClick(sender:)), for: .touchUpInside)
-            
-            self.view.addSubview(googleMapsButton)
-        }
-        
         return false
     }
     
-    @objc func markerClick(sender: UIButton) {
-        //todo
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        print("")
     }
     
 }
