@@ -18,6 +18,9 @@ class CateringViewController: BaseViewController {
     private let mapView = GMSMapView()
     private let segmentedControl = UISegmentedControl(items: ["Питание", "Магазины"])
     
+    private var markerHintShown = false
+    private var infoWindowHintShown = false
+    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -35,7 +38,9 @@ class CateringViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showToast(message: "Нажмите на красную точку, что бы увидеть информацию.")//todo if clicked don't show
+        if !markerHintShown {
+            showToast(message: "Нажмите на красную точку, что бы увидеть информацию.")
+        }
     }
     
     private func setupViews() {
@@ -172,11 +177,20 @@ extension CateringViewController: CLLocationManagerDelegate {
 extension CateringViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        markerHintShown = true
+        if !infoWindowHintShown {
+            showToast(message: "Нажмите на инфо-окошко, что бы открыть на более подробной карте.")
+        }
         return false
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        print("")
+        infoWindowHintShown = true
+        if let url = URL(string: marker.accessibilityHint!) {
+            UIApplication.shared.open(url)//todo test it
+        } else {
+            showToast(message: "Не удалось открыть на подробной карте(((")
+        }
     }
     
 }
