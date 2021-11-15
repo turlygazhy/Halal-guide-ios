@@ -16,21 +16,33 @@ class StatusEViewController: BaseViewController {
     
     private var dataSource = [Addition]()
     
+    var searchBar: UISearchBar?
+    
     private let tableView = UITableView(frame: .zero, style: .grouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 30, height: 20))
-        searchBar.placeholder = "Номер добавки, название"
-        searchBar.delegate = self
-        let searchButton = UIBarButtonItem(customView: searchBar)
+        searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 30, height: 20))
+        searchBar!.placeholder = "Номер добавки, название"
+        searchBar!.delegate = self
+        let searchButton = UIBarButtonItem(customView: searchBar!)
         navigationItem.leftBarButtonItem = searchButton
         
         setupViews()
         setConstraints()
         
         interactor?.getAdditions()
+        
+        tableView.keyboardDismissMode = .onDrag
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard() {
+        self.searchBar?.endEditing(true)
     }
     
     private func setupViews() {

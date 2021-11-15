@@ -17,14 +17,15 @@ class SearchViewController: BaseViewController {
     private var dataSource = [Place]()
     
     private let tableView = UITableView(frame: .zero, style: .grouped)
+    var searchBar: UISearchBar?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 85, height: 0))
-        searchBar.placeholder = "Предприятие, товар, марка"
-        searchBar.delegate = self
-        let searchButton = UIBarButtonItem(customView: searchBar)
+        searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 85, height: 0))
+        searchBar!.placeholder = "Предприятие, товар, марка"
+        searchBar!.delegate = self
+        let searchButton = UIBarButtonItem(customView: searchBar!)
         navigationItem.leftBarButtonItem = searchButton
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter24"), style: .plain, target: self, action: #selector(filterTapped))
@@ -33,6 +34,16 @@ class SearchViewController: BaseViewController {
         setConstraints()
         
         interactor?.getApiUpdatedDate()
+        
+        tableView.keyboardDismissMode = .onDrag
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard() {
+        self.searchBar?.endEditing(true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
