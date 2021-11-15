@@ -13,11 +13,11 @@ class SearchDetailViewController: BaseViewController {
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var mekemeTitleLabel: UILabel!//todo выходит за рамки экрана kausar
+    @IBOutlet weak var mekemeTitleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var regionLabel: UILabel!
-    @IBOutlet weak var trademarksLabel: UILabel! //todo lengerskoe выходит за рамки
+    @IBOutlet weak var trademarksLabel: UILabel!
     @IBOutlet weak var openInWebTextView: UITextView!
     
     var place: Place?
