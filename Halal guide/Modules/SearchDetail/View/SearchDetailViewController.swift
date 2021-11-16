@@ -38,7 +38,7 @@ class SearchDetailViewController: BaseViewController {
         mekemeTitleLabel.text = place?.mekeme_title
         categoryLabel.text = place?.category?.title
         statusLabel.text = place?.status?.title
-        //        statusLabel.textColor todo
+        statusLabel.textColor = place?.getStatusColor()
         regionLabel.text = place?.location?.title
         trademarksLabel.text = place?.trademarks
         if trademarksLabel.text == "" {

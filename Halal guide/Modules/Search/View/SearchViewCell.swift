@@ -109,12 +109,7 @@ class SearchViewCell: UITableViewCell, ReusableView {
         tradeMarkTitleLabel.text = place.trademark_title
         categoryLabel.text = place.category?.title
         locationLabel.text = place.location?.title
-        
-        if (place.status?.slug == "merzimi-ayaqtaldy") {
-            statusLabel.textColor = AppColor.red.uiColor
-        } else {
-            statusLabel.textColor = AppColor.green.uiColor
-        }
+        statusLabel.textColor = place.getStatusColor()
         statusLabel.text = place.status?.title
     }
 }

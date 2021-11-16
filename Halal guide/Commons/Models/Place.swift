@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Place: Codable {
     enum CodingKeys: String, CodingKey {
@@ -87,7 +88,7 @@ struct Place: Codable {
         manager = try container.decodeIfPresent(String.self, forKey: .manager)
         address = try container.decodeIfPresent(String.self, forKey: .address)
         trademarks = try container.decodeIfPresent(String.self, forKey: .trademarks)
-
+        
         location_id = try container.decodeIfPresent(Int.self, forKey: .location_id)
         keywords = try container.decodeIfPresent(String.self, forKey: .keywords)
         website = try container.decodeIfPresent(String.self, forKey: .website)
@@ -99,11 +100,19 @@ struct Place: Codable {
         location = try container.decodeIfPresent(Title.self, forKey: .location)
         supervisor = try container.decodeIfPresent(SuperVisor.self, forKey: .supervisor)
         logo = try container.decodeIfPresent(Logo.self, forKey: .logo)
-
+        
         if let maplink = try? container.decodeIfPresent([MapLink].self, forKey: .maplink) {
             self.maplink = maplink
         } else {
             maplink = .none
+        }
+    }
+    
+    func getStatusColor() -> UIColor {
+        if (status?.slug == "merzimi-ayaqtaldy") {
+            return AppColor.red.uiColor
+        } else {
+            return AppColor.green.uiColor
         }
     }
 }
