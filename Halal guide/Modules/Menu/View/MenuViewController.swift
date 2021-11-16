@@ -20,6 +20,8 @@ class MenuViewController: BaseViewController {
         view.backgroundColor = .white
         title = "Меню"
         //todo menu is ugly
+        //todo menu items are too big for iphone6
+        //todo инструкции не влезают, не скроллятся
     }
     
     @IBAction func markApp(_ sender: Any) {

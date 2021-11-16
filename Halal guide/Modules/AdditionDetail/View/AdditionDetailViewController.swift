@@ -34,5 +34,5 @@ class AdditionDetailViewController: UIViewController {
 //        statusLabel.textColor todo
         descriptionLabel.text = addition?.status_desc
     }
-    
+    //todo отображение детали не правильное, проблема как было в search detail
 }
