@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Addition: Codable {
     let id: Int?
@@ -21,6 +22,20 @@ struct Addition: Codable {
     let name: String?
     let category: String?
     let status: Status?
+    
+    func getStatusColor() -> UIColor {
+        switch status?.slug {
+        case "tyjym-salyngandar":
+            return AppColor.red.uiColor
+        case "ruqsat-etilgender":
+            return AppColor.green.uiColor
+        case "kumandiler":
+            return AppColor.yellow.uiColor
+        default:
+            return .black
+        }
+    }
+    
 }
 
 struct Status: Codable {

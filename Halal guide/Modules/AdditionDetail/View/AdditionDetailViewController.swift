@@ -30,8 +30,8 @@ class AdditionDetailViewController: UIViewController {
     func setupViews(){
         titleLabel.text = addition?.name
         categoryLabel.text = addition?.category
-        statusLabel.text = addition?.status?.name
-//        statusLabel.textColor todo
+        statusLabel.text = addition?.status?.title
+        statusLabel.textColor = addition?.getStatusColor()
         descriptionLabel.text = addition?.status_desc
     }
     //todo отображение детали не правильное, проблема как было в search detail
