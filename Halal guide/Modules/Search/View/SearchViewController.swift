@@ -47,8 +47,10 @@ class SearchViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        dataSource = DataUtil.filter(places: DataHolder.shared.getPlaces())
-//        tableView.reloadData()
+        if (DataHolder.shared.isPlacesExist()) {
+            dataSource = DataUtil.filter(places: DataHolder.shared.getPlaces())
+        }
+        tableView.reloadData()
         //todo нужно что бы когда выставлен фильтр это показывалось на иконке фильтра
     }
     
