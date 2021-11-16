@@ -54,5 +54,5 @@ class SearchDetailViewController: BaseViewController {
         openInWebTextView.attributedText = attributedString
         openInWebTextView.font = UIFont.systemFont(ofSize: 20)
     }
-    
+    //todo add open in map buttons as in android
 }
