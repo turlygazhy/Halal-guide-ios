@@ -19,7 +19,6 @@ class MenuViewController: BaseViewController {
         
         view.backgroundColor = .white
         title = "Меню"
-        //todo инструкции не влезают, не скроллятся
     }
     
     @IBAction func markApp(_ sender: Any) {

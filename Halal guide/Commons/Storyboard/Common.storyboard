@@ -550,54 +550,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vLO-0L-byw">
-                                <rect key="frame" x="157" y="20" width="100" height="100"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhZ-4z-OQY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-Ak-rcy" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="441"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-kL-7yk">
+                                                <rect key="frame" x="5" y="193" width="404" height="243"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">В данном мобильном приложении вы можете самостоятельно проверить подлинность сертификата «Халал Даму» используя меню 'Поиск', посмотреть перечень «Пищевых добавок (Е коды)», благодаря которому можно самостоятельно изучить состав продукта, открыть карту, что бы увидеть сертифицированные «Мясные лавки» и «Места общественного питания».</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="центр стандартизации и сертификации." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lK4-9o-0wR">
+                                                <rect key="frame" x="5" y="160" width="404" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Халал Даму" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxB-gs-h1V">
+                                                <rect key="frame" x="5" y="125" width="404" height="30"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="SbJ-oe-aU4">
+                                                <rect key="frame" x="157" y="15" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="C1w-zH-0Mb"/>
+                                                    <constraint firstAttribute="width" constant="100" id="nkb-UX-EeU"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UJV-kL-7yk" secondAttribute="trailing" constant="5" id="19Q-mG-G64"/>
+                                            <constraint firstAttribute="bottom" secondItem="UJV-kL-7yk" secondAttribute="bottom" constant="5" id="32O-iY-VGC"/>
+                                            <constraint firstItem="SbJ-oe-aU4" firstAttribute="centerX" secondItem="eBe-Ak-rcy" secondAttribute="centerX" id="9Pf-ug-yhk"/>
+                                            <constraint firstItem="NxB-gs-h1V" firstAttribute="leading" secondItem="eBe-Ak-rcy" secondAttribute="leading" constant="5" id="FiD-cO-T5v"/>
+                                            <constraint firstItem="NxB-gs-h1V" firstAttribute="top" secondItem="SbJ-oe-aU4" secondAttribute="bottom" constant="10" id="GR6-SR-gew"/>
+                                            <constraint firstItem="lK4-9o-0wR" firstAttribute="leading" secondItem="eBe-Ak-rcy" secondAttribute="leading" constant="5" id="QD5-hO-0Kl"/>
+                                            <constraint firstItem="lK4-9o-0wR" firstAttribute="top" secondItem="NxB-gs-h1V" secondAttribute="bottom" constant="5" id="aZe-VY-JIJ"/>
+                                            <constraint firstItem="UJV-kL-7yk" firstAttribute="top" secondItem="lK4-9o-0wR" secondAttribute="bottom" constant="10" id="gKQ-dj-OBX"/>
+                                            <constraint firstAttribute="trailing" secondItem="lK4-9o-0wR" secondAttribute="trailing" constant="5" id="hvD-m6-LeV"/>
+                                            <constraint firstItem="UJV-kL-7yk" firstAttribute="leading" secondItem="eBe-Ak-rcy" secondAttribute="leading" constant="5" id="jDe-v8-vjb"/>
+                                            <constraint firstItem="SbJ-oe-aU4" firstAttribute="top" secondItem="eBe-Ak-rcy" secondAttribute="top" constant="15" id="pD2-Ul-m5i"/>
+                                            <constraint firstAttribute="trailing" secondItem="NxB-gs-h1V" secondAttribute="trailing" constant="5" id="vVQ-mf-Zfu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1PQ-s6-7mL"/>
-                                    <constraint firstAttribute="width" constant="100" id="6OH-FH-dcV"/>
+                                    <constraint firstAttribute="bottom" secondItem="eBe-Ak-rcy" secondAttribute="bottom" id="2yd-8a-QUG"/>
+                                    <constraint firstItem="eBe-Ak-rcy" firstAttribute="top" secondItem="vhZ-4z-OQY" secondAttribute="top" id="HOa-aS-vdQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="eBe-Ak-rcy" secondAttribute="trailing" id="Qrw-nI-NMA"/>
+                                    <constraint firstItem="eBe-Ak-rcy" firstAttribute="leading" secondItem="vhZ-4z-OQY" secondAttribute="leading" id="TOY-za-yU5"/>
+                                    <constraint firstItem="eBe-Ak-rcy" firstAttribute="width" secondItem="vhZ-4z-OQY" secondAttribute="width" id="qEH-vc-DNE"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Халал Даму" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7T-0B-Y0A">
-                                <rect key="frame" x="138" y="135" width="138" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="центр стандартизации и сертификации." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjK-8i-2gi">
-                                <rect key="frame" x="29" y="168" width="356" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Mj-Nj-Jao">
-                                <rect key="frame" x="15" y="206" width="384" height="243"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">В данном мобильном приложении вы можете самостоятельно проверить подлинность сертификата «Халал Даму» используя меню 'Поиск', посмотреть перечень «Пищевых добавок (Е коды)», благодаря которому можно самостоятельно изучить состав продукта, открыть карту, что бы увидеть сертифицированные «Мясные лавки» и «Места общественного питания».</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dET-Ou-tgF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jjK-8i-2gi" firstAttribute="centerX" secondItem="f7T-0B-Y0A" secondAttribute="centerX" id="4sw-Nk-jQG"/>
-                            <constraint firstItem="dET-Ou-tgF" firstAttribute="trailing" secondItem="4Mj-Nj-Jao" secondAttribute="trailing" constant="15" id="HEc-Mp-8lk"/>
-                            <constraint firstItem="4Mj-Nj-Jao" firstAttribute="top" secondItem="jjK-8i-2gi" secondAttribute="bottom" constant="15" id="Nrk-3W-6ia"/>
-                            <constraint firstItem="f7T-0B-Y0A" firstAttribute="centerX" secondItem="vLO-0L-byw" secondAttribute="centerX" id="SX2-ha-xtq"/>
-                            <constraint firstItem="4Mj-Nj-Jao" firstAttribute="centerX" secondItem="jjK-8i-2gi" secondAttribute="centerX" id="bT3-GB-bZr"/>
-                            <constraint firstItem="vLO-0L-byw" firstAttribute="centerX" secondItem="dET-Ou-tgF" secondAttribute="centerX" id="eOD-C4-Fij"/>
-                            <constraint firstItem="jjK-8i-2gi" firstAttribute="top" secondItem="f7T-0B-Y0A" secondAttribute="bottom" constant="3" id="g4s-gp-kNn"/>
-                            <constraint firstItem="4Mj-Nj-Jao" firstAttribute="leading" secondItem="dET-Ou-tgF" secondAttribute="leading" constant="15" id="k6T-jV-9XO"/>
-                            <constraint firstItem="vLO-0L-byw" firstAttribute="top" secondItem="dET-Ou-tgF" secondAttribute="top" constant="20" id="sbH-mH-pLF"/>
-                            <constraint firstItem="f7T-0B-Y0A" firstAttribute="top" secondItem="vLO-0L-byw" secondAttribute="bottom" constant="15" id="zPh-y9-dZN"/>
+                            <constraint firstItem="vhZ-4z-OQY" firstAttribute="top" secondItem="dET-Ou-tgF" secondAttribute="top" id="HPU-qD-ZNr"/>
+                            <constraint firstItem="dET-Ou-tgF" firstAttribute="trailing" secondItem="vhZ-4z-OQY" secondAttribute="trailing" id="KEj-gf-E2L"/>
+                            <constraint firstItem="dET-Ou-tgF" firstAttribute="bottom" secondItem="vhZ-4z-OQY" secondAttribute="bottom" id="r9O-am-pHQ"/>
+                            <constraint firstItem="vhZ-4z-OQY" firstAttribute="leading" secondItem="dET-Ou-tgF" secondAttribute="leading" id="wj0-nE-KvO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pWG-lF-NC3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3K-up-4WN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="1457"/>
+            <point key="canvasLocation" x="942" y="1455"/>
         </scene>
         <!--Feedback View Controller-->
         <scene sceneID="2aV-zd-fpE">
