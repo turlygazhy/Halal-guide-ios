@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    func showToast(message: String) {//todo test on small screen
+    func showToast(message: String) {
         let toastLabel = UILabel(frame: CGRect(x: 15, y: self.view.frame.size.height-175, width: self.view.frame.size.width - 30, height: 35))
             toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
             toastLabel.textColor = UIColor.white

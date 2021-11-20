@@ -45,27 +45,6 @@ class DataHolder {
         additions!
     }
     
-    func apiUpdated(networkService: NetworkService) -> Bool {
-        let saveDate = PhoneMemory.readApiUpdateDate()
-        getApiUpdatedDate(networkService: networkService)
-        
-        
-        return false //todo
-    }
-    
-    func getApiUpdatedDate(networkService: NetworkService) -> String {
-        var updatedDate: String?
-        networkService.load(context: GetApiUpdateDateContext()) { [weak self] serverResponse in
-            guard let interactor = self else { return }
-            guard serverResponse.isSuccess else { return }
-            guard let placesResponse: ResponsePlaces = serverResponse.decode() else { return }
-            
-            guard let items = placesResponse.data else { return }
-            updatedDate = items[0].updated_at?.date
-        }
-        return updatedDate != nil ? updatedDate! : ""
-    }
-    
     private func getRegionNames() -> [String] {
         Array(Set(getPlaces().map{($0.location?.title)!}))
     }

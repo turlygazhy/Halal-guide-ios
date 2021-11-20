@@ -22,7 +22,7 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 85, height: 0))
+        searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 80, height: 0))
         searchBar!.placeholder = "Предприятие, товар, марка"
         searchBar!.delegate = self
         let searchButton = UIBarButtonItem(customView: searchBar!)
