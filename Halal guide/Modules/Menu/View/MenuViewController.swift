@@ -8,11 +8,14 @@
 
 import Foundation
 import UIKit
+import StoreKit
 
 class MenuViewController: BaseViewController {
     
     var router: MenuRouterInput?
     var interactor: MenuInteractorInput?
+    
+    let APP_LINK = "https://apps.apple.com/kz/app/halal-guide-kz/id1598839456"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +25,18 @@ class MenuViewController: BaseViewController {
     }
     
     @IBAction func markApp(_ sender: Any) {
-        //todo
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            UIApplication.shared.open(URL(string: APP_LINK)!)
+        }
     }
     
     @IBAction func shareApp(_ sender: Any) {
-        //todo
+        let activityVC = UIActivityViewController(activityItems: [APP_LINK], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
     }
     
 }
