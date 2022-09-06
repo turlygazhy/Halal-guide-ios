@@ -46,7 +46,7 @@ class DataHolder {
     }
     
     private func getRegionNames() -> [String] {
-        Array(Set(getPlaces().map{($0.location?.title)!}))
+        Array(Set(getPlaces().map{($0.location?.title ?? "unknown")!}))
     }
     
     private func getCategoryNames() -> [String] {
