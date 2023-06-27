@@ -109,11 +109,17 @@ struct Place: Codable {
     }
     
     func getStatusColor() -> UIColor {
-        if (status?.slug == "merzimi-ayaqtaldy") {
-            return AppColor.red.uiColor
-        } else {
+        switch status?.slug {
+        case "sertifikattalgan":
             return AppColor.green.uiColor
+        case "merzimi-ayaqtaldy":
+            return AppColor.red.uiColor
+        case "toqtatyldy":
+            return AppColor.red.uiColor
+        default:
+            return AppColor.red.uiColor
         }
+
     }
 }
 
